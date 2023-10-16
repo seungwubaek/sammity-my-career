@@ -3,6 +3,7 @@
 import React, { type PropsWithChildren } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 import styles from './HeaderRightMenu.module.scss';
 
@@ -13,6 +14,7 @@ const HeaderRightMenu: React.FC<MainProps> = ({
   children,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const t = useTranslations('Header');
 
   return (
     <>
@@ -35,7 +37,7 @@ const HeaderRightMenu: React.FC<MainProps> = ({
           <li>Contact</li>
         </Link>
         <div className={styles['dropdown-menu__item']}>
-          <li className={styles['dropdown-menu__item']}>Lang</li>
+          <li className={styles['dropdown-menu__item']}>{t('lang')}</li>
         </div>
       </ul>
     </>

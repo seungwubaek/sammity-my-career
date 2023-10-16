@@ -4,6 +4,7 @@ import '@/styles/globals.scss';
 import { Noto_Sans_KR } from 'next/font/google';
 
 import Header from '@/components/units/Header';
+import Providers from '@/lib/providers';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
@@ -12,16 +13,24 @@ export const metadata: Metadata = {
   description: 'Career Page of Seungwu Baek, a computer engineer.',
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return [{ locale: 'ko' }, { locale: 'en' }];
+}
+
+export default async function LocaleLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
   return (
-    <html lang="ko">
+    <html lang={locale}>
       <body className={notoSansKr.className}>
-        <Header />
-        {children}
+        <Providers locale={locale}>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
