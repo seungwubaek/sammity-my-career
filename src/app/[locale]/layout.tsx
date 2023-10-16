@@ -1,4 +1,5 @@
-import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { createTranslator } from 'next-intl';
 
 import '@/styles/globals.scss';
 import { Noto_Sans_KR } from 'next/font/google';
@@ -8,13 +9,31 @@ import Providers from '@/lib/providers';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
-export const metadata: Metadata = {
-  title: 'Seungwu Baek',
-  description: 'Career Page of Seungwu Baek, a computer engineer.',
-};
+async function getMessages(locale: string) {
+  try {
+    return (await import(`@/dictionaries/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+}
 
 export function generateStaticParams() {
-  return [{ locale: 'ko' }, { locale: 'en' }];
+  return ['ko', 'en'].map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const messages = await getMessages(locale);
+
+  const t = createTranslator({ locale, messages });
+
+  return {
+    title: t('Meta.title'),
+    description: t('Meta.description'),
+  };
 }
 
 export default async function LocaleLayout({
