@@ -5,5 +5,8 @@
   },
   "Header": {
     "lang": "Language"
+  },
+  "NotFound": {
+    "title": "Page Not Found"
   }
 }
