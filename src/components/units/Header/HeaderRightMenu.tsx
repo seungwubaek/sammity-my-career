@@ -7,12 +7,7 @@ import { useTranslations } from 'next-intl';
 
 import styles from './HeaderRightMenu.module.scss';
 
-type MainProps = PropsWithChildren<{ dropdownIconSize: number }>;
-
-const HeaderRightMenu: React.FC<MainProps> = ({
-  dropdownIconSize,
-  children,
-}) => {
+const HeaderRightMenu: React.FC<PropsWithChildren> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const t = useTranslations('Header');
 

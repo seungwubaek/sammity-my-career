@@ -8,8 +8,6 @@ import { IoMenuSharp } from 'react-icons/io5';
 import HeaderRightMenu from './HeaderRightMenu';
 
 const Header: React.FC = () => {
-  const dropDownIconSize = 26;
-
   return (
     <header className={styles.header}>
       <div className={styles['header-section']}>
@@ -41,8 +39,8 @@ const Header: React.FC = () => {
             'responsive-ssr-mobile',
           ])}
         >
-          <HeaderRightMenu dropdownIconSize={dropDownIconSize}>
-            <IoMenuSharp size={dropDownIconSize} />
+          <HeaderRightMenu>
+            <IoMenuSharp size={26} />
           </HeaderRightMenu>
         </div>
       </div>
