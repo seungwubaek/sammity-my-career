@@ -3,10 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import variable from '@/styles/variables.module.scss';
 import styles from './HeroImage.module.scss';
 
-import useAllMediaQuery from '@/hooks/useAllMediaQuery';
+import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
 
 const HeroImage: React.FC = () => {
   const { isDesktop, isTablet, isMobile } = useAllMediaQuery();
