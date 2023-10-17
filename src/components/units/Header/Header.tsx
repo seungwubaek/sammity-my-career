@@ -2,14 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { useTranslations } from 'next-intl';
 
 import styles from './Header.module.scss';
 import { IoMenuSharp } from 'react-icons/io5';
 import HeaderRightMenu from './HeaderRightMenu';
 
 const Header: React.FC = () => {
-  const t = useTranslations('Header');
   const dropDownIconSize = 26;
 
   return (
