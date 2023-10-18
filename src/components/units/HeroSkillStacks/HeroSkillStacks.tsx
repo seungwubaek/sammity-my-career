@@ -69,7 +69,6 @@ const HeroSkillStacks: React.FC = () => {
                 alt={`skill ${skill.name}`}
                 width={skill.logo.width}
                 height={skill.logo.height}
-                priority={true}
               />
             </div>
             <div className={styles['skill-title']}>{skill.name}</div>
