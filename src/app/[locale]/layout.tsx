@@ -5,7 +5,7 @@ import '@/styles/globals.scss';
 import { Noto_Sans_KR } from 'next/font/google';
 
 import Header from '@/components/units/Header';
-import Providers from '@/lib/providers';
+import Initializers from '@/lib/initializers';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
@@ -46,10 +46,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={notoSansKr.className}>
-        <Providers locale={locale}>
+        <Initializers locale={locale}>
           <Header />
           {children}
-        </Providers>
+        </Initializers>
       </body>
     </html>
   );
