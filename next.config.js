@@ -6,6 +6,16 @@ const withNextIntl = require('next-intl/plugin')(
 );
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn-sammity-career.s3.ap-northeast-2.amazonaws.com',
+        pathname: '/assets/images/**',
+      },
+    ],
+  },
+};
 
 module.exports = withNextIntl(nextConfig);

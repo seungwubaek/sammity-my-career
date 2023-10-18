@@ -3,6 +3,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   min-height: 100vh;
   width: 100%;
   background-color: var.$bg-color;
@@ -13,6 +14,12 @@
   width: var.$desktop-min-width;
   margin: 0 auto;
   padding: 0 var.$section-horizontal-padding;
+}
+
+.section-wide {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-banner {

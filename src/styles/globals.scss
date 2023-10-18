@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
   background-color: var.$bg-color;
   font-size: var.$font-size;
+
+  @media (max-width: var.$mobile-max-width) {
+    font-size: var.$mobile-font-size;
+  }
 }
 
 a {
@@ -36,3 +40,19 @@ a {
     display: none !important;
   }
 }
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Section: HeroSkillStacks
+//   Swiper의 호환성 문제로 css module class로 적용 불가한 스타일링
+//   css module class의 name은 hash가 append 되는데 반해,
+//   swiper가 initializing 단계에서 자동으로 생성하는 wrapper class name은 hash가 append 되지 않음
+// TODO: 'linear'로 설정하면 데스크탑 화면 이동 후 돌아왔을때 swiper 애니메이션이 깨짐
+// .swiper-wrapper.skill-card-wrapper {
+//   transition-timing-function: linear !important;
+// }
