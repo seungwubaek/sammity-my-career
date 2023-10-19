@@ -7,6 +7,13 @@ const withNextIntl = require('next-intl/plugin')(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compiler: {
+    // styled-components를 사용할때 SSR의 초기 렌더링에서 생성한 class name과 이후 CSR에서 생성한 class name이 mismatch 되는 문제 해결
+    // 기존의 babel compiler를 이용하면 babel-plugin-styled-components으로 해결할 수 있으며,
+    // Next.js에서는 babel compiler 대신 SWC를 사용하면서 babel-plugin-styled-components의 내용을 porting 하고 있음
+    // Ref: https://nextjs.org/docs/architecture/nextjs-compiler#styled-components
+    styledComponents: true,
+  },
   images: {
     remotePatterns: [
       {

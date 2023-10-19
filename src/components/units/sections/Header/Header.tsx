@@ -3,15 +3,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import styles from './Header.module.scss';
+import {
+  StHeaderWrapper,
+  StSectionHeader,
+  StLinkHeaderLeft,
+  StSpanLogoSub,
+  StDivHeaderRight,
+  StDivHeaderRightMobile,
+} from './Header.styled';
+
 import { IoMenuSharp } from 'react-icons/io5';
 import HeaderRightMenu from './HeaderRightMenu';
 
 const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles['header-section']}>
-        <Link className={styles['header-left']} href="/">
+    <StHeaderWrapper>
+      <StSectionHeader>
+        <StLinkHeaderLeft href="/">
           <Image
             src="/assets/images/sammity_logo.png"
             alt="sammity logo"
@@ -21,30 +29,20 @@ const Header: React.FC = () => {
             quality={100}
             priority
           />
-          <span className={styles['logo-sub']}>Career</span>
-        </Link>
-        <div
-          className={clsx([
-            styles['header-right'],
-            'responsive-ssr-desktop-tablet',
-          ])}
-        >
+          <StSpanLogoSub>Career</StSpanLogoSub>
+        </StLinkHeaderLeft>
+        <StDivHeaderRight className={clsx('responsive-ssr-desktop-tablet')}>
           <Link href="#projects">Projects</Link>
           <Link href="#contact">Contact</Link>
           <div>Lang</div>
-        </div>
-        <div
-          className={clsx([
-            styles['header-right__mobile'],
-            'responsive-ssr-mobile',
-          ])}
-        >
+        </StDivHeaderRight>
+        <StDivHeaderRightMobile className={clsx('responsive-ssr-mobile')}>
           <HeaderRightMenu>
             <IoMenuSharp size={26} />
           </HeaderRightMenu>
-        </div>
-      </div>
-    </header>
+        </StDivHeaderRightMobile>
+      </StSectionHeader>
+    </StHeaderWrapper>
   );
 };
 

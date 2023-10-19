@@ -1,13 +1,17 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 
-import styles from './HeroImage.module.scss';
-
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
+import {
+  StDivMobileHero,
+  StDivMobileImageWrapper,
+  StDivMobileName,
+  StDivMobileTitle,
+  StDivMobileTitleMain,
+} from './HeroImageByMedia.styled';
 
-const HeroImage: React.FC = () => {
+const HeroImageByMedia = () => {
   const { isDesktop, isTablet, isMobile } = useAllMediaQuery();
 
   const heroWidth = isDesktop ? 1920 : 1024;
@@ -29,7 +33,6 @@ const HeroImage: React.FC = () => {
         quality={100}
         priority
       />
-      // null
     );
   } else if (isTablet) {
     return (
@@ -47,10 +50,10 @@ const HeroImage: React.FC = () => {
         priority
       />
     );
-  } else {
+  } else if (isMobile) {
     return (
-      <div className={styles['mobile-hero']}>
-        <div className={styles['mobile-image-wrapper']}>
+      <StDivMobileHero>
+        <StDivMobileImageWrapper>
           <Image
             src="/assets/images/profile_sammy_baek.png"
             alt="profile sammy baek"
@@ -59,15 +62,17 @@ const HeroImage: React.FC = () => {
             priority
             style={{ width: '120%', height: '120%' }}
           />
-        </div>
-        <div className={styles['mobile-title']}>
-          <div className={styles['mobile-title__main']}>7년차 FullStack</div>
-          <div className={styles['mobile-title__main']}>Computer Engineer</div>
-        </div>
-        <div className={styles['mobile-name']}>백 승 우</div>
-      </div>
+        </StDivMobileImageWrapper>
+        <StDivMobileTitle>
+          <StDivMobileTitleMain>7년차 FullStack</StDivMobileTitleMain>
+          <StDivMobileTitleMain>Computer Engineer</StDivMobileTitleMain>
+        </StDivMobileTitle>
+        <StDivMobileName>백 승 우</StDivMobileName>
+      </StDivMobileHero>
     );
+  } else {
+    return null;
   }
 };
 
-export default HeroImage;
+export default HeroImageByMedia;

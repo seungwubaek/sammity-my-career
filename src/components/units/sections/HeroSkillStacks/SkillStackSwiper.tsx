@@ -10,20 +10,24 @@
 // https://swiperjs.com/react
 
 import React from 'react';
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Virtual, Autoplay } from 'swiper/modules';
 import clsx from 'clsx';
-
-import 'swiper/css';
-import 'swiper/css/virtual';
-import 'swiper/css/autoplay';
-import styles from './HeroSkillStacks.module.scss';
 
 import skills from '@/data/skills';
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
 
-const HeroSkillStacks: React.FC = () => {
+import 'swiper/css';
+import 'swiper/css/virtual';
+import 'swiper/css/autoplay';
+import {
+  StDivSkillLogoWrapper,
+  StDivSkillName,
+  StImageSkillLogo,
+  StSwiper,
+  StSwiperSlideSkillCard,
+} from './SkillStackSwiper.styled';
+
+const SkillStackSwiper: React.FC = () => {
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
 
@@ -37,9 +41,9 @@ const HeroSkillStacks: React.FC = () => {
   // 필요한 개수가 어떻게 계산되는지 알 수 없음
   // 그럴때 autoplay를 off 하는 코드 필요
   return (
-    <Swiper
+    <StSwiper
       ref={swiperRef}
-      className={clsx([styles['swiper-skill-card'], 'unselectable'])}
+      className={clsx('unselectable')}
       modules={[Virtual, Autoplay]}
       virtual={true}
       slidesPerView={isMobile ? 4 : isTablet ? 6 : 10}
@@ -53,30 +57,23 @@ const HeroSkillStacks: React.FC = () => {
     >
       {skills.map((skill, idx) => {
         return (
-          <SwiperSlide
-            key={skill.name + idx}
-            className={styles['skill-card']}
-            virtualIndex={idx}
-          >
-            <div
-              className={clsx(styles['skill-logo-wrapper'], {
-                [styles['square-radius']]: skill.logo.borderRadius === 'square',
-              })}
+          <StSwiperSlideSkillCard key={skill.name + idx} virtualIndex={idx}>
+            <StDivSkillLogoWrapper
+              $squareBorder={skill.logo.borderRadius === 'square'}
             >
-              <Image
-                className={styles['skill-logo']}
+              <StImageSkillLogo
                 src={skill.logo.url}
                 alt={`skill ${skill.name}`}
                 width={skill.logo.width}
                 height={skill.logo.height}
               />
-            </div>
-            <div className={styles['skill-title']}>{skill.name}</div>
-          </SwiperSlide>
+            </StDivSkillLogoWrapper>
+            <StDivSkillName>{skill.name}</StDivSkillName>
+          </StSwiperSlideSkillCard>
         );
       })}
-    </Swiper>
+    </StSwiper>
   );
 };
 
-export default HeroSkillStacks;
+export default SkillStackSwiper;

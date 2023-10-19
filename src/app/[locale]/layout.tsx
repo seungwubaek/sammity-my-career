@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
 import { createTranslator } from 'next-intl';
 
-import '@/styles/globals.scss';
+import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
 
-import Header from '@/components/units/Header';
+import Header from '@/components/units/sections/Header';
 import Initializers from '@/lib/initializers';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
@@ -47,6 +47,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={notoSansKr.className}>
         <Initializers locale={locale}>
+          <GlobalStyles />
           <Header />
           {children}
         </Initializers>

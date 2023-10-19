@@ -1,0 +1,54 @@
+'use client';
+
+import Link from 'next/link';
+import styled from 'styled-components';
+
+export const StHeaderWrapper = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: ${({ theme }) => theme.colors.bgColor};
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+`;
+
+export const StSectionHeader = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: ${({ theme }) => theme.media.desktopMinWidth}px;
+  width: 100%;
+  height: 100%;
+  padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
+  margin: 0 auto;
+`;
+
+export const StLinkHeaderLeft = styled(Link)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const StSpanLogoSub = styled.span`
+  font-size: ${({ theme }) => theme.font.headerLogoSubTitleSize};
+  font-weight: bold;
+  margin-left: 10px;
+`;
+
+export const StDivHeaderRight = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+`;
+
+export const StDivHeaderRightMobile = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+`;
