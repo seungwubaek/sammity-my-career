@@ -1,0 +1,33 @@
+// Layout
+$desktop-min-width: 1024px;
+$tablet-max-width: 1023px;
+$tablet-min-width: 700px;
+$mobile-max-width: 699px;
+
+// Spacing
+// Spacing - Header
+$header-height: 60px;
+// Spacing - Section
+$section-horizontal-padding: 20px;
+
+// Font
+$font-size: 16px;
+$logo-subtitle-size: 1rem;
+$hero-main-title-size-1: 86px;
+$hero-main-title-size-2: 64px;
+$hero-main-title-size-3: 32px;
+$hero-sub-title-size: 20px;
+
+// Colors
+$bg-color: #fff;
+$border-color: #e5e5e5;
+$light-border-color: #ebebeb;
+
+// Exports
+:export {
+  desktopMinWidth: $desktop-min-width;
+  tabletMinWidth: $tablet-min-width;
+  tabletMaxWidth: $tablet-max-width;
+  mobileMaxWidth: $mobile-max-width;
+  headerHeight: $header-height;
+}

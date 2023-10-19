@@ -1,0 +1,51 @@
+@use '@/styles/variables.module.scss' as var;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: var.$bg-color;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var.$desktop-min-width;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var.$section-horizontal-padding;
+}
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-sub {
+  font-size: var.$logo-subtitle-size;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.header-right__mobile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}

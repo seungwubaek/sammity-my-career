@@ -1,0 +1,38 @@
+@use 'variables.module.scss' as var;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var.$bg-color;
+  font-size: var.$font-size;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.responsive-ssr-desktop {
+  @media (max-width: var.$tablet-max-width) {
+    display: none !important;
+  }
+}
+
+.responsive-ssr-desktop-tablet {
+  @media (max-width: var.$mobile-max-width) {
+    display: none !important;
+  }
+}
+
+.responsive-ssr-mobile {
+  @media (min-width: var.$tablet-min-width) {
+    display: none !important;
+  }
+}

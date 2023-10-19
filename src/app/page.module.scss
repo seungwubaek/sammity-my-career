@@ -1,0 +1,34 @@
+@use '@/styles/variables.module.scss' as var;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var.$bg-color;
+}
+
+.section {
+  display: block;
+  width: var.$desktop-min-width;
+  margin: 0 auto;
+  padding: 0 var.$section-horizontal-padding;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: var.$tablet-min-width) {
+    aspect-ratio: 1920 / 648;
+  }
+
+  @media (min-width: var.$tablet-min-width) and (max-width: var.$tablet-max-width) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: var.$mobile-max-width) {
+    margin-top: var.$header-height;
+    height: 431px;
+  }
+}
