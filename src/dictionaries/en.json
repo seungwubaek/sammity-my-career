@@ -20,7 +20,7 @@
     "sexHeader": "Sex",
     "sex": "Male",
     "locationHeader": "Location",
-    "location": "Sadang-Dong, Dongjak-Gu, Seoul, South Korea",
+    "location": "Dongjak-Gu, Seoul, South Korea",
     "educationHeader": "Education",
     "education": "Bachelor of Science in Statistical Information, Yonsei University Wonju Campus",
     "subTitleContact": "Contact",
@@ -28,5 +28,9 @@
     "subTitleLinks": "Links",
     "githubHeader": "Github",
     "blogHeader": "Blog"
+  },
+  "Footer": {
+    "name": "Name: Sammy Baek",
+    "location": "Location: Dongjak-Gu, Seoul, South Korea"
   }
 }

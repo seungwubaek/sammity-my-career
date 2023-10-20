@@ -20,7 +20,7 @@
     "sexHeader": "성\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0별",
     "sex": "남",
     "locationHeader": "거 주 지",
-    "location": "대한민국 서울시 동작구 사당동",
+    "location": "대한민국 서울시 동작구",
     "educationHeader": "학\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0력",
     "education": "연세대학교 원주캠퍼스 정보통계학과 (학사 졸)",
     "subTitleContact": "연락처",
@@ -28,5 +28,9 @@
     "subTitleLinks": "링크",
     "githubHeader": "Github",
     "blogHeader": "블로그"
+  },
+  "Footer": {
+    "name": "성명: 백승우",
+    "location": "거주지: 대한민국 서울시 동작구"
   }
 }

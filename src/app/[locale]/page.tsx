@@ -4,6 +4,7 @@ import { StMain } from './page.styled';
 import SectionHeroImage from '@/components/units/sections/HeroImage';
 import SectionHeroSkillStacks from '@/components/units/sections/HeroSkillStacks';
 import SectionProfile from '@/components/units/sections/Profile';
+import SectionFooter from '@/components/units/sections/Footer';
 
 const Main = ({ params: { locale } }: { params: { locale: string } }) => {
   unstable_setRequestLocale(locale);
@@ -13,6 +14,7 @@ const Main = ({ params: { locale } }: { params: { locale: string } }) => {
       <SectionHeroImage />
       <SectionHeroSkillStacks />
       <SectionProfile />
+      <SectionFooter />
     </StMain>
   );
 };

@@ -7,10 +7,10 @@ import {
   StHeaderWrapper,
   StSectionHeader,
   StLinkHeaderLeft,
-  StSpanLogoSub,
   StDivHeaderRight,
   StDivHeaderRightMobile,
 } from './Header.styled';
+import SiteLogo from '@/components/units/Logo';
 
 import { IoMenuSharp } from 'react-icons/io5';
 import HeaderRightMenu from './HeaderRightMenu';
@@ -20,16 +20,7 @@ const Header: React.FC = () => {
     <StHeaderWrapper>
       <StSectionHeader>
         <StLinkHeaderLeft href="/">
-          <Image
-            src="/assets/images/sammity_logo.png"
-            alt="sammity logo"
-            width="236"
-            height="59"
-            style={{ width: '120px', height: 'auto' }}
-            quality={100}
-            priority
-          />
-          <StSpanLogoSub>Career</StSpanLogoSub>
+          <SiteLogo colorScheme="black" />
         </StLinkHeaderLeft>
         <StDivHeaderRight className={clsx('responsive-ssr-desktop-tablet')}>
           <Link href="#projects">Projects</Link>

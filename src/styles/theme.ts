@@ -28,12 +28,15 @@ const defaultFont = {
   mobileH1Size: '1.6rem',
   mobileH2Size: '1.4rem',
   headerLogoSubTitleSize: '1rem',
+  // Footer
+  footerFontSize: '0.8rem',
 };
 
 const defaultColors = {
   primary: '#0070C0',
   secondary: '#00B0F0',
   background: '#fff',
+  darkBackground: '#222222',
   border: '#e5e5e5',
   lightBorder: '#ebebeb',
 };

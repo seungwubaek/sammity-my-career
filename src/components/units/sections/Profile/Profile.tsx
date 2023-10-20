@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
+import { personalInfo } from '@/data/personalInfo';
 import { getAge } from '@/lib/utils/date';
 import { getAssetUrl } from '@/lib/utils/url';
 
@@ -97,8 +98,8 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <a href="mailto:whitesw01@gmail.com">
-                        whitesw01@gmail.com
+                      <a href={`mailto:${personalInfo.email}`}>
+                        {personalInfo.email}
                       </a>
                     </div>
                   </td>
@@ -121,11 +122,8 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <Link
-                        href="https://github.com/seungwubaek"
-                        target="_blank"
-                      >
-                        https://github.com/seungwubaek
+                      <Link href={`${personalInfo.github}`} target="_blank">
+                        {personalInfo.github}
                       </Link>
                     </div>
                   </td>
@@ -147,11 +145,8 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <Link
-                        href="https://seungwubaek.github.io"
-                        target="_blank"
-                      >
-                        https://seungwubaek.github.io
+                      <Link href={`${personalInfo.gitblog}`} target="_blank">
+                        {personalInfo.gitblog}
                       </Link>
                     </div>
                   </td>

@@ -33,12 +33,6 @@ export const StLinkHeaderLeft = styled(Link)`
   align-items: center;
 `;
 
-export const StSpanLogoSub = styled.span`
-  font-size: ${({ theme }) => theme.font.headerLogoSubTitleSize};
-  font-weight: bold;
-  margin-left: 10px;
-`;
-
 export const StDivHeaderRight = styled.div`
   display: flex;
   justify-content: space-between;
