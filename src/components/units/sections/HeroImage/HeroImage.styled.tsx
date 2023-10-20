@@ -10,18 +10,26 @@ export const StSectionHeroImage = styled(StSection)`
   position: relative;
   width: 100%;
 
-  ${generateCssByMedia({
-    desktop: css`
+  ${generateCssByMedia(
+    css`
       aspect-ratio: 1920 / 648;
     `,
-    tablet: css`
+    ['desktop']
+  )}
+
+  ${generateCssByMedia(
+    css`
       aspect-ratio: 850 / 287.27;
       margin-top: 30px;
     `,
+    ['tablet']
+  )}
 
-    mobile: css`
+  ${generateCssByMedia(
+    css`
       margin-top: ${({ theme }) => theme.layout.headerHeight}px;
       height: 431px;
     `,
-  })}
+    ['mobile']
+  )}
 `;

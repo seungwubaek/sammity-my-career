@@ -8,63 +8,94 @@ import { generateCssByMedia } from '@/lib/helpers/styling';
 import { StSection } from '@/components/units/sections/Section';
 
 export const StSectionProfileSubSection = styled(StSection)`
-  ${generateCssByMedia({
-    mobile: css`
+  ${generateCssByMedia(
+    css`
       margin: 0;
       padding: 0;
     `,
-  })}
+    ['tablet', 'mobile']
+  )}
 `;
 
 export const StH2ProfileSubSectionTitle = styled.h2`
   margin: 1.5rem 0 1rem;
-  ${generateCssByMedia({
-    desktop: css`
+  ${generateCssByMedia(
+    css`
       font-size: ${({ theme }) => theme.font.h2Size};
     `,
-    tablet: css`
+    ['desktop']
+  )}
+
+  ${generateCssByMedia(
+    css`
       font-size: ${({ theme }) => theme.font.tabletH2Size};
     `,
-    mobile: css`
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
       font-size: ${({ theme }) => theme.font.mobileH2Size};
     `,
-  })}
+    ['mobile']
+  )}
 `;
 
 export const StDivProfileSubSectionContent = styled.div`
   padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
+
+  ${generateCssByMedia(
+    css`
+      padding: 0;
+    `,
+    ['tablet', 'mobile']
+  )}
 `;
 
 export const StTablePersonalInfo = styled.table`
-  ${generateCssByMedia({
-    desktop: css`
+  line-height: 1;
+
+  th {
+    padding: 0.5rem 1rem;
+    // 양측정렬
+    & > div {
+      text-align: justify;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem; /* your line-height */
+      }
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+  td {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  ${generateCssByMedia(
+    css`
       width: 50%;
-      line-height: 1;
       th {
         width: 25%;
         padding: 0.5rem 1rem;
-        & > div {
-          text-align: justify;
-          &:before {
-            content: '';
-            display: block;
-            width: 100%;
-            margin-bottom: 1rem; /* your line-height */
-          }
-          &:after {
-            content: '';
-            display: inline-block;
-            width: 100%;
-          }
-        }
-      }
-      td {
-        padding: 0.5rem 1rem 0.5rem 1rem;
       }
     `,
-    tablet: css``,
-    mobile: css`
+    ['desktop']
+  )}
+
+  ${generateCssByMedia(
+    css`
       width: 100%;
+      th {
+        width: 30%;
+      }
     `,
-  })}
+    ['tablet', 'mobile']
+  )}
 `;

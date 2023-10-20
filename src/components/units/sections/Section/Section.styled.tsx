@@ -23,20 +23,30 @@ export const StSection = styled.section<{ $wide?: boolean }>`
 
 export const StH1SectionTitleWrapper = styled.h1`
   position: relative;
-  ${generateCssByMedia({
-    desktop: css`
-      font-size: ${({ theme }) => theme.font.h1Size};
-    `,
-    tablet: css`
-      font-size: ${({ theme }) => theme.font.tabletH1Size};
-    `,
-    mobile: css`
-      font-size: ${({ theme }) => theme.font.mobileH1Size};
-    `,
-  })}
   font-weight: 700;
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
   margin-bottom: 0.5rem;
+
+  ${generateCssByMedia(
+    css`
+      font-size: ${({ theme }) => theme.font.h1Size};
+    `,
+    ['desktop']
+  )}
+
+  ${generateCssByMedia(
+    css`
+      font-size: ${({ theme }) => theme.font.tabletH1Size};
+    `,
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
+      font-size: ${({ theme }) => theme.font.mobileH1Size};
+    `,
+    ['mobile']
+  )}
 `;
 
 export const StSpanSectionTitle = styled.span<{ $underlineWidth: number }>`

@@ -18,14 +18,19 @@ const globalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.color.background};
     font-size: ${({ theme }) => theme.font.fontSize}px;
 
-    ${generateCssByMedia({
-      tablet: css`
+    ${generateCssByMedia(
+      css`
         font-size: ${({ theme }) => theme.font.tabletFontSize}px;
       `,
-      mobile: css`
+      ['tablet']
+    )}
+
+    ${generateCssByMedia(
+      css`
         font-size: ${({ theme }) => theme.font.mobileFontSize}px;
       `,
-    })}
+      ['mobile']
+    )}
   };
 
   a {

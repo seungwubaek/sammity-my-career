@@ -13,12 +13,17 @@ export const StSectionHeroSkillStacks = styled(StSection)`
   // Skill Name이 두줄로 표시되는 경우의 height를 측정한 것
   height: 125px;
 
-  ${generateCssByMedia({
-    tablet: css`
+  ${generateCssByMedia(
+    css`
       height: 110px;
     `,
-    mobile: css`
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
       height: 100px;
     `,
-  })}
+    ['mobile']
+  )}
 `;

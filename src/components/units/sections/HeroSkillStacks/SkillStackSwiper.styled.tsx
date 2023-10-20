@@ -26,14 +26,19 @@ export const StDivSkillLogoWrapper = styled.div<{ $squareBorder?: boolean }>`
   overflow: hidden;
   width: 75px;
 
-  ${generateCssByMedia({
-    tablet: css`
+  ${generateCssByMedia(
+    css`
       width: 60px;
     `,
-    mobile: css`
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
       width: 55px;
     `,
-  })}
+    ['mobile']
+  )}
 `;
 
 export const StImageSkillLogo = styled(Image)`
@@ -48,12 +53,17 @@ export const StDivSkillName = styled.div`
   text-align: center;
   font-size: 14px;
 
-  ${generateCssByMedia({
-    tablet: css`
+  ${generateCssByMedia(
+    css`
       font-size: 14px;
     `,
-    mobile: css`
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
       font-size: 12px;
     `,
-  })}
+    ['mobile']
+  )}
 `;
