@@ -7,11 +7,7 @@ import styled, { css } from 'styled-components';
 
 import { generateCssByMedia } from '@/lib/helpers/styling';
 
-export const StSwiper = styled(Swiper)`
-  width: 100%;
-`;
-
-export const StSwiperSlideSkillCard = styled(SwiperSlide)`
+export const StDivSkillCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

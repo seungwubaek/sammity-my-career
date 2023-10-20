@@ -16,6 +16,7 @@ const nextConfig = {
     // - https://nextjs.org/docs/architecture/nextjs-compiler#styled-components
     styledComponents: true,
   },
+  transpilePackages: ['swiper', 'dom7', 'ssr-window'],
   images: {
     remotePatterns: [
       {
