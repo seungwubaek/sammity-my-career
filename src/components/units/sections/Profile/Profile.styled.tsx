@@ -56,22 +56,30 @@ export const StTablePersonalInfo = styled.table`
   line-height: 1;
 
   th {
-    padding: 0.5rem 1rem;
-    // 양측정렬
-    & > div {
-      text-align: justify;
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem; /* your line-height */
-      }
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-      }
+    padding: 0.5rem 0;
+    vertical-align: top;
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
+    // 양측정렬
+    // Ref: https://stackoverflow.com/questions/11589590/text-align-justify-inline-block-elements-properly
+    // & > div {
+    //   text-align: justify;
+    //   &:before {
+    //     content: '';
+    //     display: block;
+    //     width: 100%;
+    //     margin-bottom: 1rem; /* your line-height */
+    //   }
+    //   &:after {
+    //     content: '';
+    //     display: inline-block;
+    //     width: 100%;
+    //   }
+    // }
   }
 
   td {
@@ -82,8 +90,10 @@ export const StTablePersonalInfo = styled.table`
     css`
       width: 50%;
       th {
-        width: 25%;
-        padding: 0.5rem 1rem;
+        width: 23%;
+        div {
+          padding-left: 1.5rem;
+        }
       }
     `,
     ['desktop']
@@ -93,9 +103,27 @@ export const StTablePersonalInfo = styled.table`
     css`
       width: 100%;
       th {
-        width: 30%;
+        width: 140px;
+        div {
+          padding-left: 2rem;
+        }
       }
     `,
-    ['tablet', 'mobile']
+    ['tablet']
+  )}
+
+  ${generateCssByMedia(
+    css`
+      width: 100%;
+      th {
+        width: 30%;
+        div {
+          padding-left: 2rem;
+        }
+      }
+    `,
+    ['mobile']
   )}
 `;
+
+export const StTableContactInfo = styled(StTablePersonalInfo)``;

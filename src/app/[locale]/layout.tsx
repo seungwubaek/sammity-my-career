@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { createTranslator } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
@@ -43,6 +44,8 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  unstable_setRequestLocale(locale);
+
   return (
     <html lang={locale}>
       <body className={notoSansKr.className}>

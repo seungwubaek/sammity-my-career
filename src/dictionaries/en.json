@@ -8,5 +8,25 @@
   },
   "NotFound": {
     "title": "Page Not Found"
+  },
+  "Profile": {
+    "title": "Profile",
+    "subTitlePersonalInfo": "Personal Info",
+    "nameHeader": "Name",
+    "name": "Sammy Baek",
+    "birthHeader": "Birth",
+    "birth": "1990. 04. 07",
+    "ageHeader": "Age",
+    "sexHeader": "Sex",
+    "sex": "Male",
+    "locationHeader": "Location",
+    "location": "Sadang-Dong, Dongjak-Gu, Seoul, South Korea",
+    "educationHeader": "Education",
+    "education": "Bachelor of Science in Statistical Information, Yonsei University Wonju Campus",
+    "subTitleContact": "Contact",
+    "emailHeader": "Email",
+    "subTitleLinks": "Links",
+    "githubHeader": "Github",
+    "blogHeader": "Blog"
   }
 }

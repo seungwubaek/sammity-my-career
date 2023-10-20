@@ -8,5 +8,25 @@
   },
   "NotFound": {
     "title": "요청하신 페이지를 찾을 수 없습니다"
+  },
+  "Profile": {
+    "title": "프로필",
+    "subTitlePersonalInfo": "기본정보",
+    "nameHeader": "성\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0명",
+    "name": "백승우",
+    "birthHeader": "생년월일",
+    "birth": "1990. 04. 07",
+    "ageHeader": "나\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0이",
+    "sexHeader": "성\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0별",
+    "sex": "남",
+    "locationHeader": "거 주 지",
+    "location": "대한민국 서울시 동작구 사당동",
+    "educationHeader": "학\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0력",
+    "education": "연세대학교 원주캠퍼스 정보통계학과 (학사 졸)",
+    "subTitleContact": "연락처",
+    "emailHeader": "이메일",
+    "subTitleLinks": "링크",
+    "githubHeader": "Github",
+    "blogHeader": "블로그"
   }
 }
