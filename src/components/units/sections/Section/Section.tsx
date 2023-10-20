@@ -11,7 +11,7 @@ export const SectionTitle: React.FC<React.PropsWithChildren> = ({
 }) => {
   return (
     <StH1SectionTitleWrapper>
-      <StSpanSectionTitle underlineWidth={4}>{children}</StSpanSectionTitle>
+      <StSpanSectionTitle $underlineWidth={4}>{children}</StSpanSectionTitle>
     </StH1SectionTitleWrapper>
   );
 };

@@ -33,6 +33,11 @@ const globalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
   .responsive-ssr-desktop {
     @media (max-width: ${({ theme }) => theme.media.tabletMaxWidth}px) {
       display: none !important;

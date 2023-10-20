@@ -39,19 +39,20 @@ export const StH1SectionTitleWrapper = styled.h1`
   margin-bottom: 0.5rem;
 `;
 
-export const StSpanSectionTitle = styled.span<{ underlineWidth: number }>`
+export const StSpanSectionTitle = styled.span<{ $underlineWidth: number }>`
   position: relative;
   // g, j, p, q, y 와 같이 baseline 아래로 내려가는 글자 처리
   // - after의 height 만큼 보정
-  padding-bottom: ${({ underlineWidth }) => `${underlineWidth}px`};
-  bottom: ${({ underlineWidth }) => `${underlineWidth / 2}px`};
+  padding-bottom: ${({ $underlineWidth: underlineWidth }) =>
+    `${underlineWidth}px`};
+  bottom: ${({ $underlineWidth: underlineWidth }) => `${underlineWidth / 2}px`};
   &::after {
     display: block;
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: ${({ underlineWidth }) => `${underlineWidth}px`};
+    height: ${({ $underlineWidth: underlineWidth }) => `${underlineWidth}px`};
     background-color: ${({ theme }) => theme.color.secondary};
     content: '';
   }
