@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-import { personalInfo } from '@/data/personalInfo';
+import { personalInfo } from '@/data/commonInfo';
 import { getAge } from '@/lib/utils/date';
 import { getAssetUrl } from '@/lib/utils/url';
 
@@ -98,9 +99,12 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <a href={`mailto:${personalInfo.email}`}>
+                      <Link
+                        className={clsx('underline')}
+                        href={`mailto:${personalInfo.email}`}
+                      >
                         {personalInfo.email}
-                      </a>
+                      </Link>
                     </div>
                   </td>
                 </tr>
@@ -122,7 +126,11 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <Link href={`${personalInfo.github}`} target="_blank">
+                      <Link
+                        className={clsx('underline')}
+                        href={`${personalInfo.github}`}
+                        target="_blank"
+                      >
                         {personalInfo.github}
                       </Link>
                     </div>
@@ -145,7 +153,11 @@ const SectionProfile: React.FC = () => {
                   </th>
                   <td>
                     <div>
-                      <Link href={`${personalInfo.gitblog}`} target="_blank">
+                      <Link
+                        className={clsx('underline')}
+                        href={`${personalInfo.gitblog}`}
+                        target="_blank"
+                      >
                         {personalInfo.gitblog}
                       </Link>
                     </div>

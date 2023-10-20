@@ -36,6 +36,11 @@ const globalStyles = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+    word-break: break-all;
+
+    &.underline {
+      text-decoration: underline;
+    }
   }
 
   table {

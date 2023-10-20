@@ -3,3 +3,7 @@ export const personalInfo = {
   github: 'https://github.com/seungwubaek/',
   gitblog: 'https://seungwubaek.github.io/',
 };
+
+export const siteInfo = {
+  createdYear: 2023,
+};

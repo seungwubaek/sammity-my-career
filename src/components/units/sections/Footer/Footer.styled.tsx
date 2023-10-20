@@ -17,11 +17,20 @@ export const StDivFooterInner = styled.div`
 `;
 
 export const StUlPersonalInfo = styled.ul`
-  padding: 2rem 1rem;
+  padding-top: 2rem;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 
+  li {
+    margin-right: 3rem;
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const StUlLinkList = styled.ul`
+  padding-bottom: 2rem;
+  list-style: none;
   li {
     margin-right: 3rem;
     margin-bottom: 0.5rem;

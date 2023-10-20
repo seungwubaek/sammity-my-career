@@ -116,9 +116,9 @@ export const StTablePersonalInfo = styled.table`
     css`
       width: 100%;
       th {
-        width: 30%;
+        width: 100px;
         div {
-          padding-left: 2rem;
+          padding-left: 1rem;
         }
       }
     `,
