@@ -11,7 +11,7 @@ export const StHeaderWrapper = styled.header`
   display: flex;
   width: 100%;
   height: 60px;
-  background-color: ${({ theme }) => theme.colors.bgColor};
+  background-color: ${({ theme }) => theme.color.background};
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
 `;

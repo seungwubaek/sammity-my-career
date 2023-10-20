@@ -13,9 +13,9 @@ export const StUlDropdownMenu = styled.ul<{ $visible: boolean }>`
   right: 0;
   display: ${({ $visible }) => ($visible ? 'block' : 'none')};
   list-style: none;
-  border: solid 1px ${({ theme }) => theme.colors.lightBorderColor};
+  border: solid 1px ${({ theme }) => theme.color.lightBorder};
   border-radius: 20px;
-  background-color: ${({ theme }) => theme.colors.bgColor};
+  background-color: ${({ theme }) => theme.color.background};
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 `;
 

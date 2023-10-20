@@ -8,5 +8,5 @@ export const StMain = styled.main`
   gap: 30px;
   width: 100%;
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.bgColor};
+  background-color: ${({ theme }) => theme.color.background};
 `;

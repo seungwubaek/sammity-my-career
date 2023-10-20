@@ -3,6 +3,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import { generateCssByMedia } from '@/lib/helpers/styling';
+
 import { StSection } from '@/components/units/sections/Section/Section.styled';
 
 export const StSectionHeroSkillStacks = styled(StSection)`
@@ -11,15 +13,12 @@ export const StSectionHeroSkillStacks = styled(StSection)`
   // Skill Name이 두줄로 표시되는 경우의 height를 측정한 것
   height: 125px;
 
-  ${({ theme }) => css`
-    // prettier-ignore
-    @media (min-width: ${theme.media.tabletMinWidth}px) and
-            (max-width: ${theme.media.tabletMaxWidth}px) {
+  ${generateCssByMedia({
+    tablet: css`
       height: 110px;
-    }
-
-    @media (max-width: ${theme.media.mobileMaxWidth}px) {
+    `,
+    mobile: css`
       height: 100px;
-    }
-  `}
+    `,
+  })}
 `;

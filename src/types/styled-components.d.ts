@@ -6,6 +6,6 @@ declare module 'styled-components' {
     media: mediaType;
     layout: layoutType;
     font: fontType;
-    colors: colorType;
+    color: colorType;
   }
 }

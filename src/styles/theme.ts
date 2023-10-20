@@ -15,15 +15,27 @@ const defaultLayout = {
 };
 
 const defaultFont = {
+  // Desktop
   fontSize: 16,
+  h1Size: '1.8rem',
+  h2Size: '1.6rem',
+  // Tablet
+  tabletFontSize: 16,
+  tabletH1Size: '1.6rem',
+  tabletH2Size: '1.4rem',
+  // Mobile
   mobileFontSize: 16,
+  mobileH1Size: '1.6rem',
+  mobileH2Size: '1.4rem',
   headerLogoSubTitleSize: '1rem',
 };
 
 const defaultColors = {
-  bgColor: '#fff',
-  borderColor: '#e5e5e5',
-  lightBorderColor: '#ebebeb',
+  primary: '#0070C0',
+  secondary: '#00B0F0',
+  background: '#fff',
+  border: '#e5e5e5',
+  lightBorder: '#ebebeb',
 };
 
 const theme: DefaultTheme = {
@@ -31,7 +43,7 @@ const theme: DefaultTheme = {
   media: defaultMedia,
   layout: defaultLayout,
   font: defaultFont,
-  colors: defaultColors,
+  color: defaultColors,
 };
 
 export type mediaType = typeof defaultMedia;

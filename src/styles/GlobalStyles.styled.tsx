@@ -1,6 +1,8 @@
 'use client';
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+
+import { generateCssByMedia } from '@/lib/helpers/styling';
 
 const globalStyles = createGlobalStyle`
   * {
@@ -13,12 +15,17 @@ const globalStyles = createGlobalStyle`
   body {
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: ${({ theme }) => theme.colors.bgColor};
+    background-color: ${({ theme }) => theme.color.background};
     font-size: ${({ theme }) => theme.font.fontSize}px;
 
-    @media (max-width: ${({ theme }) => theme.media.mobileMaxWidth}px) {
-      font-size: ${({ theme }) => theme.font.mobileFontSize}px;
-    }
+    ${generateCssByMedia({
+      tablet: css`
+        font-size: ${({ theme }) => theme.font.tabletFontSize}px;
+      `,
+      mobile: css`
+        font-size: ${({ theme }) => theme.font.mobileFontSize}px;
+      `,
+    })}
   };
 
   a {

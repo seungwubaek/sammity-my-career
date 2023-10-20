@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import styled, { css } from 'styled-components';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import styled, { css } from 'styled-components';
+
+import { generateCssByMedia } from '@/lib/helpers/styling';
 
 export const StSwiper = styled(Swiper)`
   width: 100%;
@@ -25,15 +26,14 @@ export const StDivSkillLogoWrapper = styled.div<{ $squareBorder?: boolean }>`
   overflow: hidden;
   width: 75px;
 
-  // prettier-ignore
-  @media (min-width: ${({ theme }) => theme.media.tabletMinWidth}px) and
-          (max-width: ${({ theme }) => theme.media.tabletMaxWidth}px) {
-    width: 60px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobileMaxWidth}px) {
-    width: 55px;
-  }
+  ${generateCssByMedia({
+    tablet: css`
+      width: 60px;
+    `,
+    mobile: css`
+      width: 55px;
+    `,
+  })}
 `;
 
 export const StImageSkillLogo = styled(Image)`
@@ -48,13 +48,12 @@ export const StDivSkillName = styled.div`
   text-align: center;
   font-size: 14px;
 
-  // prettier-ignore
-  @media (min-width: ${({ theme }) => theme.media.tabletMinWidth}px) and
-        (max-width: ${({ theme }) => theme.media.tabletMaxWidth}px) {
-    font-size: 14px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.media.mobileMaxWidth}px) {
-    font-size: 12px;
-  }
+  ${generateCssByMedia({
+    tablet: css`
+      font-size: 14px;
+    `,
+    mobile: css`
+      font-size: 12px;
+    `,
+  })}
 `;
