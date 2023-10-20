@@ -1,24 +1,29 @@
 'use client';
 
-import { generateCssByMedia } from '@/lib/helpers/styling';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-export const StSection = styled.section<{ $wide?: boolean }>`
+import { generateCssByMedia } from '@/lib/helpers/styling';
+
+export const StCSSSection = css`
   position: relative;
   display: block;
   width: 100%;
+  max-width: ${({ theme }) => theme.media.desktopMinWidth}px;
+  padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
+  margin: 0 auto;
+`;
+
+export const StSection = styled.section<{ $wide?: boolean }>`
+  ${StCSSSection}
+
   ${({ $wide }) =>
-    !$wide
-      ? css`
-          max-width: ${({ theme }) => theme.media.desktopMinWidth}px;
-          margin: 0 auto;
-          padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
-        `
-      : css`
-          padding: 0;
-          margin: 0;
-        `}
+    $wide &&
+    css`
+      max-width: none;
+      padding: 0;
+      margin: 0;
+    `}
 `;
 
 export const StH1SectionTitleWrapper = styled.h1`
