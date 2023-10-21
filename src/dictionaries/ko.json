@@ -29,6 +29,38 @@
     "githubHeader": "Github",
     "blogHeader": "블로그"
   },
+  "Career": {
+    "title": "경력",
+    "periodHeader": "기간",
+    "teamHeader": "소속",
+    "positionHeader": "직책",
+    "projectHeader": "프로젝트",
+    "mobigen": {
+      "name": "(주)모비젠",
+      "team": "연구소 AI플랫폼연구팀",
+      "position": "책임",
+      "projects": {
+        "1": "사내 솔루션 Dockerization",
+        "2": "ETL 서버 구축",
+        "3": "L사 전자 냉장고 딥러닝을 이용한 사전진단 서비스",
+        "4": "S사 텔레콤 유사음원추천",
+        "5": "금융데이터 분석 선행연구",
+        "6": "데이터 품질평가 기반 데이터 고도화 및 데이터셋 보정기술"
+      }
+    },
+    "mosepeople": {
+      "name": "(주)모세피플",
+      "team": "IT부서 개발팀",
+      "position": "CTO (개발총괄)",
+      "projects": {
+        "1": "수산물 B2B E-Commerce 플랫폼 - 바닷길",
+        "2": "회사 홈페이지",
+        "3": "랜딩페이지",
+        "4": "중소형 마트 식자재 B2C 유통 플랫폼 - 도매공식",
+        "5": "우즈베키스탄 무역상품 홍보 사이트 - KOMART"
+      }
+    }
+  },
   "Footer": {
     "name": "성명: 백승우",
     "location": "거주지: 대한민국 서울시 동작구"

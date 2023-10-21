@@ -33,6 +33,10 @@ const globalStyles = createGlobalStyle`
     )}
   };
 
+  div {
+    word-break: keep-all;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

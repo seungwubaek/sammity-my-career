@@ -29,6 +29,38 @@
     "githubHeader": "Github",
     "blogHeader": "Blog"
   },
+  "Career": {
+    "title": "Career",
+    "periodHeader": "Period",
+    "teamHeader": "Team",
+    "positionHeader": "Position",
+    "projectHeader": "Projects",
+    "mobigen": {
+      "name": "Mobigen Co., Ltd.",
+      "team": "AI Platform Research Team, Lab",
+      "position": "Senior Researcher",
+      "projects": {
+        "1": "Dockerization of Internal Solutions",
+        "2": "Construction ETL Server",
+        "3": "L* Electronics - Refrigerator Pre-diagnosis Service using Deep Learning",
+        "4": "S* Telecom - Similar Sound Recommendation",
+        "5": "Pre-research on Financial Data Analysis",
+        "6": "Data Enhancement and Dataset Bias Mitigation Techniques Based on Data Quality Evaluation"
+      }
+    },
+    "mosepeople": {
+      "name": "MosePeople Co., Ltd.",
+      "team": "Development Team, IT Department.",
+      "position": "CTO (Director of Development)",
+      "projects": {
+        "1": "Marine Food B2B E-Commerce Platform - SeaRoad",
+        "2": "Company Homepage",
+        "3": "Landing Page",
+        "4": "Food Ingredients B2C Distribution Platform for Medium & Small Mart - Domego",
+        "5": "Korean Product Promotion Site for Uzbekistan - KOMART"
+      }
+    }
+  },
   "Footer": {
     "name": "Name: Sammy Baek",
     "location": "Location: Dongjak-Gu, Seoul, South Korea"
