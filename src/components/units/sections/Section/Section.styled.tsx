@@ -9,7 +9,7 @@ export const StCSSSection = css`
   position: relative;
   display: block;
   width: 100%;
-  max-width: ${({ theme }) => theme.media.desktopMinWidth}px;
+  max-width: ${({ theme }) => theme.layout.contentWidth}px;
   padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
   margin: 0 auto;
 `;

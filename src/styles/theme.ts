@@ -8,6 +8,8 @@ const defaultMedia = {
 };
 
 const defaultLayout = {
+  // Content
+  contentWidth: 1024,
   // Header
   headerHeight: 60,
   // Section

@@ -20,7 +20,7 @@ export const StSectionHeader = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: ${({ theme }) => theme.media.desktopMinWidth}px;
+  max-width: ${({ theme }) => theme.layout.contentWidth}px;
   width: 100%;
   height: 100%;
   padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
