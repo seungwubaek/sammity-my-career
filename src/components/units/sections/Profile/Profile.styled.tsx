@@ -42,6 +42,8 @@ export const StH2ProfileSubSectionTitle = styled.h2`
 `;
 
 export const StDivProfileSubSectionContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 ${({ theme }) => theme.layout.sectionHorizontalPadding}px;
 
   ${generateCssByMedia(
@@ -83,12 +85,14 @@ export const StTablePersonalInfo = styled.table`
   }
 
   td {
+    vertical-align: top;
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
 
   ${generateCssByMedia(
     css`
-      width: 50%;
+      width: 60%;
+      min-width: 550px;
       th {
         width: 23%;
         div {

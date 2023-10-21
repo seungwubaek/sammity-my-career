@@ -48,19 +48,25 @@ const globalStyles = createGlobalStyle`
     border-spacing: 0;
   }
 
-  .responsive-ssr-desktop {
+  .responsive-only-desktop {
     @media (max-width: ${({ theme }) => theme.media.tabletMaxWidth}px) {
       display: none !important;
     }
   }
 
-  .responsive-ssr-desktop-tablet {
+  .responsive-only-desktop-tablet {
     @media (max-width: ${({ theme }) => theme.media.mobileMaxWidth}px) {
       display: none !important;
     }
   }
 
-  .responsive-ssr-mobile {
+  .responsive-only-tablet-mobile {
+    @media (min-width: ${({ theme }) => theme.media.desktopMinWidth}px) {
+      display: none !important;
+    }
+  }
+
+  .responsive-only-mobile {
     @media (min-width: ${({ theme }) => theme.media.tabletMinWidth}px) {
       display: none !important;
     }

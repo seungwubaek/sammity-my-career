@@ -22,12 +22,12 @@ const Header: React.FC = () => {
         <StLinkHeaderLeft href="/">
           <SiteLogo colorScheme="black" />
         </StLinkHeaderLeft>
-        <StDivHeaderRight className={clsx('responsive-ssr-desktop-tablet')}>
+        <StDivHeaderRight className={clsx('responsive-only-desktop-tablet')}>
           <Link href="#projects">Projects</Link>
           <Link href="#contact">Contact</Link>
           <div>Lang</div>
         </StDivHeaderRight>
-        <StDivHeaderRightMobile className={clsx('responsive-ssr-mobile')}>
+        <StDivHeaderRightMobile className={clsx('responsive-only-mobile')}>
           <HeaderRightMenu>
             <IoMenuSharp size={26} />
           </HeaderRightMenu>

@@ -19,8 +19,13 @@ import { SectionContent, StSection } from '@/components/units/sections/Section';
 import { SectionTitle } from '@/components/units/sections/Section';
 import LinkSet from '@/components/units/LinkSet';
 import { IoMailOutline } from 'react-icons/io5';
+import ProfileImage from './ProfileImage';
 
-const SectionProfile: React.FC = () => {
+type PropsSectionProfile = {
+  locale: string;
+};
+
+const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
   const t = useTranslations('');
 
   return (
@@ -84,6 +89,7 @@ const SectionProfile: React.FC = () => {
                 </tr>
               </tbody>
             </StTablePersonalInfo>
+            <ProfileImage locale={locale} visibleMediaTypes={['desktop']} />
           </StDivProfileSubSectionContent>
           <StH2ProfileSubSectionTitle>
             {t('Profile.subTitleContact')}
@@ -130,6 +136,10 @@ const SectionProfile: React.FC = () => {
             </StTableLinkList>
           </StDivProfileSubSectionContent>
         </StSectionProfileSubSection>
+        <ProfileImage
+          locale={locale}
+          visibleMediaTypes={['tablet', 'mobile']}
+        />
       </SectionContent>
     </StSection>
   );

@@ -13,7 +13,7 @@ const Main = ({ params: { locale } }: { params: { locale: string } }) => {
     <StMain>
       <SectionHeroImage />
       <SectionHeroSkillStacks />
-      <SectionProfile />
+      <SectionProfile locale={locale} />
       <SectionFooter />
     </StMain>
   );
