@@ -16,21 +16,19 @@ export const StDivFooterInner = styled.div`
   color: #fff;
 `;
 
+export const StSectionFooterLogoAndLinkSet = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
 export const StUlPersonalInfo = styled.ul`
-  padding-top: 2rem;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-
-  li {
-    margin-right: 3rem;
-    margin-bottom: 0.5rem;
-  }
-`;
-
-export const StUlLinkList = styled.ul`
   padding-bottom: 2rem;
-  list-style: none;
+
   li {
     margin-right: 3rem;
     margin-bottom: 0.5rem;

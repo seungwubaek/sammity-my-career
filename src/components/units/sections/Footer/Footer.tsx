@@ -8,10 +8,11 @@ import { personalInfo, siteInfo } from '@/data/commonInfo';
 import {
   StDivFooterInner,
   StSectionFooter,
-  StUlLinkList,
+  StSectionFooterLogoAndLinkSet,
   StUlPersonalInfo,
 } from './Footer.styled';
 import SiteLogo from '@/components/units/Logo';
+import LinkSet from '@/components/units/LinkSet';
 
 const Footer: React.FC = () => {
   const t = useTranslations();
@@ -25,37 +26,23 @@ const Footer: React.FC = () => {
   return (
     <StSectionFooter $wide>
       <StDivFooterInner>
-        <SiteLogo colorScheme="white" />
-        <div>
-          <StUlPersonalInfo>
-            <li>{t('Footer.name')}</li>
-            <li>{t('Footer.location')}</li>
-          </StUlPersonalInfo>
-
-          <StUlLinkList>
-            <li>
-              E-Mail:&nbsp;
-              <Link
-                className={clsx('underline')}
-                href={`mailto: ${personalInfo.email}`}
-              >
-                {personalInfo.email}
-              </Link>
-            </li>
-            <li>
-              GitHub:&nbsp;
-              <Link className={clsx('underline')} href={personalInfo.github}>
-                {personalInfo.github}
-              </Link>
-            </li>
-            <li>
-              Blog:&nbsp;
-              <Link className={clsx('underline')} href={personalInfo.gitblog}>
-                {personalInfo.gitblog}
-              </Link>
-            </li>
-          </StUlLinkList>
-        </div>
+        <StSectionFooterLogoAndLinkSet>
+          <SiteLogo colorScheme="white" />
+          <LinkSet logoSize={16} githubColor="white" />
+        </StSectionFooterLogoAndLinkSet>
+        <StUlPersonalInfo>
+          <li>{t('Footer.name')}</li>
+          <li>{t('Footer.location')}</li>
+          <li>
+            E-Mail:&nbsp;
+            <Link
+              className={clsx('underline')}
+              href={`mailto: ${personalInfo.email}`}
+            >
+              {personalInfo.email}
+            </Link>
+          </li>
+        </StUlPersonalInfo>
         <div>
           <span>© {copyRightYear}. Sammity. All Rights Reserved.</span>
         </div>
