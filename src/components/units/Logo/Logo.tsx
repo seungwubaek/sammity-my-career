@@ -1,7 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
 
-import { StDivLogoWrapper, StSpanLogoSub } from './Logo.styled';
+import { StDivLogoWrapper, StImageLogo, StSpanLogoSub } from './Logo.styled';
 
 type PropsSiteLogo = {
   colorScheme: 'black' | 'white';
@@ -15,12 +14,11 @@ const SiteLogo: React.FC<PropsSiteLogo> = ({ colorScheme }) => {
 
   return (
     <StDivLogoWrapper>
-      <Image
+      <StImageLogo
         src={logoSrc}
         alt={`sammity logo (${colorScheme} color)`}
         width="236"
         height="59"
-        style={{ width: '120px', height: 'auto' }}
         quality={100}
         priority
       />

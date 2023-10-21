@@ -29,7 +29,9 @@ const defaultFont = {
   mobileFontSize: 16,
   mobileH1Size: '1.6rem',
   mobileH2Size: '1.4rem',
+  // Header
   headerLogoSubTitleSize: '1rem',
+  headerLogoSubTitleSizeMobile: '0.9rem',
   // Footer
   footerFontSize: '0.8rem',
 };
