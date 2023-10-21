@@ -6,7 +6,7 @@ import {
   StSection,
   SectionTitle,
   SectionContent,
-} from '@/components/units/sections/Section';
+} from '@/components/units/sections/SectionBase';
 import CareerCard from './CareerCard';
 import { getAssetUrl } from '@/lib/utils/url';
 

@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 
 import { generateCssByMedia } from '@/lib/helpers/styling';
 
-import { StSection } from '@/components/units/sections/Section';
+import { StSection } from '@/components/units/sections/SectionBase';
 
 export const StSectionProfileSubSection = styled(StSection)`
   ${generateCssByMedia(

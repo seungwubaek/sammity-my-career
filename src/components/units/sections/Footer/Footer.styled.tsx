@@ -3,7 +3,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { StCSSSection, StSection } from '@/components/units/sections/Section';
+import {
+  StCSSSection,
+  StSection,
+} from '@/components/units/sections/SectionBase';
 
 export const StSectionFooter = styled(StSection)`
   background-color: ${({ theme }) => theme.color.darkBackground};

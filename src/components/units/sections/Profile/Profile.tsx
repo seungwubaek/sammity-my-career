@@ -15,8 +15,11 @@ import {
   StTableContactInfo,
   StTableLinkList,
 } from './Profile.styled';
-import { SectionContent, StSection } from '@/components/units/sections/Section';
-import { SectionTitle } from '@/components/units/sections/Section';
+import {
+  SectionContent,
+  StSection,
+} from '@/components/units/sections/SectionBase';
+import { SectionTitle } from '@/components/units/sections/SectionBase';
 import LinkSet from '@/components/units/LinkSet';
 import { IoMailOutline } from 'react-icons/io5';
 import ProfileImage from './ProfileImage';

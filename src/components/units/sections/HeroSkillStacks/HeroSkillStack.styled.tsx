@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 
 import { generateCssByMedia } from '@/lib/helpers/styling';
 
-import { StSection } from '@/components/units/sections/Section/Section.styled';
+import { StSection } from '@/components/units/sections/SectionBase/SectionBase.styled';
 
 export const StSectionHeroSkillStacks = styled(StSection)`
   width: 100%;
