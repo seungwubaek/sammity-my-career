@@ -14,7 +14,9 @@ export const StCSSSection = css`
   margin: 0 auto;
 `;
 
-export const StSection = styled.section<{ $wide?: boolean }>`
+export const StSection = styled.section<{
+  $wide?: boolean;
+}>`
   ${StCSSSection}
 
   ${({ $wide }) =>
@@ -26,11 +28,19 @@ export const StSection = styled.section<{ $wide?: boolean }>`
     `}
 `;
 
-export const StH1SectionTitleWrapper = styled.h1`
+export const StH1SectionTitleWrapper = styled.h1<{
+  $hasMarginVertical?: boolean;
+}>`
   position: relative;
   font-weight: 700;
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
   margin-bottom: 0.5rem;
+
+  ${({ $hasMarginVertical }) =>
+    $hasMarginVertical &&
+    css`
+      margin: 1rem 0;
+    `}
 
   ${generateCssByMedia(
     css`
