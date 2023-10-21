@@ -30,10 +30,10 @@ const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
 
   return (
     <StSection>
-      <SectionTitle>{t('Profile.title')}</SectionTitle>
+      <SectionTitle id="profile">{t('Profile.title')}</SectionTitle>
       <SectionContent>
         <StSectionProfileSubSection>
-          <StH2ProfileSubSectionTitle>
+          <StH2ProfileSubSectionTitle id="personal-info">
             {t('Profile.subTitlePersonalInfo')}
           </StH2ProfileSubSectionTitle>
           <StDivProfileSubSectionContent>
@@ -91,7 +91,7 @@ const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
             </StTablePersonalInfo>
             <ProfileImage locale={locale} visibleMediaTypes={['desktop']} />
           </StDivProfileSubSectionContent>
-          <StH2ProfileSubSectionTitle>
+          <StH2ProfileSubSectionTitle id="contact">
             {t('Profile.subTitleContact')}
           </StH2ProfileSubSectionTitle>
           <StDivProfileSubSectionContent>
@@ -118,7 +118,7 @@ const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
               </tbody>
             </StTableContactInfo>
           </StDivProfileSubSectionContent>
-          <StH2ProfileSubSectionTitle>
+          <StH2ProfileSubSectionTitle id="links">
             {t('Profile.subTitleLinks')}
           </StH2ProfileSubSectionTitle>
           <StDivProfileSubSectionContent>
