@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 
 import { personalInfo } from '@/data/commonInfo';
 import { getAge } from '@/lib/utils/date';
-import { getAssetUrl } from '@/lib/utils/url';
 
 import {
   StSectionProfileSubSection,
@@ -14,10 +13,12 @@ import {
   StDivProfileSubSectionContent,
   StTablePersonalInfo,
   StTableContactInfo,
+  StTableLinkList,
 } from './Profile.styled';
 import { SectionContent, StSection } from '@/components/units/sections/Section';
 import { SectionTitle } from '@/components/units/sections/Section';
-import { IoMailOutline, IoLogoGithub } from 'react-icons/io5';
+import LinkSet from '@/components/units/LinkSet';
+import { IoMailOutline } from 'react-icons/io5';
 
 const SectionProfile: React.FC = () => {
   const t = useTranslations('');
@@ -115,56 +116,18 @@ const SectionProfile: React.FC = () => {
             {t('Profile.subTitleLinks')}
           </StH2ProfileSubSectionTitle>
           <StDivProfileSubSectionContent>
-            <StTableContactInfo>
+            <StTableLinkList>
               <tbody>
                 <tr>
                   <th>
-                    <div>
-                      <IoLogoGithub size={18} style={{ marginTop: 2 }} />
-                      &nbsp;{t('Profile.githubHeader')}
-                    </div>
+                    <div></div>
                   </th>
                   <td>
-                    <div>
-                      <Link
-                        className={clsx('underline')}
-                        href={`${personalInfo.github}`}
-                        target="_blank"
-                      >
-                        {personalInfo.github}
-                      </Link>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    <div>
-                      <Image
-                        src={getAssetUrl(
-                          'favicon_gitpage_seungwubaek.ico'
-                        ).toString()}
-                        alt="blog icon"
-                        width={18}
-                        height={18}
-                        style={{ marginTop: 2 }}
-                      />
-                      &nbsp;{t('Profile.blogHeader')}
-                    </div>
-                  </th>
-                  <td>
-                    <div>
-                      <Link
-                        className={clsx('underline')}
-                        href={`${personalInfo.gitblog}`}
-                        target="_blank"
-                      >
-                        {personalInfo.gitblog}
-                      </Link>
-                    </div>
+                    <LinkSet logoSize={18} githubColor="black" />
                   </td>
                 </tr>
               </tbody>
-            </StTableContactInfo>
+            </StTableLinkList>
           </StDivProfileSubSectionContent>
         </StSectionProfileSubSection>
       </SectionContent>

@@ -127,3 +127,13 @@ export const StTablePersonalInfo = styled.table`
 `;
 
 export const StTableContactInfo = styled(StTablePersonalInfo)``;
+
+export const StTableLinkList = styled(StTablePersonalInfo)`
+  th {
+    width: 0;
+  }
+  td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+`;
