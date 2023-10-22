@@ -29,7 +29,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
             locale={locale}
             careerCardWidth={careerCardWidth}
             representativeColor="#0084C8"
-            companyLogoSrc={getAssetUrl('logo_mobigen.svg').toString()}
+            companyLogoSrc={getAssetUrl('logo_mobigen.png').toString()}
             companyLogoWidth={257}
             companyLogoHeight={94}
             companyLogoStyle={{
