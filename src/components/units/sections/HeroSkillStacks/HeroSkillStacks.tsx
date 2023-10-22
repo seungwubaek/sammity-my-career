@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { getAssetUrl } from '@/lib/utils/url';
+import { getSkillsFromServer } from '@/lib/helpers/data';
 
 import { StSectionHeroSkillStacks } from './HeroSkillStack.styled';
 import SkillStackSwiper from '@/components/units/sections/HeroSkillStacks/SkillStackSwiper';
 
 const HeroSkillStacks: React.FC = () => {
+  const skills = getSkillsFromServer();
+
   return (
     <StSectionHeroSkillStacks $wide>
-      <SkillStackSwiper assetUrl={getAssetUrl('').toString()} />
+      <SkillStackSwiper skills={skills} />
     </StSectionHeroSkillStacks>
   );
 };

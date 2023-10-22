@@ -65,7 +65,7 @@ import 'swiper/css/autoplay';
 import { Virtual, Autoplay } from 'swiper/modules';
 import clsx from 'clsx';
 
-import skills from '@/data/skills';
+import { Skill } from '@/data/skills.d';
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
 
 import {
@@ -76,11 +76,11 @@ import {
 import ImageWithSizes from '@/components/units/ImageWithSizes/ImageWithSizes';
 
 type PropsSkillStackSwiper = {
-  assetUrl: string;
+  skills: Skill[];
 };
 
 const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
-  const { assetUrl } = props;
+  const { skills } = props;
 
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
@@ -89,7 +89,7 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
     if (!isTablet || !isMobile) {
       console.log('Num of skills: ', skills.length);
     }
-  }, [isTablet, isMobile]);
+  }, [isTablet, isMobile, skills.length]);
 
   // TODO: skills 개수가 충분치 않으면 autoplay 작동이 이상해짐
   // 필요한 개수가 어떻게 계산되는지 알 수 없음
@@ -124,7 +124,7 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
                 $squareBorder={skill.logo.borderRadius === 'square'}
               >
                 <ImageWithSizes
-                  src={path.join(assetUrl, skill.logo.url)}
+                  src={skill.logo.url}
                   alt={`skill ${skill.name}`}
                   sizes={{ desktop: 75, tablet: 60, mobile: 55 }}
                 />
