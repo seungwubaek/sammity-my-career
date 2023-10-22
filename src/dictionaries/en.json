@@ -35,11 +35,11 @@
     "teamHeader": "Team",
     "positionHeader": "Position",
     "projectHeader": "Projects",
-    "mobigen": {
+    "Mobigen": {
       "name": "Mobigen Co., Ltd.",
       "team": "AI Platform Research Team, Lab",
       "position": "Senior Researcher",
-      "projects": {
+      "Projects": {
         "1": "Dockerization of Internal Solutions",
         "2": "Construction ETL Server",
         "3": "L* Electronics - Refrigerator Pre-diagnosis Service using Deep Learning",
@@ -48,11 +48,11 @@
         "6": "Data Enhancement and Dataset Bias Mitigation Techniques Based on Data Quality Evaluation"
       }
     },
-    "mosepeople": {
+    "Mosepeople": {
       "name": "MosePeople Co., Ltd.",
       "team": "Development Team, IT Department.",
       "position": "CTO (Director of Development)",
-      "projects": {
+      "Projects": {
         "1": "Marine Food B2B E-Commerce Platform - SeaRoad",
         "2": "Company Homepage",
         "3": "Landing Page",

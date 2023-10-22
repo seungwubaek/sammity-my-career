@@ -37,18 +37,18 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
               maxWidth: '240px',
               height: 'auto',
             }}
-            companyName={t('Career.mobigen.name')}
+            companyName={t('Career.Mobigen.name')}
             periodFrom={new Date('2016-10')}
             periodTo={new Date('2021-09')}
-            team={t('Career.mobigen.team')}
-            position={t('Career.mobigen.position')}
+            team={t('Career.Mobigen.team')}
+            position={t('Career.Mobigen.position')}
             projectArray={[
-              t('Career.mobigen.projects.1'),
-              t('Career.mobigen.projects.2'),
-              t('Career.mobigen.projects.3'),
-              t('Career.mobigen.projects.4'),
-              t('Career.mobigen.projects.5'),
-              t('Career.mobigen.projects.6'),
+              t('Career.Mobigen.Projects.1'),
+              t('Career.Mobigen.Projects.2'),
+              t('Career.Mobigen.Projects.3'),
+              t('Career.Mobigen.Projects.4'),
+              t('Career.Mobigen.Projects.5'),
+              t('Career.Mobigen.Projects.6'),
             ]}
           />
           <CareerCard
@@ -63,17 +63,17 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
               maxWidth: '300px',
               height: 'auto',
             }}
-            companyName={t('Career.mosepeople.name')}
+            companyName={t('Career.Mosepeople.name')}
             periodFrom={new Date('2021-09')}
             periodTo={new Date('2023-08')}
-            team={t('Career.mosepeople.team')}
-            position={t('Career.mosepeople.position')}
+            team={t('Career.Mosepeople.team')}
+            position={t('Career.Mosepeople.position')}
             projectArray={[
-              t('Career.mosepeople.projects.1'),
-              t('Career.mosepeople.projects.2'),
-              t('Career.mosepeople.projects.3'),
-              t('Career.mosepeople.projects.4'),
-              t('Career.mosepeople.projects.5'),
+              t('Career.Mosepeople.Projects.1'),
+              t('Career.Mosepeople.Projects.2'),
+              t('Career.Mosepeople.Projects.3'),
+              t('Career.Mosepeople.Projects.4'),
+              t('Career.Mosepeople.Projects.5'),
             ]}
           />
         </StDivCareerCardWrapper>
