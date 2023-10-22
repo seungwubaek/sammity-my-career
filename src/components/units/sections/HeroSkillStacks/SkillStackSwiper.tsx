@@ -64,11 +64,9 @@ import 'swiper/css/autoplay';
 // Issue 2 해결 1의 방법에서 swiper module은 require를 써지 않아도 되는지 확인 필요
 import { Virtual, Autoplay } from 'swiper/modules';
 import clsx from 'clsx';
-import { useTheme } from 'styled-components';
 
 import skills from '@/data/skills';
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
-import { getImageSizes } from '@/lib/helpers/styling';
 
 import {
   StDivSkillLogoWrapper,
@@ -84,7 +82,6 @@ type PropsSkillStackSwiper = {
 const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
   const { assetUrl } = props;
 
-  const theme = useTheme();
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
 
@@ -105,10 +102,10 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
       virtual={true}
       slidesPerView={isMobile ? 4 : isTablet ? 6 : 10}
       loop={true}
-      // autoplay={{
-      //   delay: 0,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 500,
+        disableOnInteraction: false,
+      }}
       speed={1000}
     >
       {skills.map((skill, idx) => {
