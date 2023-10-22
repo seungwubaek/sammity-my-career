@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { getAssetUrl } from '@/lib/utils/url';
 
 import { StDivImageWrapper, StDivProfileImage } from './ProfileImage.style';
+import ImageWithSizes from '@/components/units/ImageWithSizes';
 
 type PropsProfileImage = {
   visibleMediaTypes: ('desktop' | 'tablet' | 'mobile')[];
@@ -30,13 +31,11 @@ const ProfileImage: React.FC<PropsProfileImage> = (props) => {
   return (
     <StDivProfileImage className={clsx(`responsive-only-${classNamePostfix}`)}>
       <StDivImageWrapper>
-        <Image
+        <ImageWithSizes
           src={getAssetUrl(`post_pain_${locale}.jpg`).toString()}
           alt="post for pain relief"
-          width={400}
-          height={400}
           quality={100}
-          style={{ width: '140%', height: '140%' }}
+          sizes={{ desktop: 400 }}
         />
       </StDivImageWrapper>
     </StDivProfileImage>

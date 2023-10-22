@@ -32,12 +32,34 @@ export const StDivCareerCard = styled.div<{
   )}
 `;
 
-export const StDivCompanyLogoWrapper = styled.div`
+export const StDivCompanyLogoLocator = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 120px;
   margin-bottom: 2rem;
+`;
+
+export const StDivCompanyLogoWrapper = styled.div<{
+  $companyLogoMaxWidth: number;
+}>`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  max-width: ${({ $companyLogoMaxWidth }) => $companyLogoMaxWidth}px;
+  width: 100%;
+  height: 100%;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const StDivCompanyName = styled.div`

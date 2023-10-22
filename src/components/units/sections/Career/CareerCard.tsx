@@ -1,23 +1,24 @@
 import React from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
 import {
   StDivCareerCard,
+  StDivCompanyLogoLocator,
   StDivCompanyLogoWrapper,
   StDivCompanyName,
   StTableCareerInfo,
   StUlProjectList,
 } from './CareerCard.styled';
 
+import ImageWithSizes from '@/components/units/ImageWithSizes';
+
 type PropsCareerCard = {
   locale: string;
   careerCardWidth?: number;
   representativeColor?: string;
   companyLogoSrc?: string;
-  companyLogoWidth?: number;
-  companyLogoHeight?: number;
+  companyLogoMaxWidth?: number;
   companyLogoStyle?: React.CSSProperties;
   companyName: string;
   periodFrom: Date;
@@ -33,9 +34,7 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
     careerCardWidth = 420,
     representativeColor = 'black',
     companyLogoSrc,
-    companyLogoWidth = 150,
-    companyLogoHeight = 40,
-    companyLogoStyle,
+    companyLogoMaxWidth = 240,
     companyName,
     periodFrom,
     periodTo,
@@ -85,21 +84,19 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
       $representativeColor={representativeColor}
       $careerCardWidth={careerCardWidth}
     >
-      <StDivCompanyLogoWrapper>
-        {companyLogoSrc ? (
-          <Image
-            src={companyLogoSrc}
-            alt={companyName}
-            width={companyLogoWidth}
-            height={companyLogoHeight}
-            style={companyLogoStyle}
-          />
-        ) : (
-          <div
-            style={{ width: companyLogoWidth, height: companyLogoHeight }}
-          ></div>
-        )}
-      </StDivCompanyLogoWrapper>
+      <StDivCompanyLogoLocator>
+        <StDivCompanyLogoWrapper $companyLogoMaxWidth={companyLogoMaxWidth}>
+          {companyLogoSrc ? (
+            <ImageWithSizes
+              src={companyLogoSrc}
+              alt={companyName}
+              sizes={{ desktop: companyLogoMaxWidth }}
+            />
+          ) : (
+            <div style={{ width: companyLogoMaxWidth, height: 120 }}></div>
+          )}
+        </StDivCompanyLogoWrapper>
+      </StDivCompanyLogoLocator>
       <StDivCompanyName>{companyName}</StDivCompanyName>
       <StTableCareerInfo>
         <tbody>

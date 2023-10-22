@@ -38,6 +38,7 @@ Swiper의 ESM 코드를 CJS로 Transpiling 한다. `next.config.js`에 간단히
 */
 
 import React from 'react';
+import Image from 'next/image';
 
 /*
 // Issue 2 해결 1의 방법을 적용하려면 아래 코드를 주석 해제
@@ -63,18 +64,21 @@ import 'swiper/css/autoplay';
 // Issue 2 해결 1의 방법에서 swiper module은 require를 써지 않아도 되는지 확인 필요
 import { Virtual, Autoplay } from 'swiper/modules';
 import clsx from 'clsx';
+import { useTheme } from 'styled-components';
 
 import skills from '@/data/skills';
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
+import { getImageSizes } from '@/lib/helpers/styling';
 
 import {
   StDivSkillLogoWrapper,
   StDivSkillName,
-  StImageSkillLogo,
   StDivSkillCard,
 } from './SkillStackSwiper.styled';
+import ImageWithSizes from '@/components/units/ImageWithSizes/ImageWithSizes';
 
 const SkillStackSwiper: React.FC = () => {
+  const theme = useTheme();
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
 
@@ -95,10 +99,10 @@ const SkillStackSwiper: React.FC = () => {
       virtual={true}
       slidesPerView={isMobile ? 4 : isTablet ? 6 : 10}
       loop={true}
-      autoplay={{
-        delay: 0,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 0,
+      //   disableOnInteraction: false,
+      // }}
       speed={1000}
     >
       {skills.map((skill, idx) => {
@@ -116,11 +120,10 @@ const SkillStackSwiper: React.FC = () => {
               <StDivSkillLogoWrapper
                 $squareBorder={skill.logo.borderRadius === 'square'}
               >
-                <StImageSkillLogo
+                <ImageWithSizes
                   src={skill.logo.url}
                   alt={`skill ${skill.name}`}
-                  width={skill.logo.width}
-                  height={skill.logo.height}
+                  sizes={{ desktop: 75, tablet: 60, mobile: 55 }}
                 />
               </StDivSkillLogoWrapper>
               <StDivSkillName>{skill.name}</StDivSkillName>

@@ -30,6 +30,7 @@ export const StDivProfileImage = styled.div`
 `;
 
 export const StDivImageWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,5 +38,12 @@ export const StDivImageWrapper = styled.div`
   border-radius: 15px;
   overflow: hidden;
   max-width: 450px;
+  width: 100%;
   height: auto;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 `;

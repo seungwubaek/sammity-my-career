@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
+import { getAssetUrl } from '@/lib/utils/url';
+
 import { StDivCareerCardWrapper } from './Career.styled';
 import {
   StSection,
@@ -8,7 +10,6 @@ import {
   SectionContent,
 } from '@/components/units/sections/SectionBase';
 import CareerCard from './CareerCard';
-import { getAssetUrl } from '@/lib/utils/url';
 
 type PropsSectionCareer = {
   locale?: string;
@@ -30,13 +31,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
             careerCardWidth={careerCardWidth}
             representativeColor="#0084C8"
             companyLogoSrc={getAssetUrl('logo_mobigen.png').toString()}
-            companyLogoWidth={257}
-            companyLogoHeight={94}
-            companyLogoStyle={{
-              width: '100%',
-              maxWidth: '240px',
-              height: 'auto',
-            }}
+            companyLogoMaxWidth={240}
             companyName={t('Career.Mobigen.name')}
             periodFrom={new Date('2016-10')}
             periodTo={new Date('2021-09')}
@@ -56,13 +51,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
             careerCardWidth={careerCardWidth}
             representativeColor="#2B5DA5"
             companyLogoSrc={getAssetUrl('logo_mosepeople.png').toString()}
-            companyLogoWidth={224}
-            companyLogoHeight={31}
-            companyLogoStyle={{
-              width: '100%',
-              maxWidth: '300px',
-              height: 'auto',
-            }}
+            companyLogoMaxWidth={300}
             companyName={t('Career.Mosepeople.name')}
             periodFrom={new Date('2021-09')}
             periodTo={new Date('2023-08')}

@@ -14,6 +14,7 @@ export const StDivSkillCard = styled.div`
 `;
 
 export const StDivSkillLogoWrapper = styled.div<{ $squareBorder?: boolean }>`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,13 +36,12 @@ export const StDivSkillLogoWrapper = styled.div<{ $squareBorder?: boolean }>`
     `,
     ['mobile']
   )}
-`;
 
-export const StImageSkillLogo = styled(Image)`
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const StDivSkillName = styled.div`
