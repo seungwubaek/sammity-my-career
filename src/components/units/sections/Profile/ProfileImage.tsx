@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import { getAssetUrl } from '@/lib/utils/url';
 
-import { StDivImageWrapper, StDivProfileImage } from './ProfileImage.style';
+import { StDivImageWrapper, StDivProfileImage } from './ProfileImage.styled';
 import ImageWithSizes from '@/components/units/ImageWithSizes';
 
 type PropsProfileImage = {
