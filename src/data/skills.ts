@@ -1,5 +1,7 @@
 import path from 'path';
 
+import { type Skill } from './skills.d';
+
 let baseUrlPathname: string;
 if (process.env.NODE_ENV === 'development') {
   baseUrlPathname = '/assets/images';
@@ -8,42 +10,13 @@ if (process.env.NODE_ENV === 'development') {
     'https://cdn-sammity-career.s3.ap-northeast-2.amazonaws.com/assets/images';
 }
 
-type SkillCategory =
-  | 'Language'
-  | 'FrontEnd'
-  | 'BackEnd'
-  | 'FullStack'
-  | 'GUI'
-  | 'DBMS'
-  | 'DataEngineering'
-  | 'Infrastructure'
-  | 'DataScience'
-  | 'Linux'
-  | 'CodeManagement'
-  | 'SEO'
-  | 'Documentation';
-
-type Skill = {
-  name: string;
-  level: number;
-  category: SkillCategory[];
-  logo: {
-    url: string;
-    width: number;
-    height: number;
-    borderRadius?: LogoBorderRadius;
-  };
-};
-
-type LogoBorderRadius = 'round' | 'square';
-
 const skills: Skill[] = [
   {
     name: 'HTML',
     level: 8,
     category: ['FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_html.svg'),
+      url: path.join(baseUrlPathname, 'logo_html.png'),
       width: 256,
       height: 361,
       borderRadius: 'square',
@@ -54,7 +27,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_css.svg'),
+      url: path.join(baseUrlPathname, 'logo_css.png'),
       width: 256,
       height: 361,
       borderRadius: 'square',
@@ -65,7 +38,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_sass.svg'),
+      url: path.join(baseUrlPathname, 'logo_sass.png'),
       width: 256,
       height: 192,
     },
@@ -75,7 +48,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_jekyll.svg'),
+      url: path.join(baseUrlPathname, 'logo_jekyll.png'),
       width: 512,
       height: 209,
     },
@@ -95,7 +68,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['Language', 'FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_javascript.svg'),
+      url: path.join(baseUrlPathname, 'logo_javascript.png'),
       width: 256,
       height: 256,
     },
@@ -105,7 +78,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['Language', 'FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_typescript.svg'),
+      url: path.join(baseUrlPathname, 'logo_typescript.png'),
       width: 256,
       height: 256,
     },
@@ -115,7 +88,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['FrontEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_react.svg'),
+      url: path.join(baseUrlPathname, 'logo_react.png'),
       width: 256,
       height: 228,
     },
@@ -135,7 +108,7 @@ const skills: Skill[] = [
     level: 4,
     category: ['FrontEnd', 'FullStack'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_nextjs.svg'),
+      url: path.join(baseUrlPathname, 'logo_nextjs.png'),
       width: 256,
       height: 256,
     },
@@ -145,7 +118,7 @@ const skills: Skill[] = [
     level: 7,
     category: ['Language', 'FullStack', 'DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_python.svg'),
+      url: path.join(baseUrlPathname, 'logo_python.png'),
       width: 256,
       height: 256,
     },
@@ -155,7 +128,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_tensorflow.svg'),
+      url: path.join(baseUrlPathname, 'logo_tensorflow.png'),
       width: 256,
       height: 287,
     },
@@ -165,7 +138,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['BackEnd', 'FullStack'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_django.svg'),
+      url: path.join(baseUrlPathname, 'logo_django.png'),
       width: 256,
       height: 256,
       borderRadius: 'square',
@@ -176,7 +149,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['BackEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_fastapi.svg'),
+      url: path.join(baseUrlPathname, 'logo_fastapi.png'),
       width: 256,
       height: 256,
     },
@@ -197,7 +170,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['FrontEnd', 'BackEnd'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_gunicorn.svg'),
+      url: path.join(baseUrlPathname, 'logo_gunicorn.png'),
       width: 256,
       height: 156,
     },
@@ -207,7 +180,7 @@ const skills: Skill[] = [
     level: 4,
     category: ['GUI'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_pyqt.svg'),
+      url: path.join(baseUrlPathname, 'logo_pyqt.png'),
       width: 224,
       height: 160,
     },
@@ -217,7 +190,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['Linux'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_linux.svg'),
+      url: path.join(baseUrlPathname, 'logo_linux.png'),
       width: 256,
       height: 295,
     },
@@ -227,7 +200,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['Language', 'Linux'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_bash.svg'),
+      url: path.join(baseUrlPathname, 'logo_bash.png'),
       width: 224,
       height: 256,
     },
@@ -247,7 +220,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['Infrastructure'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_docker.svg'),
+      url: path.join(baseUrlPathname, 'logo_docker.png'),
       width: 256,
       height: 185,
     },
@@ -257,7 +230,7 @@ const skills: Skill[] = [
     level: 4.5,
     category: ['Infrastructure'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_aws.svg'),
+      url: path.join(baseUrlPathname, 'logo_aws.png'),
       width: 256,
       height: 153,
       borderRadius: 'square',
@@ -268,7 +241,7 @@ const skills: Skill[] = [
     level: 8,
     category: ['DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_jupyter.svg'),
+      url: path.join(baseUrlPathname, 'logo_jupyter.png'),
       width: 256,
       height: 300,
     },
@@ -278,7 +251,7 @@ const skills: Skill[] = [
     level: 4,
     category: ['DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_zeppelin.svg'),
+      url: path.join(baseUrlPathname, 'logo_zeppelin.png'),
       width: 500,
       height: 310,
     },
@@ -288,7 +261,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['Language', 'DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_r_lang.svg'),
+      url: path.join(baseUrlPathname, 'logo_r_lang.png'),
       width: 256,
       height: 193,
       borderRadius: 'square',
@@ -299,7 +272,7 @@ const skills: Skill[] = [
     level: 6,
     category: ['DataScience'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_r_studio.svg'),
+      url: path.join(baseUrlPathname, 'logo_r_studio.png'),
       width: 1784,
       height: 626,
     },
@@ -319,7 +292,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['DBMS'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_mysql.svg'),
+      url: path.join(baseUrlPathname, 'logo_mysql.png'),
       width: 256,
       height: 252,
     },
@@ -329,7 +302,7 @@ const skills: Skill[] = [
     level: 5,
     category: ['DBMS'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_sqlite.svg'),
+      url: path.join(baseUrlPathname, 'logo_sqlite.png'),
       width: 512,
       height: 228,
     },
@@ -349,7 +322,7 @@ const skills: Skill[] = [
     level: 4,
     category: ['DataEngineering'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_hadoop.svg'),
+      url: path.join(baseUrlPathname, 'logo_hadoop.png'),
       width: 256,
       height: 192,
     },
@@ -359,7 +332,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['DataEngineering'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_spark.svg'),
+      url: path.join(baseUrlPathname, 'logo_spark.png'),
       width: 512,
       height: 256,
     },
@@ -369,7 +342,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['DataEngineering'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_kafka.svg'),
+      url: path.join(baseUrlPathname, 'logo_kafka.png'),
       width: 256,
       height: 413,
     },
@@ -379,7 +352,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['DataEngineering'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_logstash.svg'),
+      url: path.join(baseUrlPathname, 'logo_logstash.png'),
       width: 256,
       height: 307,
       borderRadius: 'square',
@@ -390,7 +363,7 @@ const skills: Skill[] = [
     level: 3,
     category: ['DataEngineering'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_telegraf.svg'),
+      url: path.join(baseUrlPathname, 'logo_telegraf.png'),
       width: 230,
       height: 54,
     },
@@ -410,17 +383,17 @@ const skills: Skill[] = [
     level: 7,
     category: ['CodeManagement'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_github.svg'),
+      url: path.join(baseUrlPathname, 'logo_github.png'),
       width: 256,
       height: 250,
     },
   },
   {
-    name: 'Google Analytics',
+    name: 'Analytics',
     level: 3,
     category: ['SEO'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_google_analytics.svg'),
+      url: path.join(baseUrlPathname, 'logo_google_analytics.png'),
       width: 256,
       height: 284,
       borderRadius: 'square',
@@ -431,7 +404,7 @@ const skills: Skill[] = [
     level: 9,
     category: ['Documentation'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_markdown.svg'),
+      url: path.join(baseUrlPathname, 'logo_markdown.png'),
       width: 256,
       height: 158,
       borderRadius: 'square',
@@ -442,7 +415,7 @@ const skills: Skill[] = [
     level: 1,
     category: ['Language', 'FullStack'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_c.svg'),
+      url: path.join(baseUrlPathname, 'logo_c.png'),
       width: 256,
       height: 288,
     },
@@ -452,7 +425,7 @@ const skills: Skill[] = [
     level: 1,
     category: ['Language', 'FullStack'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_c_plusplus.svg'),
+      url: path.join(baseUrlPathname, 'logo_c_plusplus.png'),
       width: 256,
       height: 288,
     },
@@ -462,7 +435,7 @@ const skills: Skill[] = [
     level: 1,
     category: ['Language', 'FullStack'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_java.svg'),
+      url: path.join(baseUrlPathname, 'logo_java.png'),
       width: 256,
       height: 346,
     },
@@ -472,7 +445,7 @@ const skills: Skill[] = [
     level: 1,
     category: ['Language'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_kotlin.svg'),
+      url: path.join(baseUrlPathname, 'logo_kotlin.png'),
       width: 256,
       height: 256,
       borderRadius: 'square',
@@ -483,7 +456,7 @@ const skills: Skill[] = [
     level: 1,
     category: ['Language'],
     logo: {
-      url: path.join(baseUrlPathname, 'logo_scala.svg'),
+      url: path.join(baseUrlPathname, 'logo_scala.png'),
       width: 256,
       height: 416,
       borderRadius: 'square',
