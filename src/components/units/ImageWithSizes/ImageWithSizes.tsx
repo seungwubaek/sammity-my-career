@@ -14,10 +14,11 @@ type PropsImage = {
     tablet?: number;
     mobile?: number;
   };
+  priority?: boolean;
 };
 
 const ImageWithSizes: React.FC<PropsImage> = (props) => {
-  const { src, alt, quality, sizes } = props;
+  const { src, alt, quality, sizes, priority = false } = props;
   const theme = useTheme();
 
   return (
@@ -30,6 +31,7 @@ const ImageWithSizes: React.FC<PropsImage> = (props) => {
         { desktop: sizes.desktop, tablet: sizes.tablet, mobile: sizes.mobile },
         theme.media
       )}
+      priority={priority}
     />
   );
 };

@@ -2,13 +2,13 @@ import path from 'path';
 
 import { type Skill } from './skills.d';
 
-let baseUrlPathname: string;
-if (process.env.NODE_ENV === 'development') {
-  baseUrlPathname = '/assets/images';
-} else {
-  baseUrlPathname =
-    'https://cdn-sammity-career.s3.ap-northeast-2.amazonaws.com/assets/images';
-}
+let baseUrlPathname = '';
+// if (process.env.NODE_ENV === 'development') {
+//   baseUrlPathname = '/assets/images';
+// } else {
+//   baseUrlPathname =
+//     'https://cdn-sammity-career.s3.ap-northeast-2.amazonaws.com/assets/images';
+// }
 
 const skills: Skill[] = [
   {

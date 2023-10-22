@@ -28,6 +28,8 @@ const ProfileImage: React.FC<PropsProfileImage> = (props) => {
 
   const classNamePostfix = classNamePostfixArr.join('-');
 
+  console.log(getAssetUrl(`post_pain_${locale}.jpg`).toString());
+
   return (
     <StDivProfileImage className={clsx(`responsive-only-${classNamePostfix}`)}>
       <StDivImageWrapper>

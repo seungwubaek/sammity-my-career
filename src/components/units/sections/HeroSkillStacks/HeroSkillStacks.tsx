@@ -1,17 +1,14 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+
+import { getAssetUrl } from '@/lib/utils/url';
 
 import { StSectionHeroSkillStacks } from './HeroSkillStack.styled';
-
-const DynamicSkillStackSwiper = dynamic(
-  () => import('@/components/units/sections/HeroSkillStacks/SkillStackSwiper'),
-  { ssr: false }
-);
+import SkillStackSwiper from '@/components/units/sections/HeroSkillStacks/SkillStackSwiper';
 
 const HeroSkillStacks: React.FC = () => {
   return (
     <StSectionHeroSkillStacks $wide>
-      <DynamicSkillStackSwiper />
+      <SkillStackSwiper assetUrl={getAssetUrl('').toString()} />
     </StSectionHeroSkillStacks>
   );
 };

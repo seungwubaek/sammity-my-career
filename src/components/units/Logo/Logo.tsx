@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { getAssetUrl } from '@/lib/utils/url';
+
 import { StDivLogoWrapper, StImageLogo, StSpanLogoSub } from './Logo.styled';
 
 type PropsSiteLogo = {
@@ -15,7 +17,7 @@ const SiteLogo: React.FC<PropsSiteLogo> = ({ colorScheme }) => {
   return (
     <StDivLogoWrapper>
       <StImageLogo
-        src={logoSrc}
+        src={getAssetUrl(logoSrc).toString()}
         alt={`sammity logo (${colorScheme} color)`}
         width="236"
         height="59"

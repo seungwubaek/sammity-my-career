@@ -38,7 +38,7 @@ Swiper의 ESM 코드를 CJS로 Transpiling 한다. `next.config.js`에 간단히
 */
 
 import React from 'react';
-import Image from 'next/image';
+import path from 'path';
 
 /*
 // Issue 2 해결 1의 방법을 적용하려면 아래 코드를 주석 해제
@@ -77,7 +77,13 @@ import {
 } from './SkillStackSwiper.styled';
 import ImageWithSizes from '@/components/units/ImageWithSizes/ImageWithSizes';
 
-const SkillStackSwiper: React.FC = () => {
+type PropsSkillStackSwiper = {
+  assetUrl: string;
+};
+
+const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
+  const { assetUrl } = props;
+
   const theme = useTheme();
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
@@ -121,7 +127,7 @@ const SkillStackSwiper: React.FC = () => {
                 $squareBorder={skill.logo.borderRadius === 'square'}
               >
                 <ImageWithSizes
-                  src={skill.logo.url}
+                  src={path.join(assetUrl, skill.logo.url)}
                   alt={`skill ${skill.name}`}
                   sizes={{ desktop: 75, tablet: 60, mobile: 55 }}
                 />

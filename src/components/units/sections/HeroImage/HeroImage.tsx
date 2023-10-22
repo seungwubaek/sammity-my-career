@@ -1,16 +1,54 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import clsx from 'clsx';
 
-import { StSectionHeroImage } from './HeroImage.styled';
+import { getAssetUrl } from '@/lib/utils/url';
 
-const DynamicHeroImageByMedia = dynamic(() => import('./HeroImageByMedia'), {
-  ssr: false,
-});
+import {
+  StDivHeroImageWrapper,
+  StDivMobileHero,
+  StDivMobileImageWrapper,
+  StDivMobileName,
+  StDivMobileTitle,
+  StDivMobileTitleMain,
+  StSectionHeroImage,
+} from './HeroImage.styled';
+import ImageWithSizes from '../../ImageWithSizes';
 
 const HeroImage: React.FC = () => {
+  const srcHero = getAssetUrl('main_hero.png').toString();
+  const srcMobile = getAssetUrl('profile_sammy_baek.png').toString();
+
   return (
     <StSectionHeroImage $wide>
-      <DynamicHeroImageByMedia />
+      <StDivHeroImageWrapper className={clsx('responsive-only-desktop-tablet')}>
+        <ImageWithSizes
+          src={srcHero}
+          alt="main hero"
+          sizes={{ desktop: 1920, tablet: 1024, mobile: 700 }}
+          quality={100}
+          priority
+        />
+      </StDivHeroImageWrapper>
+      <div className={clsx('responsive-only-mobile')}>
+        <StDivMobileHero>
+          <StDivMobileImageWrapper>
+            <Image
+              src={srcMobile}
+              alt="profile sammy baek"
+              width={240}
+              height={240}
+              priority
+              style={{ width: '120%', height: '120%' }}
+            />
+          </StDivMobileImageWrapper>
+          <StDivMobileTitle>
+            <StDivMobileTitleMain>7년차 FullStack</StDivMobileTitleMain>
+            <StDivMobileTitleMain>Computer Engineer</StDivMobileTitleMain>
+          </StDivMobileTitle>
+          <StDivMobileName>백 승 우</StDivMobileName>
+        </StDivMobileHero>
+      </div>
     </StSectionHeroImage>
   );
 };
