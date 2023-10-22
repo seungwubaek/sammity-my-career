@@ -18,8 +18,9 @@ export const generateCssByMedia = <cssProps extends object>(
     (mediaType) => {
       switch (mediaType) {
         case 'desktop':
+          // prettier-ignore
           return css<cssProps>`
-            @media (min-width: ${({ theme }) => theme.media.tabletMinWidth}px) {
+            @media (min-width: ${({ theme }) => theme.media.desktopMinWidth}px) {
               ${cssByMedia}
             }
           `;
