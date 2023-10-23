@@ -15,8 +15,14 @@ import {
 } from './HeroImage.styled';
 import ImageWithSizes from '../../ImageWithSizes';
 
-const HeroImage: React.FC = () => {
-  const srcHero = getAssetUrl('main_hero.png').toString();
+type PropsHeroImage = {
+  locale: string;
+};
+
+const HeroImage: React.FC<PropsHeroImage> = (props) => {
+  const { locale } = props;
+
+  const srcHero = getAssetUrl(`main_hero_${locale}.png`).toString();
   const srcMobile = getAssetUrl('profile_sammy_baek.png').toString();
 
   return (
@@ -43,7 +49,7 @@ const HeroImage: React.FC = () => {
             />
           </StDivMobileImageWrapper>
           <StDivMobileTitle>
-            <StDivMobileTitleMain>7년차 FullStack</StDivMobileTitleMain>
+            <StDivMobileTitleMain>FullStack</StDivMobileTitleMain>
             <StDivMobileTitleMain>Computer Engineer</StDivMobileTitleMain>
           </StDivMobileTitle>
           <StDivMobileName>백 승 우</StDivMobileName>
