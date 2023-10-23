@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { useTheme } from 'styled-components';
 
 import type { Skill, ClientSkill } from '@/types/skills';
@@ -31,23 +32,53 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
   const [skillAlignType, setSkillAlignType] = React.useState<
     'default' | 'name' | 'level'
   >('default');
-  const [skills, setSkills] = React.useState<ClientSkill[]>(
-    skillsFromServer.map((skill) => ({ ...skill, isActive: false }))
+  const [skillsFromClient, setSkillsFromClient] = React.useState<ClientSkill[]>(
+    skillsFromServer.map((skill, index) => ({
+      ...skill,
+      defaultNo: index,
+      isVisible: true,
+      isActive: false,
+    }))
   );
 
+  const t = useTranslations('');
   const theme = useTheme();
 
+  const searchSkills = React.useCallback(
+    (keyword: string) => {
+      return skillsFromClient.map((skill) => {
+        if (skill.name.toLowerCase().includes(keyword.toLowerCase())) {
+          return { ...skill, isVisible: true };
+        } else {
+          return { ...skill, isVisible: false };
+        }
+      });
+    },
+    [skillsFromClient]
+  );
+
+  const sortSkills = React.useCallback(
+    (alignType: string) => {
+      if (alignType === 'default') {
+        return skillsFromClient.sort((a, b) => a.defaultNo - b.defaultNo);
+      } else if (alignType === 'name') {
+        return skillsFromClient.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (alignType === 'level') {
+        return skillsFromClient.sort((a, b) => b.level - a.level);
+      } else {
+        throw new Error('Invalid skillAlignType');
+      }
+    },
+    [skillsFromClient]
+  );
+
   React.useEffect(() => {
-    if (skillAlignType === 'default') {
-      setSkills(
-        skillsFromServer.map((skill) => ({ ...skill, isActive: false }))
-      );
-    } else if (skillAlignType === 'name') {
-    } else if (skillAlignType === 'level') {
-    } else {
-      throw new Error('Invalid skillAlignType');
-    }
-  }, [skillsFromServer, skillAlignType]);
+    setSkillsFromClient([...searchSkills(searchKeyword)]);
+  }, [searchSkills, searchKeyword]);
+
+  React.useEffect(() => {
+    setSkillsFromClient([...sortSkills(skillAlignType)]);
+  }, [sortSkills, skillAlignType]);
 
   return (
     <>
@@ -67,7 +98,9 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
           </StDivInvCtrlSearch>
         </StDivInvCtrlSearchWrapper>
         <StDivInvCtrlAlignWrapper>
-          <StDivInvCtrlAlignTitle>정렬</StDivInvCtrlAlignTitle>
+          <StDivInvCtrlAlignTitle>
+            {t('SkillInventory.Align.title')}
+          </StDivInvCtrlAlignTitle>
           <StDivInvCtrlAlignBtnWrapper>
             <StDivInvCtrlAlignBtn
               $bgColor={theme.color.skillAlignDefault}
@@ -75,7 +108,7 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
               $isActive={skillAlignType === 'default'}
               onClick={() => setSkillAlignType('default')}
             >
-              <span>기본순</span>
+              <span>{t('SkillInventory.Align.default')}</span>
             </StDivInvCtrlAlignBtn>
             <StDivInvCtrlAlignBtn
               $bgColor={theme.color.skillAlignName}
@@ -83,7 +116,7 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
               $isActive={skillAlignType === 'name'}
               onClick={() => setSkillAlignType('name')}
             >
-              <span>이름순</span>
+              <span>{t('SkillInventory.Align.name')}</span>
             </StDivInvCtrlAlignBtn>
             <StDivInvCtrlAlignBtn
               $bgColor={theme.color.skillAlignLevel}
@@ -91,16 +124,19 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
               $isActive={skillAlignType === 'level'}
               onClick={() => setSkillAlignType('level')}
             >
-              <span>숙련도순</span>
+              <span>{t('SkillInventory.Align.level')}</span>
             </StDivInvCtrlAlignBtn>
           </StDivInvCtrlAlignBtnWrapper>
         </StDivInvCtrlAlignWrapper>
       </StDivInvCtrlContainer>
       <StDivClientSkillInventory>
-        {skills.map((skill, index) => (
+        {skillsFromClient.map((skill) => {
           // SkillItemSlot은 server component이지만 client component 내부에서 사용하므로 client component로 취급된다.
-          <SkillItemSlot key={skill.name + index} skill={skill} />
-        ))}
+          if (!skill.isVisible) {
+            return null;
+          }
+          return <SkillItemSlot key={skill.name} skill={skill} />;
+        })}
       </StDivClientSkillInventory>
     </>
   );
