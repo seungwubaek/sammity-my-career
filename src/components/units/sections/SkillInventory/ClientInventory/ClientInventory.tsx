@@ -45,8 +45,8 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
   const theme = useTheme();
 
   const searchSkills = React.useCallback(
-    (keyword: string) => {
-      return skillsFromClient.map((skill) => {
+    (skills: ClientSkill[], keyword: string) => {
+      return skills.map((skill) => {
         if (skill.name.toLowerCase().includes(keyword.toLowerCase())) {
           return { ...skill, isVisible: true };
         } else {
@@ -54,30 +54,34 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
         }
       });
     },
-    [skillsFromClient]
+    []
   );
 
   const sortSkills = React.useCallback(
-    (alignType: string) => {
+    (skills: ClientSkill[], alignType: string) => {
       if (alignType === 'default') {
-        return skillsFromClient.sort((a, b) => a.defaultNo - b.defaultNo);
+        return skills.sort((a, b) => a.defaultNo - b.defaultNo);
       } else if (alignType === 'name') {
-        return skillsFromClient.sort((a, b) => a.name.localeCompare(b.name));
+        return skills.sort((a, b) => a.name.localeCompare(b.name));
       } else if (alignType === 'level') {
-        return skillsFromClient.sort((a, b) => b.level - a.level);
+        return skills.sort((a, b) => b.level - a.level);
       } else {
         throw new Error('Invalid skillAlignType');
       }
     },
-    [skillsFromClient]
+    []
   );
 
   React.useEffect(() => {
-    setSkillsFromClient([...searchSkills(searchKeyword)]);
+    setSkillsFromClient((prevSkills) => [
+      ...searchSkills(prevSkills, searchKeyword),
+    ]);
   }, [searchSkills, searchKeyword]);
 
   React.useEffect(() => {
-    setSkillsFromClient([...sortSkills(skillAlignType)]);
+    setSkillsFromClient((prevSkills) => [
+      ...sortSkills(prevSkills, skillAlignType),
+    ]);
   }, [sortSkills, skillAlignType]);
 
   return (
