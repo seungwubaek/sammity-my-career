@@ -1,6 +1,6 @@
 import path from 'path';
 
-import { type Skill } from './skills.d';
+import { type Skill } from '@/types/skills';
 
 let baseUrlPathname = '';
 // if (process.env.NODE_ENV === 'development') {

@@ -26,3 +26,7 @@ export type Skill = {
 };
 
 export type LogoBorderRadius = 'round' | 'square';
+
+export type ClientSkill = Skill & {
+  isActive: boolean;
+};

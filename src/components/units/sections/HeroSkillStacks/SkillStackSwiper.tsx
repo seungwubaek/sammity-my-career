@@ -65,7 +65,7 @@ import 'swiper/css/autoplay';
 import { Virtual, Autoplay } from 'swiper/modules';
 import clsx from 'clsx';
 
-import { Skill } from '@/data/skills.d';
+import type { Skill } from '@/types/skills';
 import useAllMediaQuery from '@/lib/hooks/useAllMediaQuery';
 
 import {
