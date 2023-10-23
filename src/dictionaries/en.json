@@ -61,6 +61,15 @@
       }
     }
   },
+  "SkillInventory": {
+    "title": "Skills",
+    "Align": {
+      "title": "Sort",
+      "default": "Default",
+      "name": "Name",
+      "level": "Level"
+    }
+  },
   "Footer": {
     "name": "Name: Sammy Baek",
     "location": "Location: Dongjak-Gu, Seoul, South Korea"

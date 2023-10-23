@@ -61,6 +61,15 @@
       }
     }
   },
+  "SkillInventory": {
+    "title": "스킬",
+    "Align": {
+      "title": "정렬",
+      "default": "기본순",
+      "name": "이름순",
+      "level": "숙련도순"
+    }
+  },
   "Footer": {
     "name": "성명: 백승우",
     "location": "거주지: 대한민국 서울시 동작구"

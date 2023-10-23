@@ -14,6 +14,10 @@ const defaultLayout = {
   headerHeight: 60,
   // Section
   sectionHorizontalPadding: 20,
+  // SkillInventory
+  skillSearchBtnSize: 20,
+  skillSlotHeight: 50,
+  skillExpGaugeHeight: 10,
 };
 
 const defaultFont = {
@@ -43,6 +47,19 @@ const defaultColors = {
   darkBackground: '#222222',
   border: '#e5e5e5',
   lightBorder: '#ebebeb',
+  darkBorder: '#a5a5a5',
+  // SkillInventory
+  skillAlignDefault: '#8dc6ff',
+  skillAlignDefaultActive: '#638bb2',
+  skillAlignName: '#cbf078',
+  skillAlignNameActive: '#9ecb4f', // how about #7bef77
+  skillAlignLevel: '#f1b963',
+  skillAlignLevelActive: '#ef8534',
+  skillExpGaugeBackground: '#dfdfdf',
+  skillExpGaugeHigh: '#0070C0',
+  skillExpGaugeMid: '#009e47',
+  skillExpGaugeLow: '#ffa600',
+  skillExpGaugeBeginner: '#ff6e55',
 };
 
 const theme: DefaultTheme = {

@@ -47,6 +47,11 @@ const globalStyles = createGlobalStyle`
     }
   }
 
+  input {
+    outline: none;
+    border: none;
+  }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
