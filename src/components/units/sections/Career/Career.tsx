@@ -34,7 +34,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
             companyLogoMaxWidth={240}
             companyName={t('Career.Mobigen.name')}
             periodFrom={new Date('2016-10')}
-            periodTo={new Date('2021-09')}
+            periodTo={new Date('2021-08')}
             team={t('Career.Mobigen.team')}
             position={t('Career.Mobigen.position')}
             projectArray={[

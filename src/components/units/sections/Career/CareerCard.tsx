@@ -60,21 +60,16 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
       periodDiffString += ` ${periodDiffInMonthsRemainder}개월`;
     }
   } else if (locale === 'en') {
-    if (periodDiffInYears === 1) {
-      periodDiffString = `1 year`;
-    } else if (periodDiffInYears > 1) {
-      periodDiffString = `${periodDiffInYears} years`;
+    if (periodDiffInYears > 0) {
+      periodDiffString = `${periodDiffInYears}Y`;
     }
-    if (periodDiffInMonthsRemainder === 1) {
-      periodDiffString += ` 1 month`;
-    } else if (periodDiffInMonthsRemainder > 1) {
-      periodDiffString += ` ${periodDiffInMonthsRemainder} months`;
+    if (periodDiffInMonthsRemainder > 0) {
+      periodDiffString += ` ${periodDiffInMonthsRemainder}M`;
     }
   } else {
     throw new Error(`Unsupported locale: ${locale}`);
   }
 
-  periodDiffString = `${periodDiffInYears}년 ${periodDiffInMonthsRemainder}개월`;
   // prettier-ignore
   const period = `(${periodDiffString}) ${periodFrom.getFullYear()}. ${periodFrom.getMonth() + 1} ~
                   ${periodTo.getFullYear()}. ${periodTo.getMonth() + 1}`;
