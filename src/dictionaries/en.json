@@ -40,12 +40,13 @@
       "team": "AI Platform Research Team, Lab",
       "position": "Senior Researcher",
       "Projects": {
-        "1": "Dockerization of Internal Solutions",
-        "2": "Construction ETL Server",
+        "1": "Dockerizing Internal Solutions",
+        "2": "Development of ETL Solution",
         "3": "L* Electronics - Refrigerator Pre-diagnosis Service using Deep Learning",
-        "4": "S* Telecom - Similar Sound Recommendation",
-        "5": "Pre-research on Financial Data Analysis",
-        "6": "Data Enhancement and Dataset Bias Mitigation Techniques Based on Data Quality Evaluation"
+        "4": "SmartCity SW Security Monitoring System Development",
+        "5": "S* Telecom - Similar Sound Recommendation",
+        "6": "Pre-research on Financial Data Analysis",
+        "7": "Data Enhancement and Dataset Bias Mitigation Techniques Based on Data Quality Evaluation"
       }
     },
     "Mosepeople": {
@@ -53,8 +54,8 @@
       "team": "Development Team, IT Department.",
       "position": "CTO (Director of Development)",
       "Projects": {
-        "1": "Marine Food B2B E-Commerce Platform - SeaRoad",
-        "2": "Company Homepage",
+        "1": "Marine Food B2B E-Commerce Platform - SeaRoadS",
+        "2": "Company Official Homepage",
         "3": "Landing Page",
         "4": "Food Ingredients B2C Distribution Platform for Medium & Small Mart - Domego",
         "5": "Korean Product Promotion Site for Uzbekistan - KOMART"
@@ -69,6 +70,9 @@
       "name": "Name",
       "level": "Level"
     }
+  },
+  "Projects": {
+    "title": "Projects"
   },
   "Footer": {
     "name": "Name: Sammy Baek",

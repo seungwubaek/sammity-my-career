@@ -44,6 +44,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
               t('Career.Mobigen.Projects.4'),
               t('Career.Mobigen.Projects.5'),
               t('Career.Mobigen.Projects.6'),
+              t('Career.Mobigen.Projects.7'),
             ]}
           />
           <CareerCard

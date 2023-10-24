@@ -18,6 +18,9 @@ const defaultLayout = {
   skillSearchBtnSize: 20,
   skillSlotHeight: 50,
   skillExpGaugeHeight: 10,
+  // Project
+  projectCardMaxWidth: 320,
+  projectCardHeight: 100,
 };
 
 const defaultFont = {

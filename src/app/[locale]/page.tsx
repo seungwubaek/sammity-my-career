@@ -6,6 +6,7 @@ import SectionHeroSkillStacks from '@/components/units/sections/HeroSkillStacks'
 import SectionProfile from '@/components/units/sections/Profile';
 import SectionCareer from '@/components/units/sections/Career/Career';
 import SectionSkillInventory from '@/components/units/sections/SkillInventory/SkillInventory';
+import SectionProjects from '@/components/units/sections/Projects/Projects';
 import SectionFooter from '@/components/units/sections/Footer';
 
 const Main = ({ params: { locale } }: { params: { locale: string } }) => {
@@ -18,6 +19,7 @@ const Main = ({ params: { locale } }: { params: { locale: string } }) => {
       <SectionProfile locale={locale} />
       <SectionCareer locale={locale} />
       <SectionSkillInventory locale={locale} />
+      <SectionProjects locale={locale} />
       <SectionFooter />
     </StMain>
   );
