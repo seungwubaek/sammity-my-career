@@ -174,6 +174,8 @@ const projects: Project[] = [
     tasks: [
       'Research on prior studies such as IBM AIF360, Microsoft Fairlearn, Google PAIR',
       'Development of data bias detection and processing program using IBM AIF360',
+      "Research biased learning of Large Language Model (MS 'Tay', ScatterLab 'Luda Lee'), " +
+        'Adversarial Attack on Deep Learning Model, Latest Model Research (ELMo, Attention Mechanism, Transformer, BERT)',
     ],
   },
   {

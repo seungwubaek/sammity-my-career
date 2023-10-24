@@ -170,6 +170,8 @@ const projects: Project[] = [
     tasks: [
       'IBM AIF360, Microsoft Fairlearn, Google PAIR 등 선행 연구 조사',
       'AIF360을 이용한 데이터 편향 탐지 및 가공 프로그램 개발',
+      "거대언어모델의 학습편향 조사 (MS 'Tay', 스캐터랩 '이루다'), Deep Learning 공격, " +
+        'LLM 최신 모델 조사 (ELMo, Attention Mechanism, Transformer, BERT)',
     ],
   },
   {

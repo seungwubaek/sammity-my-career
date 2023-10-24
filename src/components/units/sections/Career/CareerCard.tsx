@@ -2,13 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
+import { StTableBase, StUlBase } from '@/components/units/sections/SectionBase';
 import {
   StDivCareerCard,
   StDivCompanyLogoLocator,
   StDivCompanyLogoWrapper,
   StDivCompanyName,
-  StTableCareerInfo,
-  StUlProjectList,
 } from './CareerCard.styled';
 
 import ImageWithSizes from '@/components/units/ImageWithSizes';
@@ -93,7 +92,7 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
         </StDivCompanyLogoWrapper>
       </StDivCompanyLogoLocator>
       <StDivCompanyName>{companyName}</StDivCompanyName>
-      <StTableCareerInfo>
+      <StTableBase>
         <tbody>
           <tr>
             <th>{t('Career.periodHeader')}</th>
@@ -114,15 +113,15 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
           </tr>
           <tr>
             <td colSpan={2} className={clsx('wide')}>
-              <StUlProjectList>
+              <StUlBase>
                 {projectArray.map((project, index) => (
                   <li key={index}>{project}</li>
                 ))}
-              </StUlProjectList>
+              </StUlBase>
             </td>
           </tr>
         </tbody>
-      </StTableCareerInfo>
+      </StTableBase>
     </StDivCareerCard>
   );
 };

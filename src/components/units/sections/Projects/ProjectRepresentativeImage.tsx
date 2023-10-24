@@ -18,7 +18,9 @@ const ProjectRepresentativeImage: React.FC<PropsProjectCard> = (props) => {
   const theme = useTheme();
 
   return (
-    <StDivProjectRepresentativeImageWrapper>
+    <StDivProjectRepresentativeImageWrapper
+      $borderType={project.imageBorderRadius ?? 'square'}
+    >
       <ImageWithSizes
         src={project.representativeImageSrc}
         alt={project.title}

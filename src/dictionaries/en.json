@@ -72,7 +72,13 @@
     }
   },
   "Projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "whereHeader": "Team",
+    "summaryHeader": "Summary",
+    "periodHeader": "Period",
+    "participationRateHeader": "Contrib. Rate",
+    "useSkillHeader": "Skills",
+    "responsibilitiesHeader": "Responsibilities"
   },
   "Footer": {
     "name": "Name: Sammy Baek",

@@ -47,6 +47,10 @@ const globalStyles = createGlobalStyle`
     }
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: calc(1em / 3 * 2);
+  }
+
   input {
     outline: none;
     border: none;

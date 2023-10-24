@@ -72,7 +72,13 @@
     }
   },
   "Projects": {
-    "title": "프로젝트"
+    "title": "프로젝트",
+    "whereHeader": "소속",
+    "summaryHeader": "요약",
+    "periodHeader": "기간",
+    "participationRateHeader": "기여도",
+    "useSkillHeader": "사용기술",
+    "responsibilitiesHeader": "담당업무"
   },
   "Footer": {
     "name": "성명: 백승우",
