@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTheme } from 'styled-components';
+import clsx from 'clsx';
 
 import { Project } from '@/types/projects';
 
@@ -19,6 +20,7 @@ const ProjectRepresentativeImage: React.FC<PropsProjectCard> = (props) => {
 
   return (
     <StDivProjectRepresentativeImageWrapper
+      className={clsx('unselectable')}
       $borderType={project.imageBorderRadius ?? 'square'}
     >
       <ImageWithSizes

@@ -9,7 +9,7 @@ export const StDivProjectRepresentativeImageWrapper = styled.div<{
   position: relative;
   width: 100%;
   height: ${({ theme }) => theme.layout.projectCardHeight}px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   ${({ $borderType }) => $borderType === 'round' && `border-radius: 8px;`}
 
   img {

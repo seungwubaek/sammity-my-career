@@ -17,6 +17,7 @@ const globalStyles = createGlobalStyle`
     overflow-x: hidden;
     background-color: ${({ theme }) => theme.color.background};
     font-size: ${({ theme }) => theme.font.fontSize}px;
+    transition: all 0.2s linear;
 
     ${generateCssByMedia(
       css`
@@ -49,6 +50,52 @@ const globalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: calc(1em / 3 * 2);
+  }
+
+  h1 {
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.h1Size};
+      `,
+      ['desktop']
+    )}
+
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.tabletH1Size};
+      `,
+      ['tablet']
+    )}
+
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.mobileH1Size};
+      `,
+      ['mobile']
+    )}
+  }
+
+  h2 {
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.h2Size};
+      `,
+      ['desktop']
+    )}
+
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.tabletH2Size};
+      `,
+      ['tablet']
+    )}
+
+    ${generateCssByMedia(
+      css`
+        font-size: ${({ theme }) => theme.font.mobileH2Size};
+      `,
+      ['mobile']
+    )}
   }
 
   input {
