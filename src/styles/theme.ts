@@ -18,7 +18,7 @@ const defaultLayout = {
   skillSearchBtnSize: 20,
   skillSlotHeight: 50,
   skillExpGaugeHeight: 10,
-  // Project
+  // Projects
   projectCardMaxWidth: 320,
   projectCardHeight: 100,
 };
@@ -63,6 +63,8 @@ const defaultColors = {
   skillExpGaugeMid: '#009e47',
   skillExpGaugeLow: '#ffa600',
   skillExpGaugeBeginner: '#ff6e55',
+  // Introduction
+  speechCardBorder: '#5e5e5e',
 };
 
 const theme: DefaultTheme = {

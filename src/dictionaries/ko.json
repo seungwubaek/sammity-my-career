@@ -80,6 +80,9 @@
     "useSkillHeader": "사용기술",
     "responsibilitiesHeader": "담당업무"
   },
+  "SelfIntroduction": {
+    "title": "자기소개"
+  },
   "Footer": {
     "name": "성명: 백승우",
     "location": "거주지: 대한민국 서울시 동작구"

@@ -80,6 +80,9 @@
     "useSkillHeader": "Skills",
     "responsibilitiesHeader": "Responsibilities"
   },
+  "SelfIntroduction": {
+    "title": "Introduction"
+  },
   "Footer": {
     "name": "Name: Sammy Baek",
     "location": "Location: Dongjak-Gu, Seoul, South Korea"
