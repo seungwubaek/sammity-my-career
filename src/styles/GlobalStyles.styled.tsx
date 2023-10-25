@@ -97,6 +97,10 @@ const globalStyles = createGlobalStyle`
     )}
   }
 
+  p {
+    margin-bottom: 0.6em;
+  }
+
   input {
     outline: none;
     border: none;

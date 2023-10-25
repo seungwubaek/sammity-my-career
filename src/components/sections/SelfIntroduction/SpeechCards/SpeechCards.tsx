@@ -5,11 +5,7 @@ import { useTheme } from 'styled-components';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 import { Speech } from '@/types/speech';
-import {
-  StDivSpeechCard,
-  StDivSpeechCardMessage,
-  StH2SpeechCardTitle,
-} from './SpeechCards.styled';
+import { StDivSpeechCard, StH2SpeechCardTitle } from './SpeechCards.styled';
 
 type PropsSpeechCards = {
   speeches: Speech[];
@@ -31,11 +27,9 @@ const SpeechCards: React.FC<PropsSpeechCards> = (props) => {
         {speeches.map((speech) => (
           <StDivSpeechCard key={speech.title}>
             <StH2SpeechCardTitle>{speech.title}</StH2SpeechCardTitle>
-            <StDivSpeechCardMessage>
-              {speech.message.map((message, index) => (
-                <p key={speech.title + index}>{message}</p>
-              ))}
-            </StDivSpeechCardMessage>
+            {speech.message.map((message, index) => (
+              <p key={speech.title + index}>{message}</p>
+            ))}
           </StDivSpeechCard>
         ))}
       </Masonry>
