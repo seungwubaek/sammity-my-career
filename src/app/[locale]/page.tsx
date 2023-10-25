@@ -8,6 +8,7 @@ import SectionCareer from '@/components/sections/Career/Career';
 import SectionSkillInventory from '@/components/sections/SkillInventory';
 import SectionProjects from '@/components/sections/Projects';
 import SectionSelfIntroduction from '@/components/sections/SelfIntroduction';
+import SectionAboutSite from '@/components/sections/AboutSite/AboutSite';
 import SectionFooter from '@/components/sections/Footer';
 
 const Main = ({ params: { locale } }: { params: { locale: string } }) => {
@@ -22,6 +23,7 @@ const Main = ({ params: { locale } }: { params: { locale: string } }) => {
       <SectionSkillInventory locale={locale} />
       <SectionProjects locale={locale} />
       <SectionSelfIntroduction locale={locale} />
+      <SectionAboutSite locale={locale} />
       <SectionFooter />
     </StMain>
   );

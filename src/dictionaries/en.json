@@ -83,6 +83,12 @@
   "SelfIntroduction": {
     "title": "Introduction"
   },
+  "AboutSite": {
+    "Descriptions": {
+      "1": "This site is developed with Next.js, a React-based Front-End framework.",
+      "2": "This site is served with the following structure."
+    }
+  },
   "Footer": {
     "name": "Name: Sammy Baek",
     "location": "Location: Dongjak-Gu, Seoul, South Korea"
