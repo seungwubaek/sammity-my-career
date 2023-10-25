@@ -2,11 +2,12 @@ import { notFound } from 'next/navigation';
 import { createTranslator } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
+import Initializers from '@/lib/initializers';
 import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
 
 import Header from '@/components/sections/Header';
-import Initializers from '@/lib/initializers';
+import ToTop from '@/components/units/ToTop';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
@@ -53,6 +54,7 @@ export default async function LocaleLayout({
           <GlobalStyles />
           <Header />
           {children}
+          <ToTop />
         </Initializers>
       </body>
     </html>
