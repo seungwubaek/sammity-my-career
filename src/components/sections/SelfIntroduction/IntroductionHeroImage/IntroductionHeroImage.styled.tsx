@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StSectionIntroductionHeroWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 570px;
   overflow: hidden;
   clip-path: inset(0 0 0 0);
 `;
