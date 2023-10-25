@@ -17,7 +17,6 @@ const globalStyles = createGlobalStyle`
     overflow-x: hidden;
     background-color: ${({ theme }) => theme.color.background};
     font-size: ${({ theme }) => theme.font.fontSize}px;
-    transition: all 0.2s linear;
 
     ${generateCssByMedia(
       css`
