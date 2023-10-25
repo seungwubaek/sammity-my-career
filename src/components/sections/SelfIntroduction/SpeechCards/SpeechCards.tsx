@@ -31,7 +31,11 @@ const SpeechCards: React.FC<PropsSpeechCards> = (props) => {
         {speeches.map((speech) => (
           <StDivSpeechCard key={speech.title}>
             <StH2SpeechCardTitle>{speech.title}</StH2SpeechCardTitle>
-            <StDivSpeechCardMessage>{speech.message}</StDivSpeechCardMessage>
+            <StDivSpeechCardMessage>
+              {speech.message.map((message, index) => (
+                <p key={speech.title + index}>{message}</p>
+              ))}
+            </StDivSpeechCardMessage>
           </StDivSpeechCard>
         ))}
       </Masonry>

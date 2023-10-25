@@ -11,4 +11,8 @@ export const StDivSpeechCard = styled.div`
 
 export const StH2SpeechCardTitle = styled.h2``;
 
-export const StDivSpeechCardMessage = styled.div``;
+export const StDivSpeechCardMessage = styled.div`
+  p {
+    margin: 0.6em 0;
+  }
+`;

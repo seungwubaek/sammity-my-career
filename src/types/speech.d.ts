@@ -1,4 +1,4 @@
 export type Speech = {
   title: string;
-  message: string;
+  message: string[];
 };
