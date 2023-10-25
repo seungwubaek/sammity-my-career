@@ -1,13 +1,13 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { StMain } from './page.styled';
-import SectionHeroImage from '@/components/units/sections/HeroImage';
-import SectionHeroSkillStacks from '@/components/units/sections/HeroSkillStacks';
-import SectionProfile from '@/components/units/sections/Profile';
-import SectionCareer from '@/components/units/sections/Career/Career';
-import SectionSkillInventory from '@/components/units/sections/SkillInventory/SkillInventory';
-import SectionProjects from '@/components/units/sections/Projects/Projects';
-import SectionFooter from '@/components/units/sections/Footer';
+import SectionHeroImage from '@/components/sections/HeroImage';
+import SectionHeroSkillStacks from '@/components/sections/HeroSkillStacks';
+import SectionProfile from '@/components/sections/Profile';
+import SectionCareer from '@/components/sections/Career/Career';
+import SectionSkillInventory from '@/components/sections/SkillInventory';
+import SectionProjects from '@/components/sections/Projects/Projects';
+import SectionFooter from '@/components/sections/Footer';
 
 const Main = ({ params: { locale } }: { params: { locale: string } }) => {
   unstable_setRequestLocale(locale);

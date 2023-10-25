@@ -7,7 +7,7 @@ import {
   StSection,
   SectionTitle,
   SectionContent,
-} from '@/components/units/sections/SectionBase';
+} from '@/components/sections/SectionBase';
 import { StDivProjectsContainer } from './Projects.styled';
 import ProjectCard from './ProjectCard';
 

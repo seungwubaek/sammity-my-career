@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
-import { StTableBase, StUlBase } from '@/components/units/sections/SectionBase';
+import { StTableBase, StUlBase } from '@/components/sections/SectionBase';
 import {
   StDivCareerCard,
   StDivCompanyLogoLocator,

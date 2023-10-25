@@ -5,7 +5,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
 
-import Header from '@/components/units/sections/Header';
+import Header from '@/components/sections/Header';
 import Initializers from '@/lib/initializers';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });

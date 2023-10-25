@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import { Project } from '@/types/projects';
 
-import { StTableBase, StUlBase } from '@/components/units/sections/SectionBase';
+import { StTableBase, StUlBase } from '@/components/sections/SectionBase';
 import ProjectRepresentativeImage from './ProjectRepresentativeImage';
 import { StDivProjectCard } from './ProjectCard.styled';
 

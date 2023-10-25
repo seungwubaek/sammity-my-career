@@ -8,7 +8,7 @@ import {
   StSection,
   SectionTitle,
   SectionContent,
-} from '@/components/units/sections/SectionBase';
+} from '@/components/sections/SectionBase';
 import CareerCard from './CareerCard';
 
 type PropsSectionCareer = {

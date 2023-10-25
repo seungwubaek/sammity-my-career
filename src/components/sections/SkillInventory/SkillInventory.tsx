@@ -7,7 +7,7 @@ import {
   SectionContent,
   SectionTitle,
   StSection,
-} from '@/components/units/sections/SectionBase';
+} from '@/components/sections/SectionBase';
 import ClientInventory from './ClientInventory';
 
 type PropsSectionSkillInventory = React.PropsWithChildren<{

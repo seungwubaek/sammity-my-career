@@ -13,7 +13,7 @@ import {
   StDivMobileTitleMain,
   StSectionHeroImage,
 } from './HeroImage.styled';
-import ImageWithSizes from '../../ImageWithSizes';
+import ImageWithSizes from '../../units/ImageWithSizes';
 
 type PropsHeroImage = {
   locale: string;
