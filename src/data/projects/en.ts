@@ -174,7 +174,7 @@ const projects: Project[] = [
     tasks: [
       'Research on prior studies such as IBM AIF360, Microsoft Fairlearn, Google PAIR',
       'Development of data bias detection and processing program using IBM AIF360',
-      "Research biased learning of Large Language Model (MS 'Tay', ScatterLab 'Luda Lee'), " +
+      "Research biased learning of Large Language Model (MS 'Tay', ScatterLab 'Luda Lee' v1), " +
         'Adversarial Attack on Deep Learning Model, Latest Model Research (ELMo, Attention Mechanism, Transformer, BERT)',
     ],
   },
@@ -334,6 +334,43 @@ const projects: Project[] = [
       'Initial design considering local culture',
       'Service planning',
       'DataBase design',
+    ],
+  },
+  {
+    title: 'Convenient MoneyBook',
+    representativeImageSrc: path.join(
+      baseUrlPathname,
+      'logo_conv_moneybook.png'
+    ),
+    where: 'Personal Project',
+    summary:
+      'Mobile Application based on React Native that records personal transactions by distinguishing ' +
+      'between income and expenditure, and provides transaction information visualization and reporting services. ' +
+      'Supports both Google Play Store and Apple App Store.',
+    startedAt: '2021. 08',
+    endedAt: '',
+    participationRate: 100,
+    usedSkills: [
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'Realm',
+      'Firebase',
+      'AdMob',
+    ],
+    tasks: [
+      'Reasearch on similar services',
+      'Design of DB Schema',
+      'Planning and Design of personalization using Firebase',
+      'Design of UI',
+      'Planning AdMob-based advertising exposure',
+      'Implementation of Transaction (income/expenditure/transfer) CRUD function and UI',
+      'Implementation of Asset (Cash/Hana Card/Samsung Card, etc.) management function and UI',
+      'Implementation of Asset Group (Check Card/Credit Card/Insurance, etc.) management function and UI',
+      'Implementation of Category (transportation expenses/food expenses/shopping, etc.) management function and UI',
+      'Implementation of Bottom Sheet UI that can edit asset, asset group, and category in transaction CRUD screen',
+      'Implementation of Report Generation Function of Transaction and UI',
+      'Support both Android and iOS',
     ],
   },
 ];

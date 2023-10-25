@@ -76,7 +76,7 @@
     "whereHeader": "Team",
     "summaryHeader": "Summary",
     "periodHeader": "Period",
-    "participationRateHeader": "Contrib. Rate",
+    "participationRateHeader": "Contrib",
     "useSkillHeader": "Skills",
     "responsibilitiesHeader": "Responsibilities"
   },

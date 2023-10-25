@@ -37,8 +37,8 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'proj_etl_process.png'),
     where: '(주)모비젠',
     summary:
-      'Spring Boot 기반의 ETL 서버 및 Python 기반 Worker Agent 솔루션.' +
-      'Worker Agent는 각 Node에서 Talend로 생성한 ETL Java Job을 실행.' +
+      'Spring Boot 기반의 ETL 서버 및 Python 기반 Worker Agent 솔루션. ' +
+      'Worker Agent는 각 Node에서 Talend로 생성한 ETL Java Job을 실행. ' +
       'ETL 서버는 연동되는 Worker Agent 및 Slave Node의 관리, 모니터링, 데이터 시각화 제공',
     startedAt: '2017. 01',
     endedAt: '2017. 12',
@@ -170,7 +170,7 @@ const projects: Project[] = [
     tasks: [
       'IBM AIF360, Microsoft Fairlearn, Google PAIR 등 선행 연구 조사',
       'AIF360을 이용한 데이터 편향 탐지 및 가공 프로그램 개발',
-      "거대언어모델의 학습편향 조사 (MS 'Tay', 스캐터랩 '이루다'), Deep Learning 공격, " +
+      "거대언어모델의 학습편향 조사 (MS 'Tay', 스캐터랩 '이루다' v1), Deep Learning 공격, " +
         'LLM 최신 모델 조사 (ELMo, Attention Mechanism, Transformer, BERT)',
     ],
   },
@@ -325,6 +325,42 @@ const projects: Project[] = [
       '현지 문화를 고려한 초기 디자인',
       '서비스 기획',
       'DB 설계',
+    ],
+  },
+  {
+    title: '편리한 가계부',
+    representativeImageSrc: path.join(
+      baseUrlPathname,
+      'logo_conv_moneybook.png'
+    ),
+    where: '개인 프로젝트',
+    summary:
+      '개인의 거래를 수입/지출을 구분하여 기록하고, 거래 정보의 시각화 및 보고서 서비스 제공하는 ' +
+      'React Native 기반 모바일 애플리케이션. Google Play Store, Apple App Store 모두 지원.',
+    startedAt: '2021. 08',
+    endedAt: '',
+    participationRate: 100,
+    usedSkills: [
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'Realm',
+      'Firebase',
+      'AdMob',
+    ],
+    tasks: [
+      '동종 서비스 조사',
+      'Realm DB 설계',
+      'Firebase를 이용한 개인화 기획 및 설계',
+      'UI 기획',
+      'AdMob을 이용한 광고 노출 기획',
+      '거래(수입/지출/이체) CRUD 기능 및 UI 구현',
+      '자산(현금/하나카드/삼성카드 등) 관리 기능 및 UI 구현',
+      '자산그룹(체크카드/신용카드/보험 등) 관리 기능 및 UI 구현',
+      '카테고리(교통비/식비/쇼핑 등) 관리 기능 및 UI 구현',
+      '거래 CRUD 화면에서 자산, 자산그룹, 카테고리 편집 가능한 Bottom Sheet UI 구현',
+      '거래 이력 보고서 생성 기능 기획 및 설계',
+      'Android/iOS 지원',
     ],
   },
 ];
