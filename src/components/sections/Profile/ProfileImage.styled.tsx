@@ -4,6 +4,8 @@ import styled, { css } from 'styled-components';
 
 import { generateCssByMedia } from '@/lib/helpers/styling';
 
+import { StDivImageWrapperBase } from '../SectionBase/ImageWrapper.styled';
+
 export const StDivProfileImage = styled.div`
   display: flex;
   justify-content: center;
@@ -29,8 +31,7 @@ export const StDivProfileImage = styled.div`
   )}
 `;
 
-export const StDivImageWrapper = styled.div`
-  position: relative;
+export const StDivImageWrapper = styled(StDivImageWrapperBase)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,10 +41,4 @@ export const StDivImageWrapper = styled.div`
   max-width: 450px;
   width: 100%;
   height: auto;
-
-  img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-  }
 `;
