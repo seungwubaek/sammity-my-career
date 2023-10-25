@@ -46,6 +46,7 @@ const defaultFont = {
 const defaultColors = {
   primary: '#0070C0',
   secondary: '#00B0F0',
+  black: '#222222',
   background: '#fff',
   darkBackground: '#222222',
   border: '#e5e5e5',

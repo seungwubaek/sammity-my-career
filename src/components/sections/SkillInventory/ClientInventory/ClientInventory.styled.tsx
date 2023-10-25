@@ -59,6 +59,9 @@ export const StDivInvCtrlSearch = styled.div`
   padding: 8px 10px;
   border: 1px solid ${({ theme }) => theme.color.darkBorder};
   border-radius: 13px;
+  &:focus-within {
+    border: 1px solid ${({ theme }) => theme.color.black};
+  }
 `;
 
 export const StInputInvCtrlSearch = styled.input`
