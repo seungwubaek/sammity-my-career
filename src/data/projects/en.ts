@@ -296,7 +296,7 @@ const projects: Project[] = [
       'with React-based frontend and Fastapi-based MVC backend server',
     startedAt: '2022. 02',
     endedAt: '2022. 12',
-    participationRate: 100,
+    participationRate: 90,
     usedSkills: [
       'Python',
       'Fastapi',

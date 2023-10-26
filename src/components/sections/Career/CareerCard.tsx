@@ -115,7 +115,7 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
             <td colSpan={2} className={clsx('wide')}>
               <StUlBase>
                 {projectArray.map((project, index) => (
-                  <li key={index}>{project}</li>
+                  <li key={`projectInCareer_${index}`}>{project}</li>
                 ))}
               </StUlBase>
             </td>

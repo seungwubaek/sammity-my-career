@@ -24,11 +24,11 @@ const SpeechCards: React.FC<PropsSpeechCards> = (props) => {
       }}
     >
       <Masonry gutter={'20px'}>
-        {speeches.map((speech) => (
-          <StDivSpeechCard key={speech.title}>
+        {speeches.map((speech, index) => (
+          <StDivSpeechCard key={`introductionSpeechCard_${index}`}>
             <StH2SpeechCardTitle>{speech.title}</StH2SpeechCardTitle>
             {speech.message.map((message, index) => (
-              <p key={speech.title + index}>{message}</p>
+              <p key={`introductionSpeechMsg_${index}`}>{message}</p>
             ))}
           </StDivSpeechCard>
         ))}

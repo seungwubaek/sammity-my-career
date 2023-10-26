@@ -8,8 +8,7 @@ import {
   SectionTitle,
   SectionContent,
 } from '@/components/sections/SectionBase';
-import { StDivProjectsContainer } from './Projects.styled';
-import ProjectCard from './ProjectCard';
+import ProjectCards from './ProjectCards';
 
 type PropsSectionProjects = {
   locale: string;
@@ -27,11 +26,7 @@ const SectionProjects: React.FC<PropsSectionProjects> = (props) => {
         {t('Projects.title')}
       </SectionTitle>
       <SectionContent>
-        <StDivProjectsContainer>
-          {projectsFromServer.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </StDivProjectsContainer>
+        <ProjectCards projects={projectsFromServer} />
       </SectionContent>
     </StSection>
   );

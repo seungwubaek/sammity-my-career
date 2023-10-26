@@ -8,7 +8,6 @@ import { Project } from '@/types/projects';
 
 import { StUlBase } from '@/components/sections/SectionBase';
 import {
-  StDivProjectCardWrapper,
   StDivProjectCard,
   StDivProjectCardOpenButtonWrapper,
   StDivProjectCardTitleWrapper,
@@ -40,64 +39,62 @@ const ProjectCard: React.FC<PropsProjectCard> = (props) => {
   }, [isCardDetailOpen]);
 
   return (
-    <StDivProjectCardWrapper>
-      <StDivProjectCard
-        key={project.title}
-        onClick={() => setIsCardOpen((prev) => !prev)}
-      >
-        <StDivProjectCardTitleWrapper>
-          <StH2ProjectCardTitle className={clsx('unselectable')}>
-            {project.title}
-          </StH2ProjectCardTitle>
-          <StDivProjectCardOpenButtonWrapper className="card-btn-wrapper">
-            {isCardDetailOpen ? (
-              <IoChevronUp size={20} />
-            ) : (
-              <IoChevronDown size={20} />
-            )}
-          </StDivProjectCardOpenButtonWrapper>
-        </StDivProjectCardTitleWrapper>
-        <ProjectRepresentativeImage project={project} />
-        <StTableProjectCard ref={tableRef} $showDetail={isCardDetailOpen}>
-          <tbody>
-            <tr>
-              <th>{t('Projects.summaryHeader')}</th>
-              <td>{`${project.summary}`}</td>
-            </tr>
-            <tr>
-              <th>{t('Projects.whereHeader')}</th>
-              <td>{`${project.where}`}</td>
-            </tr>
-            <tr>
-              <th>{t('Projects.periodHeader')}</th>
-              <td>{`${project.startedAt} ~ ${project.endedAt}`}</td>
-            </tr>
-            <tr>
-              <th>{t('Projects.participationRateHeader')}</th>
-              <td>{`${project.participationRate}%`}</td>
-            </tr>
-            <tr>
-              <th>{t('Projects.useSkillHeader')}</th>
-              <td>{project.usedSkills.join(', ')}</td>
-            </tr>
-            <tr>
-              <td colSpan={2} className={clsx('replaceTh')}>
-                {t('Projects.responsibilitiesHeader')}
-              </td>
-            </tr>
-            <tr>
-              <td colSpan={2} className={clsx('wide')}>
-                <StUlBase>
-                  {project.tasks.map((task, index) => (
-                    <li key={index}>{task}</li>
-                  ))}
-                </StUlBase>
-              </td>
-            </tr>
-          </tbody>
-        </StTableProjectCard>
-      </StDivProjectCard>
-    </StDivProjectCardWrapper>
+    <StDivProjectCard
+      key={project.title}
+      onClick={() => setIsCardOpen((prev) => !prev)}
+    >
+      <StDivProjectCardTitleWrapper>
+        <StH2ProjectCardTitle className={clsx('unselectable')}>
+          {project.title}
+        </StH2ProjectCardTitle>
+        <StDivProjectCardOpenButtonWrapper className="card-btn-wrapper">
+          {isCardDetailOpen ? (
+            <IoChevronUp size={20} />
+          ) : (
+            <IoChevronDown size={20} />
+          )}
+        </StDivProjectCardOpenButtonWrapper>
+      </StDivProjectCardTitleWrapper>
+      <ProjectRepresentativeImage project={project} />
+      <StTableProjectCard ref={tableRef} $showDetail={isCardDetailOpen}>
+        <tbody>
+          <tr>
+            <th>{t('Projects.summaryHeader')}</th>
+            <td>{`${project.summary}`}</td>
+          </tr>
+          <tr>
+            <th>{t('Projects.whereHeader')}</th>
+            <td>{`${project.where}`}</td>
+          </tr>
+          <tr>
+            <th>{t('Projects.periodHeader')}</th>
+            <td>{`${project.startedAt} ~ ${project.endedAt}`}</td>
+          </tr>
+          <tr>
+            <th>{t('Projects.participationRateHeader')}</th>
+            <td>{`${project.participationRate}%`}</td>
+          </tr>
+          <tr>
+            <th>{t('Projects.useSkillHeader')}</th>
+            <td>{project.usedSkills.join(', ')}</td>
+          </tr>
+          <tr>
+            <td colSpan={2} className={clsx('replaceTh')}>
+              {t('Projects.responsibilitiesHeader')}
+            </td>
+          </tr>
+          <tr>
+            <td colSpan={2} className={clsx('wide')}>
+              <StUlBase>
+                {project.tasks.map((task, index) => (
+                  <li key={`projectCardTable_${index}`}>{task}</li>
+                ))}
+              </StUlBase>
+            </td>
+          </tr>
+        </tbody>
+      </StTableProjectCard>
+    </StDivProjectCard>
   );
 };
 

@@ -7,8 +7,6 @@ import { generateCssByMedia } from '@/lib/helpers/styling';
 
 import { StCSSTable } from '@/components/sections/SectionBase/TableBase.styled';
 
-export const StDivProjectCardWrapper = styled.div``;
-
 export const StDivProjectCard = styled.div`
   display: flex;
   flex-direction: column;

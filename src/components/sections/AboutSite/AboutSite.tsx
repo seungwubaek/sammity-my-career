@@ -41,8 +41,8 @@ const SectionAboutSite: React.FC<PropsSectionAboutSite> = (props) => {
       <SectionContent>
         {aboutSiteMessages.map((message, index) => {
           return (
-            <>
-              <p key={index}>{message}</p>
+            <React.Fragment key={`aboutSiteMessage_${index}`}>
+              <p>{message}</p>
               {index === 0 ? (
                 <ImageLogoNextjs imageSrc={logoNextjsImageSrc} />
               ) : index === 2 ? (
@@ -50,7 +50,7 @@ const SectionAboutSite: React.FC<PropsSectionAboutSite> = (props) => {
               ) : index === 4 ? (
                 <ImageSiteArchitecture imageSrc={siteArchitectureImageSrc} />
               ) : null}
-            </>
+            </React.Fragment>
           );
         })}
       </SectionContent>

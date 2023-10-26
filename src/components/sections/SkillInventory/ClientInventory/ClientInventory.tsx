@@ -139,7 +139,12 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
           if (!skill.isVisible) {
             return null;
           }
-          return <SkillItemSlot key={skill.name} skill={skill} />;
+          return (
+            <SkillItemSlot
+              key={`skillInventorySlot_${skill.name}`}
+              skill={skill}
+            />
+          );
         })}
       </StDivClientSkillInventory>
     </>

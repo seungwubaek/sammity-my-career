@@ -289,7 +289,7 @@ const projects: Project[] = [
       'React 기반 프론트엔드, Fastapi 기반 MVC 구조의 백엔드 서버로 구성.',
     startedAt: '2022. 02',
     endedAt: '2022. 12',
-    participationRate: 100,
+    participationRate: 90,
     usedSkills: [
       'Python',
       'Fastapi',
