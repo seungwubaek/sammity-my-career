@@ -27,7 +27,9 @@ const Footer: React.FC = () => {
     <StSectionFooter $wide>
       <StDivFooterInner>
         <StSectionFooterLogoAndLinkSet>
-          <SiteLogo colorScheme="white" />
+          <Link href="/">
+            <SiteLogo colorScheme="white" />
+          </Link>
           <LinkSet logoSize={16} githubColor="white" />
         </StSectionFooterLogoAndLinkSet>
         <StUlPersonalInfo>
