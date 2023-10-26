@@ -8,10 +8,11 @@ const aboutSiteMessages = [
   It also provides various optimization features such as automatic image quality adjustment, caching for script, component, and data fetching.`,
   `This site has improved Web Core Vital score by utilizing those various optimization features of Next.js.
   By introducing a Composite Rendering method of Client Side Rendering and Server Side Rendering, it made fast Painting and User Interaction possible.
-  Also, this site prevented Cumulative Layout Shift caused by Image Lazy Loading.
-  And this site applied one of the major Third party of React, styled-components, on Server Side ` +
-    `to reduce Painting Delay caused by CSS-in-JS download dynamically.`,
-  'This site is served with the following structure.',
+  Also, this site prevented Cumulative Layout Shift caused by Image Lazy Loading by utilizing <Image> component, ` +
+    `which is an extension of HTML <img> element made by Next.js,
+  And this site dramatically reduced Painting Delay caused by downloading CSS-in-JS on Client Side by applying styled-components, ` +
+    `one of React's major Third party, on Server Side.`,
+  'This site is being served with the following structure.',
 ];
 
 export default aboutSiteMessages;
