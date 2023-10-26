@@ -237,6 +237,16 @@ const skills: Skill[] = [
     },
   },
   {
+    name: 'Firebase',
+    level: 2,
+    category: ['Infrastructure'],
+    logo: {
+      url: path.join(baseUrlPathname, 'logo_firebase.png'),
+      width: 256,
+      height: 351,
+    },
+  },
+  {
     name: 'Jupyter',
     level: 8,
     category: ['DataScience'],
@@ -305,6 +315,16 @@ const skills: Skill[] = [
       url: path.join(baseUrlPathname, 'logo_sqlite.png'),
       width: 512,
       height: 228,
+    },
+  },
+  {
+    name: 'Realm',
+    level: 2,
+    category: ['DBMS'],
+    logo: {
+      url: path.join(baseUrlPathname, 'logo_realm.png'),
+      width: 256,
+      height: 256,
     },
   },
   {
