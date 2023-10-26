@@ -17,10 +17,12 @@ export const StDivProjectCard = styled.div`
   border-radius: 15px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
   overflow: hidden;
 
   &:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+
     .card-btn-wrapper {
       border-radius: 14px;
       background-color: rgba(0, 0, 0, 0.1);
