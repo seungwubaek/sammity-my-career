@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
 import { getAssetUrl } from '@/lib/utils/url';
@@ -22,6 +23,7 @@ type PropsHeroImage = {
 const HeroImage: React.FC<PropsHeroImage> = (props) => {
   const { locale } = props;
 
+  const t = useTranslations();
   const srcHero = getAssetUrl(`main_hero_${locale}.png`).toString();
   const srcMobile = getAssetUrl('profile_sammy_baek.png').toString();
 
@@ -52,7 +54,7 @@ const HeroImage: React.FC<PropsHeroImage> = (props) => {
             <StDivMobileTitleMain>FullStack</StDivMobileTitleMain>
             <StDivMobileTitleMain>Computer Engineer</StDivMobileTitleMain>
           </StDivMobileTitle>
-          <StDivMobileName>백 승 우</StDivMobileName>
+          <StDivMobileName>{t('HeroImage.mobileName')}</StDivMobileName>
         </StDivMobileHero>
       </div>
     </StSectionHeroImage>

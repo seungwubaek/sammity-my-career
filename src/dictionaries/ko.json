@@ -9,6 +9,9 @@
   "NotFound": {
     "title": "요청하신 페이지를 찾을 수 없습니다"
   },
+  "HeroImage": {
+    "mobileName": "백 승 우"
+  },
   "Profile": {
     "title": "프로필",
     "subTitlePersonalInfo": "기본정보",

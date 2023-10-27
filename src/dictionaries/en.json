@@ -9,6 +9,9 @@
   "NotFound": {
     "title": "Page Not Found"
   },
+  "HeroImage": {
+    "mobileName": "Sammy Baek"
+  },
   "Profile": {
     "title": "Profile",
     "subTitlePersonalInfo": "Personal Info",
