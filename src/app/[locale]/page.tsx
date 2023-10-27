@@ -19,6 +19,13 @@ const DynamicToastPortal = dynamic(
   }
 );
 
+const DynamicModalPortal = dynamic(
+  () => import('@/components/units/Portal/ModalPortal'),
+  {
+    ssr: false,
+  }
+);
+
 const Main = ({ params: { locale } }: { params: { locale: string } }) => {
   unstable_setRequestLocale(locale);
 
@@ -34,6 +41,7 @@ const Main = ({ params: { locale } }: { params: { locale: string } }) => {
       <SectionAboutSite locale={locale} />
       <SectionFooter />
       <DynamicToastPortal />
+      <DynamicModalPortal />
     </StMain>
   );
 };

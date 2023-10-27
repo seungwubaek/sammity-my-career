@@ -1,4 +1,11 @@
-import { colorType, fontType, layoutType, mediaType } from '@/styles/theme';
+import {
+  colorType,
+  fontType,
+  layoutType,
+  mediaType,
+  styleType,
+  zIndexType,
+} from '@/styles/theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -7,5 +14,7 @@ declare module 'styled-components' {
     layout: layoutType;
     font: fontType;
     color: colorType;
+    style: styleType;
+    zIndex: zIndexType;
   }
 }

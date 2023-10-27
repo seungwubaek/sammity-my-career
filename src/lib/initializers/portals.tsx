@@ -1,10 +1,17 @@
 'use client';
 
 import React from 'react';
-import { ToastPortalProvider } from '@/components/units/Portal';
+import {
+  ModalPortalProvider,
+  ToastPortalProvider,
+} from '@/components/units/Portal';
 
 const PortalProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  return <ToastPortalProvider>{children}</ToastPortalProvider>;
+  return (
+    <ToastPortalProvider>
+      <ModalPortalProvider>{children}</ModalPortalProvider>
+    </ToastPortalProvider>
+  );
 };
 
 export default PortalProvider;

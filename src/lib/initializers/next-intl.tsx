@@ -18,7 +18,11 @@ const NextIntlClientProviderWrapper: React.FC<
   }
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider
+      locale={locale}
+      timeZone="Asia/Seoul"
+      messages={messages}
+    >
       {children}
     </NextIntlClientProvider>
   );

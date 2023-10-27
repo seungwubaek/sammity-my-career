@@ -21,6 +21,9 @@ const defaultLayout = {
   // Projects
   projectCardMaxWidth: 320,
   projectCardHeight: 100,
+  // Modal
+  modalHorizontalPadding: 20,
+  modalVerticalPadding: 10,
 };
 
 const defaultFont = {
@@ -52,6 +55,7 @@ const defaultColors = {
   border: '#e5e5e5',
   lightBorder: '#ebebeb',
   darkBorder: '#a5a5a5',
+  listHovered: '#f1f1f1',
   // SkillInventory
   skillAlignDefault: '#8dc6ff',
   skillAlignDefaultActive: '#638bb2',
@@ -66,6 +70,18 @@ const defaultColors = {
   skillExpGaugeBeginner: '#ff6e55',
   // Introduction
   speechCardBorder: '#5e5e5e',
+  // Modal
+  modalBackdrop: 'rgba(0, 0, 0, 0.5)',
+};
+
+const defaultStyle = {
+  // Header
+  dropdownShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+};
+
+const defaultZIndex = {
+  modalBackdrop: 100,
+  modal: 200,
 };
 
 const theme: DefaultTheme = {
@@ -74,10 +90,14 @@ const theme: DefaultTheme = {
   layout: defaultLayout,
   font: defaultFont,
   color: defaultColors,
+  style: defaultStyle,
+  zIndex: defaultZIndex,
 };
 
 export type mediaType = typeof defaultMedia;
 export type layoutType = typeof defaultLayout;
 export type fontType = typeof defaultFont;
 export type colorType = typeof defaultColors;
+export type styleType = typeof defaultStyle;
+export type zIndexType = typeof defaultZIndex;
 export default theme;

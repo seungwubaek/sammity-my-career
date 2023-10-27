@@ -17,6 +17,7 @@ export const StHeaderWrapper = styled.header`
 `;
 
 export const StSectionHeader = styled.section`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,13 +32,15 @@ export const StLinkHeaderLeft = styled(Link)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  min-width: 180px;
 `;
 
 export const StDivHeaderRight = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  gap: 30px;
+  height: 100%;
 `;
 
 export const StDivHeaderRightMobile = styled.div`

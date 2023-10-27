@@ -2,8 +2,12 @@
 // https://next-intl-docs.vercel.app/docs/getting-started/app-router-server-components
 import createMiddleware from 'next-intl/middleware';
 
+// Guide for using hooks in next-intl v3
+// https://next-intl-docs-git-feat-next-13-rsc-next-intl.vercel.app/docs/routing/navigation
+import { locales } from './intl-navigation';
+
 export default createMiddleware({
-  locales: ['ko', 'en'],
+  locales,
   defaultLocale: 'ko',
   localePrefix: 'always',
 });
