@@ -55,6 +55,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <ToTop />
+          <div id="toast-portal" />
         </Initializers>
       </body>
     </html>

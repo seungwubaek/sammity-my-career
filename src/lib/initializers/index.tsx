@@ -4,6 +4,7 @@ import StyledComponentThemeProvider from './styled-components-theme';
 import NextIntlClientProviderWrapper, {
   NextIntlClientProviderProps,
 } from './next-intl';
+import PortalProvider from './portals';
 
 export type ProvidersProps = NextIntlClientProviderProps;
 
@@ -12,7 +13,7 @@ const Providers: React.FC<ProvidersProps> = (props) => {
     <StyledComponentsRegistry>
       <StyledComponentThemeProvider>
         <NextIntlClientProviderWrapper locale={props.locale}>
-          {props.children}
+          <PortalProvider>{props.children}</PortalProvider>
         </NextIntlClientProviderWrapper>
       </StyledComponentThemeProvider>
     </StyledComponentsRegistry>
