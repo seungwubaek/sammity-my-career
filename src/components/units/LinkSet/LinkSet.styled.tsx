@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 
 export const StDivLinkSet = styled.div`
   display: flex;
+
   a {
     display: flex;
     align-items: center;
@@ -13,22 +14,15 @@ export const StDivLinkSet = styled.div`
 
   ${generateCssByMedia(
     css`
-      gap: 2rem;
+      gap: 30px;
     `,
     ['desktop']
   )}
 
   ${generateCssByMedia(
     css`
-      gap: 1rem;
+      gap: 20px;
     `,
-    ['tablet']
-  )}
-
-  ${generateCssByMedia(
-    css`
-      gap: 0.7rem;
-    `,
-    ['mobile']
+    ['tablet', 'mobile']
   )}
 `;
