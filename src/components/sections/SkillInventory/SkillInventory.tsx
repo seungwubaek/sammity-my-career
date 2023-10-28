@@ -8,6 +8,7 @@ import {
   SectionTitle,
   StSection,
 } from '@/components/sections/SectionBase';
+import { StDivNumSkillsBlock } from './SkillInventory.styled';
 import ClientInventory from './ClientInventory';
 
 type PropsSectionSkillInventory = React.PropsWithChildren<{
@@ -25,6 +26,11 @@ const SectionSkillInventory: React.FC<PropsSectionSkillInventory> = () => {
         {t('SkillInventory.title')}
       </SectionTitle>
       <SectionContent>
+        <StDivNumSkillsBlock>
+          {`${t('SkillInventory.NumSkills.beforeNum')} ` +
+            `${skills.length} ` +
+            `${t('SkillInventory.NumSkills.afterNum')}`}
+        </StDivNumSkillsBlock>
         <ClientInventory skills={skills} />
       </SectionContent>
     </StSection>

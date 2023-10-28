@@ -17,6 +17,7 @@ import {
   StDivInvCtrlAlignTitle,
   StDivInvCtrlAlignBtnWrapper,
   StDivInvCtrlAlignBtn,
+  StDivSearchResultEmpty,
 } from './ClientInventory.styled';
 import SkillItemSlot from '../SkillItemSlot';
 import { IoSearch } from 'react-icons/io5';
@@ -134,18 +135,24 @@ const ClientInventory: React.FC<PropsClientInventory> = (props) => {
         </StDivInvCtrlAlignWrapper>
       </StDivInvCtrlContainer>
       <StDivClientSkillInventory>
-        {skillsFromClient.map((skill) => {
-          // SkillItemSlot은 server component이지만 client component 내부에서 사용하므로 client component로 취급된다.
-          if (!skill.isVisible) {
-            return null;
-          }
-          return (
-            <SkillItemSlot
-              key={`skillInventorySlot_${skill.name}`}
-              skill={skill}
-            />
-          );
-        })}
+        {skillsFromClient.filter((skill) => skill.isVisible).length === 0 ? (
+          <StDivSearchResultEmpty>
+            {t('SkillInventory.Search.resultEmpty')}
+          </StDivSearchResultEmpty>
+        ) : (
+          skillsFromClient.map((skill) => {
+            // SkillItemSlot은 server component이지만 client component 내부에서 사용하므로 client component로 취급된다.
+            if (!skill.isVisible) {
+              return null;
+            }
+            return (
+              <SkillItemSlot
+                key={`skillInventorySlot_${skill.name}`}
+                skill={skill}
+              />
+            );
+          })
+        )}
       </StDivClientSkillInventory>
     </>
   );

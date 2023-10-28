@@ -36,9 +36,8 @@ export const StDivInvCtrlContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   margin-bottom: 1rem;
-  min-height: ${({ theme }) => theme.layout.skillSlotHeight}px;
 
   ${generateCssByMedia(
     css`
@@ -52,6 +51,8 @@ export const StDivInvCtrlContainer = styled.div`
 export const StDivInvCtrlSearchWrapper = styled.div`
   display: flex;
   margin-right: 15px;
+  min-height: ${({ theme }) => theme.layout.skillSlotHeight}px;
+  padding: 5px 0;
 `;
 
 export const StDivInvCtrlSearch = styled.div`
@@ -116,4 +117,12 @@ export const StDivInvCtrlAlignBtn = styled.div<{
   &:not(:last-child) {
     margin-right: 10px;
   }
+`;
+
+export const StDivSearchResultEmpty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
 `;

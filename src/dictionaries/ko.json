@@ -67,6 +67,13 @@
   },
   "SkillInventory": {
     "title": "스킬",
+    "NumSkills": {
+      "beforeNum": "총",
+      "afterNum": "개 스킬"
+    },
+    "Search": {
+      "resultEmpty": "검색 결과가 없습니다."
+    },
     "Align": {
       "title": "정렬",
       "default": "기본순",

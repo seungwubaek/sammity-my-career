@@ -67,6 +67,13 @@
   },
   "SkillInventory": {
     "title": "Skills",
+    "NumSkills": {
+      "beforeNum": "Total",
+      "afterNum": "skills"
+    },
+    "Search": {
+      "resultEmpty": "No results found."
+    },
     "Align": {
       "title": "Sort",
       "default": "Default",
