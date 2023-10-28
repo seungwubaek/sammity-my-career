@@ -55,8 +55,6 @@ export const StDivProfileSubSectionContent = styled.div`
 `;
 
 export const StTablePersonalInfo = styled.table`
-  line-height: 1;
-
   th {
     padding: 0.5rem 0;
     vertical-align: top;
