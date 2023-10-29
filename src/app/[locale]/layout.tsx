@@ -62,10 +62,10 @@ export async function generateMetadata(
       siteName: t('Meta.title'),
       images: [
         {
-          url: `${getAssetUrl('sammity.png')}`,
-          width: 192,
-          height: 192,
-          alt: 'Logo Sammity',
+          url: `${getAssetUrl('my-hero-image.png')}`,
+          width: 800,
+          height: 400,
+          alt: 'My Hero Image for share',
         },
         ...previousImages,
       ],
