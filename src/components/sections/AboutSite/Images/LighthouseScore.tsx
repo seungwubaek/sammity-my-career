@@ -17,7 +17,7 @@ export const LighthouseScore: React.FC<PropsLighthouseScore> = (props) => {
       <ImageWithSizes
         src={imageSrc}
         alt="Lighthouse Score"
-        mediaSizes={{ desktop: 450 }}
+        mediaSizes={{ desktop: 700 }}
         quality={100}
       />
     </StDivImageWrapper>

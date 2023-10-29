@@ -7,8 +7,8 @@ import { StDivImageWrapperBase } from '@/components/sections/SectionBase/ImageWr
 
 export const StDivImageWrapper = styled(StDivImageWrapperBase)`
   position: relative;
-  aspect-ratio: 487 / 283;
-  max-width: 450px;
+  aspect-ratio: 711 / 732;
+  max-width: 600px;
   width: 100%;
   height: auto;
   margin: 20px auto;
