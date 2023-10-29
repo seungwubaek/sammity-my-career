@@ -63,7 +63,7 @@ export async function generateMetadata(
       images: [
         {
           url: `${getAssetUrl('my-hero-image.png')}`,
-          width: 800,
+          width: 768, // 1.92:1
           height: 400,
           alt: 'My Hero Image for share',
         },
