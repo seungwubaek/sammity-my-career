@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { pixelLightGrayBase64 } from '@/data/loading';
+
 import ImageWithSizes from '@/components/units/ImageWithSizes';
 import { StDivImageWrapper } from './LighthouseScore.styled';
 
@@ -15,7 +17,7 @@ export const LighthouseScore: React.FC<PropsLighthouseScore> = (props) => {
       <ImageWithSizes
         src={imageSrc}
         alt="Lighthouse Score"
-        sizes={{ desktop: 450 }}
+        mediaSizes={{ desktop: 450 }}
         quality={100}
       />
     </StDivImageWrapper>

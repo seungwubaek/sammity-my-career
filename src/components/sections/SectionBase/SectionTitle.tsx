@@ -102,8 +102,12 @@ export const SectionTitle: React.FC<PropsSectionTitle> = (props) => {
 
   const [isShowAnchor, setIsShowAnchor] = React.useState(false);
 
-  const toggleIsShowAnchor = React.useCallback(() => {
-    setIsShowAnchor((prev) => !prev);
+  const showAnchor = React.useCallback(() => {
+    setIsShowAnchor(true);
+  }, []);
+
+  const hideAnchor = React.useCallback(() => {
+    setIsShowAnchor(false);
   }, []);
 
   const { showToastPortal } = useToastPortal();
@@ -111,8 +115,8 @@ export const SectionTitle: React.FC<PropsSectionTitle> = (props) => {
   return (
     <StH1SectionTitleWrapper id={id} $hasMarginVertical={hasMarginVertical}>
       <StDivSectionTitleLinkWrapper
-        onMouseEnter={toggleIsShowAnchor}
-        onMouseLeave={toggleIsShowAnchor}
+        onMouseEnter={showAnchor}
+        onMouseLeave={hideAnchor}
         onClick={() => {
           if (navigator.clipboard === undefined) {
             showToastPortal(

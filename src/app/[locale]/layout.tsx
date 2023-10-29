@@ -8,6 +8,8 @@ import { Noto_Sans_KR } from 'next/font/google';
 
 import Header from '@/components/sections/Header';
 import ToTop from '@/components/units/ToTop';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
@@ -52,11 +54,13 @@ export default async function LocaleLayout({
       <body className={notoSansKr.className}>
         <Initializers locale={locale}>
           <GlobalStyles />
-          <Header />
-          {children}
-          <ToTop />
-          <div id="modal-portal" />
-          <div id="toast-portal" />
+          <Suspense fallback={<Loading />}>
+            <Header />
+            {children}
+            <ToTop />
+            <div id="modal-portal" />
+            <div id="toast-portal" />
+          </Suspense>
         </Initializers>
       </body>
     </html>

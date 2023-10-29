@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 
 import { getAssetUrl } from '@/lib/utils/url';
+import { pixelGrayBase64 } from '@/data/loading';
 
 import { StDivImageWrapper, StDivProfileImage } from './ProfileImage.styled';
 import ImageWithSizes from '@/components/units/ImageWithSizes';
@@ -35,7 +35,9 @@ const ProfileImage: React.FC<PropsProfileImage> = (props) => {
           src={getAssetUrl(`post_pain_${locale}.jpg`).toString()}
           alt="post for pain relief"
           quality={100}
-          sizes={{ desktop: 400 }}
+          mediaSizes={{ desktop: 400 }}
+          placeholder="blur"
+          blurDataURL={pixelGrayBase64}
         />
       </StDivImageWrapper>
     </StDivProfileImage>

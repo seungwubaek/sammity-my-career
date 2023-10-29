@@ -3,6 +3,8 @@ import clsx from 'clsx';
 
 import type { Skill } from '@/types/skills';
 
+import { pixelGrayBase64 } from '@/data/loading';
+
 import {
   StDivSkillItemSlot,
   StDivSkillNameWrapper,
@@ -28,7 +30,7 @@ const SkillItemSlot: React.FC<PropsSkillItemSlot> = (props) => {
           <ImageWithSizes
             src={skill.logo.url}
             alt={skill.name}
-            sizes={{ desktop: skill.logo.width }}
+            mediaSizes={{ desktop: skill.logo.width }}
           />
         </div>
         <span>{skill.name}</span>

@@ -123,6 +123,13 @@ const globalStyles = createGlobalStyle`
     }
   }
 
+  .responsive-only-tablet {
+    @media (min-width: ${({ theme }) => theme.media.desktopMinWidth}px),
+      (max-width: ${({ theme }) => theme.media.mobileMaxWidth}px) {
+      display: none !important;
+    }
+  }
+
   .responsive-only-tablet-mobile {
     @media (min-width: ${({ theme }) => theme.media.desktopMinWidth}px) {
       display: none !important;

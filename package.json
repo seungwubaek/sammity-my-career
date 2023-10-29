@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true NODE_ENV=production next build"
   },
   "dependencies": {
     "clsx": "^2.0.0",
@@ -17,15 +18,18 @@
     "react-icons": "^4.11.0",
     "react-responsive": "^9.0.2",
     "react-responsive-masonry": "^2.1.7",
+    "react-spinners": "^0.13.8",
     "sharp": "^0.32.6",
     "styled-components": "^6.1.0",
     "swiper": "^10.3.1"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-responsive-masonry": "^2.1.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "sass": "^1.69.3",

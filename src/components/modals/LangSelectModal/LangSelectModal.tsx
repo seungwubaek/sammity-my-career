@@ -19,7 +19,7 @@ const LangSelectModal: React.FC = () => {
           key={locale}
           onClick={() => {
             closeModal();
-            router.replace(pathname, { locale });
+            router.replace(pathname, { scroll: false, locale });
           }}
         >
           {locale}

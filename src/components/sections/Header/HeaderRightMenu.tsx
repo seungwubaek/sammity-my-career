@@ -40,7 +40,6 @@ const HeaderRightMenu: React.FC<PropsWithChildren> = ({ children }) => {
         <StDivDropdownMenuItem
           onClick={() => {
             setIsMenuOpen(false);
-            // openModal(<LangSelectModal />);
             openModal({
               modalTitle: 'Select Language',
               modalContent: <LangSelectModal />,

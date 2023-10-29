@@ -76,7 +76,7 @@ const LangDropdown: React.FC = () => {
             key={locale}
             onClick={() => {
               hideMenu();
-              router.replace(pathname, { locale });
+              router.replace(pathname, { scroll: false, locale });
             }}
           >
             {localesLabels[locale]}

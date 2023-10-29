@@ -26,7 +26,7 @@ const ProjectRepresentativeImage: React.FC<PropsProjectCard> = (props) => {
       <ImageWithSizes
         src={project.representativeImageSrc}
         alt={project.title}
-        sizes={{ desktop: theme.layout.projectCardMaxWidth }}
+        mediaSizes={{ desktop: theme.layout.projectCardMaxWidth }}
         quality={100}
       />
     </StDivProjectRepresentativeImageWrapper>

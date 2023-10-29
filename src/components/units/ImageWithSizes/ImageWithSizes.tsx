@@ -5,30 +5,29 @@ import Image from 'next/image';
 import { useTheme } from 'styled-components';
 import { getImageSizes } from '@/lib/helpers/styling';
 
-type PropsImage = {
-  src: string;
-  alt: string;
-  quality?: number;
-  sizes: {
+type PropsImage = React.ComponentProps<typeof Image> & {
+  mediaSizes: {
     desktop?: number;
     tablet?: number;
     mobile?: number;
   };
-  priority?: boolean;
 };
 
 const ImageWithSizes: React.FC<PropsImage> = (props) => {
-  const { src, alt, quality, sizes, priority = false } = props;
+  const { mediaSizes, fill = true, priority = false, ...rest } = props;
   const theme = useTheme();
 
   return (
     <Image
-      src={src}
-      alt={alt}
-      quality={quality}
-      fill
+      {...rest}
+      alt={rest.alt || ''} // 원래는 안써도 됨 but for suppress eslint alt-text 규칙 경고
+      fill={fill}
       sizes={getImageSizes(
-        { desktop: sizes.desktop, tablet: sizes.tablet, mobile: sizes.mobile },
+        {
+          desktop: mediaSizes.desktop,
+          tablet: mediaSizes.tablet,
+          mobile: mediaSizes.mobile,
+        },
         theme.media
       )}
       priority={priority}

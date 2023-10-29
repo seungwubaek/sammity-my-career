@@ -15,7 +15,7 @@ export const SiteArchitecture: React.FC<PropsSiteArchitecture> = (props) => {
       <ImageWithSizes
         src={imageSrc}
         alt="Site Architecture"
-        sizes={{ desktop: 800 }}
+        mediaSizes={{ desktop: 800 }}
         quality={100}
       />
     </StDivImageWrapper>

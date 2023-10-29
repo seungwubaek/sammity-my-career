@@ -63,6 +63,7 @@ import 'swiper/css/autoplay';
 // TODO:
 // Issue 2 해결 1의 방법에서 swiper module은 require를 써지 않아도 되는지 확인 필요
 import { Virtual, Autoplay } from 'swiper/modules';
+import { useTheme } from 'styled-components';
 import clsx from 'clsx';
 
 import type { Skill } from '@/types/skills';
@@ -84,6 +85,7 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
 
   const swiperRef = React.useRef(null);
   const { isTablet, isMobile } = useAllMediaQuery();
+  const theme = useTheme();
 
   React.useEffect(() => {
     if (!isTablet || !isMobile) {
@@ -100,7 +102,18 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
       className={clsx('unselectable')}
       modules={[Virtual, Autoplay]}
       virtual={true}
-      slidesPerView={isMobile ? 4 : isTablet ? 6 : 10}
+      slidesPerView={4}
+      breakpoints={{
+        [theme.media.mobileMinWidth]: {
+          slidesPerView: theme.layout.heroSkillStacksNumOfSkillPerRow.mobile,
+        },
+        [theme.media.tabletMinWidth]: {
+          slidesPerView: theme.layout.heroSkillStacksNumOfSkillPerRow.tablet,
+        },
+        [theme.media.desktopMinWidth]: {
+          slidesPerView: theme.layout.heroSkillStacksNumOfSkillPerRow.desktop,
+        },
+      }}
       loop={true}
       autoplay={{
         delay: 500,
@@ -126,7 +139,7 @@ const SkillStackSwiper: React.FC<PropsSkillStackSwiper> = (props) => {
                 <ImageWithSizes
                   src={skill.logo.url}
                   alt={`skill ${skill.name}`}
-                  sizes={{ desktop: 75, tablet: 60, mobile: 55 }}
+                  mediaSizes={{ desktop: 75, tablet: 60, mobile: 55 }}
                 />
               </StDivSkillLogoWrapper>
               <StDivSkillName>{skill.name}</StDivSkillName>

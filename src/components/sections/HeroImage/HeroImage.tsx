@@ -33,7 +33,7 @@ const HeroImage: React.FC<PropsHeroImage> = (props) => {
         <ImageWithSizes
           src={srcHero}
           alt="main hero"
-          sizes={{ desktop: 1920, tablet: 1024, mobile: 700 }}
+          mediaSizes={{ desktop: 1920, tablet: 1024, mobile: 700 }}
           quality={100}
           priority
         />

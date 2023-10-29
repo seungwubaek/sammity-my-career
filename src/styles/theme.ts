@@ -5,6 +5,7 @@ const defaultMedia = {
   tabletMaxWidth: 1023,
   tabletMinWidth: 700,
   mobileMaxWidth: 699,
+  mobileMinWidth: 350,
 };
 
 const defaultLayout = {
@@ -14,6 +15,17 @@ const defaultLayout = {
   headerHeight: 60,
   // Section
   sectionHorizontalPadding: 20,
+  // HeroSkillStacks
+  heroSkillStacksLogoWidth: {
+    desktop: '75px',
+    tablet: '60px',
+    mobile: '55px',
+  },
+  heroSkillStacksNumOfSkillPerRow: {
+    desktop: 10,
+    tablet: 6,
+    mobile: 4,
+  },
   // SkillInventory
   skillSearchBtnSize: 20,
   skillSlotHeight: 50,
@@ -56,6 +68,8 @@ const defaultColors = {
   lightBorder: '#ebebeb',
   darkBorder: '#a5a5a5',
   listHovered: '#f1f1f1',
+  // Loading Spinner
+  loadingSpinner: '#0070C0',
   // SkillInventory
   skillAlignDefault: '#8dc6ff',
   skillAlignDefaultActive: '#638bb2',
@@ -80,6 +94,7 @@ const defaultStyle = {
 };
 
 const defaultZIndex = {
+  skillStackSwiper: 2,
   modalBackdrop: 100,
   modal: 200,
 };

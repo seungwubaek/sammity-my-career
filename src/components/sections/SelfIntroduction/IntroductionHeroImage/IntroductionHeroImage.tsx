@@ -20,7 +20,7 @@ const IntroductionHeroImage: React.FC<PropsIntroductionHeroImage> = (props) => {
         <ImageWithSizes
           src={imageSrc}
           alt="Self Introduction Hero Image"
-          sizes={{ desktop: 1920 }}
+          mediaSizes={{ desktop: 1920 }}
         />
       </StSectionIntroductionHeroFixer>
     </StSectionIntroductionHeroWrapper>

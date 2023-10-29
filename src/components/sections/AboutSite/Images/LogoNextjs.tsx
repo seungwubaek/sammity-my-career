@@ -15,7 +15,7 @@ export const LogoNextjs: React.FC<PropsLogoNextjs> = (props) => {
       <ImageWithSizes
         src={imageSrc}
         alt="Logo Next.js"
-        sizes={{ desktop: 250 }}
+        mediaSizes={{ desktop: 250 }}
         quality={100}
       />
     </StDivImageWrapper>

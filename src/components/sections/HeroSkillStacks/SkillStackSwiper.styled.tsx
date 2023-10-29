@@ -21,18 +21,18 @@ export const StDivSkillLogoWrapper = styled.div<{ $squareBorder?: boolean }>`
   aspect-ratio: 1/1;
   border-radius: ${({ $squareBorder }) => ($squareBorder ? 0 : '15px')};
   overflow: hidden;
-  width: 75px;
+  width: ${({ theme }) => theme.layout.heroSkillStacksLogoWidth.desktop};
 
   ${generateCssByMedia(
     css`
-      width: 60px;
+      width: ${({ theme }) => theme.layout.heroSkillStacksLogoWidth.tablet};
     `,
     ['tablet']
   )}
 
   ${generateCssByMedia(
     css`
-      width: 55px;
+      width: ${({ theme }) => theme.layout.heroSkillStacksLogoWidth.mobile};
     `,
     ['mobile']
   )}

@@ -84,7 +84,7 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
             <ImageWithSizes
               src={companyLogoSrc}
               alt={companyName}
-              sizes={{ desktop: companyLogoMaxWidth }}
+              mediaSizes={{ desktop: companyLogoMaxWidth }}
             />
           ) : (
             <div style={{ width: companyLogoMaxWidth, height: 120 }}></div>
