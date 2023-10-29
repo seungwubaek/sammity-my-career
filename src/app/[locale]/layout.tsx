@@ -9,6 +9,7 @@ import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/scripts';
 import { localeMap } from '@/intl-navigation';
+import { getAssetUrl } from '@/lib/utils/url';
 
 import Header from '@/components/sections/Header';
 import ToTop from '@/components/units/ToTop';
@@ -61,7 +62,7 @@ export async function generateMetadata(
       siteName: t('Meta.title'),
       images: [
         {
-          url: '/assets/images/sammity.png',
+          url: `${getAssetUrl('sammity.png')}`,
           width: 192,
           height: 192,
           alt: 'Logo Sammity',
