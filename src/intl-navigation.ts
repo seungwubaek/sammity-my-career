@@ -10,5 +10,11 @@ export const localesLabels = {
   en: 'English',
 };
 
+// export const localeMap: { [key in (typeof locales)[number]]: string } = {
+export const localeMap: { [key: string]: string } = {
+  ko: 'ko_KR',
+  en: 'en_US',
+};
+
 export const { Link, redirect, usePathname, useRouter } =
   createSharedPathnamesNavigation({ locales });

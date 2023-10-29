@@ -2,15 +2,25 @@ import { notFound } from 'next/navigation';
 import { createTranslator } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
+import type { Metadata, ResolvingMetadata } from 'next';
+
 import Initializers from '@/lib/initializers';
 import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/scripts';
+import { localeMap } from '@/intl-navigation';
 
 import Header from '@/components/sections/Header';
 import ToTop from '@/components/units/ToTop';
 import { Suspense } from 'react';
 import Loading from './loading';
+
+type PropsMetadata = {
+  params: {
+    locale: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 const notoSansKr = Noto_Sans_KR({ subsets: [] });
 
@@ -26,18 +36,39 @@ export function generateStaticParams() {
   return ['ko', 'en'].map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+// https://nextjs.org/docs/app/building-your-application/optimizing/metadata#dynamic-metadata
+export async function generateMetadata(
+  { params: { locale }, searchParams }: PropsMetadata,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const messages = await getMessages(locale);
 
   const t = createTranslator({ locale, messages });
 
+  const previousImages = (await parent).openGraph?.images || [];
+
   return {
-    title: t('Meta.title'),
+    title: `${t('Meta.title')}`,
     description: t('Meta.description'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL ?? '/'),
+    authors: [{ name: 'Sammy Baek', url: 'https://seungwebaek.github.io' }],
+    openGraph: {
+      title: `${t('Meta.title')}`,
+      description: t('Meta.description'),
+      type: 'website',
+      locale: localeMap[locale],
+      url: new URL('/', process.env.NEXT_PUBLIC_BASE_URL ?? '/'),
+      siteName: t('Meta.title'),
+      images: [
+        {
+          url: '/assets/images/sammity.png',
+          width: 192,
+          height: 192,
+          alt: 'Logo Sammity',
+        },
+        ...previousImages,
+      ],
+    },
   };
 }
 
