@@ -5,6 +5,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import Initializers from '@/lib/initializers';
 import GlobalStyles from '@/styles/GlobalStyles.styled';
 import { Noto_Sans_KR } from 'next/font/google';
+import { GoogleAnalytics } from '@/lib/scripts';
 
 import Header from '@/components/sections/Header';
 import ToTop from '@/components/units/ToTop';
@@ -63,6 +64,7 @@ export default async function LocaleLayout({
           </Suspense>
         </Initializers>
       </body>
+      {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
     </html>
   );
 }
