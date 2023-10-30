@@ -150,7 +150,16 @@ const projects: Project[] = [
     startedAt: '2020. 01',
     endedAt: '2021. 08',
     participationRate: 100,
-    usedSkills: ['Python', 'Flask', 'Hadoop', 'HDFS', 'Spark'],
+    usedSkills: [
+      'Python',
+      'Flask',
+      'Hadoop',
+      'HDFS',
+      'Spark',
+      'Linux',
+      'KVM',
+      'Windows',
+    ],
     tasks: [
       'Analysis of stock data',
       'Development of GUI program to collect data of hundreds of stocks in top KOSPI every day using PyQt and multi-threading technology',
@@ -225,7 +234,7 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_mosepeople.png'),
     where: 'MosePeople Co., Ltd.',
     summary:
-      'Production of React-based company homepage. Rendering news article from Django server',
+      'Production of React-based company official homepage. Rendering news article from Django-based Backend Server',
     startedAt: '2022. 10',
     endedAt: '2023. 05',
     participationRate: 70,

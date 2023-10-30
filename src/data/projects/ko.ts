@@ -147,7 +147,16 @@ const projects: Project[] = [
     startedAt: '2020. 01',
     endedAt: '2021. 08',
     participationRate: 100,
-    usedSkills: ['Python', 'Flask', 'Hadoop', 'HDFS', 'Spark'],
+    usedSkills: [
+      'Python',
+      'Flask',
+      'Hadoop',
+      'HDFS',
+      'Spark',
+      'Linux',
+      'KVM',
+      'Windows',
+    ],
     tasks: [
       '주식 데이터 분석',
       'PyQt과 멀티 쓰레딩 기술을 활용하여 매일 KOSPI 상위 수백 종목에 대한 데이터를 수집하는 GUI 프로그램 개발',
@@ -170,7 +179,7 @@ const projects: Project[] = [
     tasks: [
       'IBM AIF360, Microsoft Fairlearn, Google PAIR 등 선행 연구 조사',
       'AIF360을 이용한 데이터 편향 탐지 및 가공 프로그램 개발',
-      "거대언어모델의 학습편향 조사 (MS 'Tay', 스캐터랩 '이루다' v1), Deep Learning 공격, " +
+      "거대언어모델의 학습편향 조사 (MS 'Tay', 스캐터랩 '이루다' v1), Deep Learning 모델 적대적 공격, " +
         'LLM 최신 모델 조사 (ELMo, Attention Mechanism, Transformer, BERT)',
     ],
   },
@@ -216,11 +225,11 @@ const projects: Project[] = [
     ],
   },
   {
-    title: '회사 홈페이지 제작',
+    title: '회사 공식 홈페이지 제작',
     representativeImageSrc: path.join(baseUrlPathname, 'logo_mosepeople.png'),
     where: '(주)모세피플',
     summary:
-      'React 기반 회사 홈페이지 제작. Django 서버로부터 소식 게시물 데이터를 받아와서 렌더링',
+      'React 기반 회사 홈페이지 제작. Django 기반 백엔드 서버로부터 소식 게시물 데이터를 받아와서 렌더링',
     startedAt: '2022. 10',
     endedAt: '2023. 05',
     participationRate: 70,
