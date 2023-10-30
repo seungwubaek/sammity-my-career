@@ -1,5 +1,7 @@
-import { notFound } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import { redirect } from '@/intl-navigation';
 
 export default function CatchAllRestPage() {
-  return notFound();
+  const locale = useLocale();
+  return redirect(`/me`);
 }
