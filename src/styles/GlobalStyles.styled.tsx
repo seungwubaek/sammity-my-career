@@ -50,6 +50,7 @@ const globalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0.6em;  // 3/5=6/15
     margin-bottom: calc(1em / 3 * 2);  // 2/3=10/15
+    scroll-margin-top: ${({ theme }) => theme.layout.headerHeight + 10}px;
   }
 
   h1 {

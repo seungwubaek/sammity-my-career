@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <StHeaderWrapper>
       <StSectionHeader>
-        <StLinkHeaderLeft href="/">
+        <StLinkHeaderLeft href={`/${locale}/me`}>
           <SiteLogo colorScheme="black" />
         </StLinkHeaderLeft>
         <StDivHeaderRight className={clsx('responsive-only-desktop')}>
