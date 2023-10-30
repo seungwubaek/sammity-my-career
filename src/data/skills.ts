@@ -65,7 +65,7 @@ const skills: Skill[] = [
   },
   {
     name: 'JavaScript',
-    level: 5,
+    level: 6,
     category: ['Language', 'FrontEnd'],
     logo: {
       url: path.join(baseUrlPathname, 'logo_javascript.png'),
@@ -75,7 +75,7 @@ const skills: Skill[] = [
   },
   {
     name: 'TypeScript',
-    level: 5,
+    level: 6,
     category: ['Language', 'FrontEnd'],
     logo: {
       url: path.join(baseUrlPathname, 'logo_typescript.png'),
@@ -105,7 +105,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Next.js',
-    level: 4,
+    level: 6,
     category: ['FrontEnd', 'FullStack'],
     logo: {
       url: path.join(baseUrlPathname, 'logo_nextjs.png'),
@@ -125,7 +125,7 @@ const skills: Skill[] = [
   },
   {
     name: 'TensorFlow',
-    level: 5,
+    level: 4,
     category: ['DataScience'],
     logo: {
       url: path.join(baseUrlPathname, 'logo_tensorflow.png'),
@@ -319,7 +319,7 @@ const skills: Skill[] = [
   },
   {
     name: 'Realm',
-    level: 2,
+    level: 3,
     category: ['DBMS'],
     logo: {
       url: path.join(baseUrlPathname, 'logo_realm.png'),
