@@ -10,21 +10,20 @@ import { useToastPortal } from '@/components/units/Portal';
 
 type PropsSectionTitle = React.PropsWithChildren<{
   id?: string;
-  hasMarginVertical?: boolean;
+  noMarginTop?: boolean;
 }>;
 
 export const StH1SectionTitleWrapper = styled.h1<{
-  $hasMarginVertical?: boolean;
+  $noMarginTop?: boolean;
 }>`
   position: relative;
   font-weight: 700;
   border-bottom: 1px solid ${({ theme }) => theme.color.border};
-  margin-bottom: 0.5rem;
 
-  ${({ $hasMarginVertical }) =>
-    $hasMarginVertical &&
+  ${({ $noMarginTop }) =>
+    $noMarginTop &&
     css`
-      margin: 1rem 0;
+      margin-top: 0;
     `}
 
   ${generateCssByMedia(
@@ -98,7 +97,7 @@ export const StSpanSectionTitle = styled.span<{ $underlineWidth: number }>`
 `;
 
 export const SectionTitle: React.FC<PropsSectionTitle> = (props) => {
-  const { id, hasMarginVertical = false, children } = props;
+  const { id, noMarginTop = false, children } = props;
 
   const [isShowAnchor, setIsShowAnchor] = React.useState(false);
 
@@ -113,7 +112,7 @@ export const SectionTitle: React.FC<PropsSectionTitle> = (props) => {
   const { showToastPortal } = useToastPortal();
 
   return (
-    <StH1SectionTitleWrapper id={id} $hasMarginVertical={hasMarginVertical}>
+    <StH1SectionTitleWrapper id={id} $noMarginTop={noMarginTop}>
       <StDivSectionTitleLinkWrapper
         onMouseEnter={showAnchor}
         onMouseLeave={hideAnchor}

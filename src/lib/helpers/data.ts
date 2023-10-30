@@ -2,6 +2,7 @@ import skills from '@/data/skills';
 import { ko as project_ko, en as project_en } from '@/data/projects';
 import { ko as speech_ko, en as speech_en } from '@/data/speechCards';
 import { ko as aboutSite_ko, en as aboutSite_en } from '@/data/aboutSite';
+import { aboutSiteH2Messages } from '@/data/aboutSite/ko';
 
 import { getAssetUrl } from '../utils/url';
 
@@ -60,5 +61,5 @@ export const getAboutSiteMessagesFromServer = (locale: string) => {
     throw new Error('Unsupported locale');
   }
 
-  return aboutSiteMessages;
+  return { h2: aboutSiteH2Messages, p: aboutSiteMessages };
 };

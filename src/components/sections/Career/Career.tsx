@@ -21,9 +21,7 @@ const SectionCareer: React.FC<PropsSectionCareer> = (props) => {
   const careerCardWidth = 420;
   return (
     <StSection>
-      <SectionTitle id="career" hasMarginVertical={true}>
-        {t('Career.title')}
-      </SectionTitle>
+      <SectionTitle id="career">{t('Career.title')}</SectionTitle>
       <SectionContent>
         <StDivCareerCardWrapper>
           <CareerCard

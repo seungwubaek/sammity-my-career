@@ -12,4 +12,7 @@ const aboutSiteMessages = [
   `이 사이트는 아래와 같은 구조로 서비스 되고 있습니다.`,
 ];
 
+const aboutSiteH2Messages = ['Next.js', 'Web Core Vital', 'Architecture'];
+
 export default aboutSiteMessages;
+export { aboutSiteH2Messages };

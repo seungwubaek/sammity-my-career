@@ -27,7 +27,7 @@ const SectionSelfIntroduction: React.FC<PropsSectionIntroduction> = (props) => {
   return (
     <StSection $wide>
       <StSection>
-        <SectionTitle id="self-introduction" hasMarginVertical={true}>
+        <SectionTitle id="self-introduction">
           {t('SelfIntroduction.title')}
         </SectionTitle>
       </StSection>

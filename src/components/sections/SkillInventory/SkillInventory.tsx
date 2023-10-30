@@ -22,7 +22,7 @@ const SectionSkillInventory: React.FC<PropsSectionSkillInventory> = () => {
 
   return (
     <StSection>
-      <SectionTitle id="skill-inventory" hasMarginVertical={true}>
+      <SectionTitle id="skill-inventory">
         {t('SkillInventory.title')}
       </SectionTitle>
       <SectionContent>

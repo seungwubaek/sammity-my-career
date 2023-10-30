@@ -22,9 +22,7 @@ const SectionProjects: React.FC<PropsSectionProjects> = (props) => {
 
   return (
     <StSection>
-      <SectionTitle id="projects" hasMarginVertical={true}>
-        {t('Projects.title')}
-      </SectionTitle>
+      <SectionTitle id="projects">{t('Projects.title')}</SectionTitle>
       <SectionContent>
         <ProjectCards projects={projectsFromServer} />
       </SectionContent>

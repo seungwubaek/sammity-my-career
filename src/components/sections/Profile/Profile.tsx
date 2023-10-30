@@ -30,7 +30,9 @@ const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
 
   return (
     <StSection>
-      <SectionTitle id="profile">{t('Profile.title')}</SectionTitle>
+      <SectionTitle id="profile" noMarginTop={true}>
+        {t('Profile.title')}
+      </SectionTitle>
       <SectionContent>
         <StSectionProfileSubSection>
           <StH2ProfileSubSectionTitle id="personal-info">
