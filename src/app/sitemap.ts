@@ -3,15 +3,15 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://my-career.sammity.com/ko',
+      url: new URL('ko/me', process.env.NEXT_PUBLIC_BASE_URL).toString(),
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://my-career.sammity.com/en',
+      url: new URL('en/me', process.env.NEXT_PUBLIC_BASE_URL).toString(),
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
   ];

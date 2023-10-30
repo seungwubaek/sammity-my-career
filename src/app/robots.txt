@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://my-career.sammity.com/sitemap.xml
+Sitemap: https://career.sammity.com/sitemap.xml
