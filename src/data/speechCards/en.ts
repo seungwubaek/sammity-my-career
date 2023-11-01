@@ -28,7 +28,7 @@ const speeches: Speech[] = [
         'continue to challenge. Even if I spend less time playing and sleeping, I can take responsibility for the given task ' +
         'and complete them to the end. Because such difficulties are what make me grow.',
       'While working for an early-stage startup, I continued to work in extreme situations of waking up at 10:30 a.m., ' +
-        'and going to bed at 4 a.m. for about a year and a half. This means that the average daily working hours ' +
+        'and leaving work at 3-4 a.m. for about a year and a half. This means that the average daily working hours ' +
         'are more than 12 hours, excluding break time. Every day, I had to solve problems that I had never experienced before. ' +
         'It was a very difficult time physically and mentally, but I completed the task with a clear sense of purpose and perseverance.',
       'And this experience proved that I can solve any problem if I try hard.',
