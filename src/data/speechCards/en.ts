@@ -1,19 +1,24 @@
 import { Speech } from '@/types/speech';
 
+// TODO: need to use markdown converting
+
 const speeches: Speech[] = [
   {
     title: 'Attitude of Learning',
     message: [
-      'It is important to be able to approach and use any IT technology but more importantly, ' +
-        'team collaboration with the attitude of learning.',
-      'I thought that as a computer engineer, I should have the ability to develop, launch and maintain IT service for myself.',
-      "So I've experienced all web/app/server/data related fields, and learned any IT skills with interest.",
-      'I have encountered the conflict of concepts and limitations in order to learn IT skills on different topics, ' +
-        'and overcome those limitations. So I am familiar with the limit situation. ' +
-        "I'm always ready to learn new skills and I can participate in any field based on my wide range of practical knowledge.",
-      'By the way, IT is developing globally every minute and second, and new paradigms are emerging and existing tools are constantly being updated.',
+      'IT is developing globally every minute and second, and new paradigms are emerging and existing tools are constantly being updated.',
       'In order to adapt to the rapidly changing IT field, it is important to have a cooperative and learning attitude. ' +
-        'We should always be humble, respect each others, and find something to learn in everything.',
+        'It is important to be able to approach and use any IT technology. But more importantly, ' +
+        'if we focus on productivity, the time given to us is limited, so even if some skilled developers can show productivity ' +
+        'of more than 2 people, it is difficult to catch up with the collaboration of 2~3 developers.',
+      'Therefore, the most important thing for a startup developer is team collaboration through the attitude of learning. ' +
+        'We should always be humble, respect each others, collaborate, and find something to learn in everything.',
+      'On the other hand, I thought that as a complete software engineer, I should have the ability to develop, launch and maintain IT service for myself. ' +
+        'So I have experienced all web/app/server/data related fields, and learned any IT skills with interest.',
+      'Every time, I encountered the conflict of concepts and limitations in order to learn IT skills on different paradigms, ' +
+        'and overcome those limitations. So I am familiar with the limit situation. ' +
+        "I'm ready to learn new skills, with humble and not being conceited because I know my insufficiency in the infinite development and change of IT. " +
+        'Also, I can participate in any IT field based on my wide range of practical knowledge.',
     ],
   },
   {

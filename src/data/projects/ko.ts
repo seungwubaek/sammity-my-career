@@ -1,6 +1,8 @@
 import path from 'path';
 import { Project } from '@/types/projects';
 
+// TODO: need to use markdown converting
+
 let baseUrlPathname = '';
 
 const projects: Project[] = [
@@ -294,7 +296,8 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_domego.png'),
     where: '(주)모세피플',
     summary:
-      '중소형 마트와 고객을 연결하는 공산품 및 식자재 B2C E-Commerce 플랫폼 프로젝트. ' +
+      '온라인을 통한 판촉에 어려움을 겪는 중소형 마트 사업자를 대상으로, ' +
+      '고객과 온라인 거래를 중개하는 B2C E-Commerce 플랫폼. ' +
       'React 기반 프론트엔드, Fastapi 기반 MVC 구조의 백엔드 서버로 구성.',
     startedAt: '2022. 02',
     endedAt: '2022. 12',

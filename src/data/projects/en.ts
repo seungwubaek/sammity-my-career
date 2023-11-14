@@ -1,6 +1,8 @@
 import path from 'path';
 import { Project } from '@/types/projects';
 
+// TODO: need to use markdown converting
+
 let baseUrlPathname = '';
 
 const projects: Project[] = [
@@ -301,8 +303,8 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_domego.png'),
     where: 'MosePeople Co., Ltd.',
     summary:
-      'Industrial and Food material product B2C E-Commerce platform that connects medium and small marts and customers ' +
-      'with React-based frontend and Fastapi-based MVC backend server',
+      'B2C E-Commerce Platform that connects medium/small marts, who have difficulty promoting on online, ' +
+      'and customers. with React-based frontend and Fastapi-based MVC backend server',
     startedAt: '2022. 02',
     endedAt: '2022. 12',
     participationRate: 90,

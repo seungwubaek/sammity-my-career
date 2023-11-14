@@ -1,3 +1,5 @@
+// TODO: need to use markdown converting
+
 const aboutSiteMessages = [
   `This site is developed with Next.js (React based Front-End framework).`,
   'React is a SPA that works with Client Side Rendering, so painting screen is not completed until all scripts are ' +

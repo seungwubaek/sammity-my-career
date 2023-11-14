@@ -1,3 +1,5 @@
+// TODO: need to use markdown converting
+
 const aboutSiteMessages = [
   `이 사이트는 Next.js(React 기반 Front-End 프레임워크)로 개발되었습니다.`,
   `SPA인 React는 Client Side Rendering으로 동작하기 때문에 서버로부터 Script를 모두 다운로드하기 전까지 화면 Painting이 이루어지지 않습니다.
