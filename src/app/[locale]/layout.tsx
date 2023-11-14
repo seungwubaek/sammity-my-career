@@ -87,13 +87,11 @@ export default async function LocaleLayout({
       <body className={notoSansKr.className}>
         <Initializers locale={locale}>
           <GlobalStyles />
-          <Suspense fallback={<Loading />}>
-            <Header />
-            {children}
-            <ToTop />
-            <div id="modal-portal" />
-            <div id="toast-portal" />
-          </Suspense>
+          <Header />
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+          <ToTop />
+          <div id="modal-portal" />
+          <div id="toast-portal" />
         </Initializers>
       </body>
       {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
