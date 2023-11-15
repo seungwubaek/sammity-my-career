@@ -63,7 +63,7 @@ const projects: Project[] = [
     ],
   },
   {
-    title: 'L사 전자 - 냉장고 딥러닝을 이용한 사전진단 서비스',
+    title: 'L사 - 냉장고 딥러닝을 이용한 사전진단 서비스',
     representativeImageSrc: path.join(
       baseUrlPathname,
       'proj_l_refrig_deep.png'
@@ -111,7 +111,7 @@ const projects: Project[] = [
     ],
   },
   {
-    title: 'S사 텔레콤 - 유사 음원 추천',
+    title: 'S사 - 유사 음원 추천',
     representativeImageSrc: path.join(
       baseUrlPathname,
       'proj_s_recommendation_engine.png'

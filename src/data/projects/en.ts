@@ -64,8 +64,7 @@ const projects: Project[] = [
     ],
   },
   {
-    title:
-      'L* Electronics - Refrigerator Pre-diagnosis Service using Deep Learning',
+    title: 'L* Co. - Refrigerator Pre-diagnosis Service using Deep Learning',
     representativeImageSrc: path.join(
       baseUrlPathname,
       'proj_l_refrig_deep.png'
@@ -113,7 +112,7 @@ const projects: Project[] = [
     ],
   },
   {
-    title: 'S* Telecom - Similar Sound Recommendation',
+    title: 'S* Co. - Similar Sound Recommendation',
     representativeImageSrc: path.join(
       baseUrlPathname,
       'proj_s_recommendation_engine.png'
