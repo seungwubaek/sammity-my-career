@@ -31,6 +31,13 @@ const headerMenus: headerMenu[] = [
   },
   {
     title: {
+      ko: '포트폴리오',
+      en: 'Portfolio',
+    },
+    href: '#portfolio',
+  },
+  {
+    title: {
       ko: '자기소개',
       en: 'Introduction',
     },

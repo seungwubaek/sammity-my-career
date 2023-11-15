@@ -90,6 +90,9 @@
     "useSkillHeader": "Skills",
     "responsibilitiesHeader": "Responsibilities"
   },
+  "Portfolio": {
+    "title": "Portfolio"
+  },
   "SelfIntroduction": {
     "title": "Introduction"
   },

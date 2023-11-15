@@ -90,6 +90,9 @@
     "useSkillHeader": "사용기술",
     "responsibilitiesHeader": "담당업무"
   },
+  "Portfolio": {
+    "title": "포트폴리오"
+  },
   "SelfIntroduction": {
     "title": "자기소개"
   },
