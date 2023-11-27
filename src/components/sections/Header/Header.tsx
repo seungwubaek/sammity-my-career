@@ -13,10 +13,11 @@ import {
   StDivHeaderRightMobile,
 } from './Header.styled';
 import SiteLogo from '@/components/units/Logo';
+import TocDropdown from './TocDropdown';
+import GitHubDropdown from './GitHubDropdown';
 import LangDropdown from './LangDropdown';
 import HeaderRightMenu from './HeaderRightMenu';
 import { IoMenuSharp } from 'react-icons/io5';
-import TocDropdown from './TocDropdown';
 
 const Header: React.FC = () => {
   const locale = useLocale() as 'ko' | 'en';
@@ -35,6 +36,7 @@ const Header: React.FC = () => {
             }))}
           />
           <LangDropdown />
+          <GitHubDropdown />
         </StDivHeaderRight>
         <StDivHeaderRightMobile
           className={clsx('responsive-only-tablet-mobile')}

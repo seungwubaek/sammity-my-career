@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 
 import headerMenus from '@/data/headerMenu';
 import { localesLabels } from '@/intl-navigation';
+import { siteInfo } from '@/data/commonInfo';
 
 import {
   StDivDropdown,
@@ -12,7 +13,11 @@ import {
   StLinkDropdownMenuItem,
   StUlDropdownMenu,
 } from './HeaderRightMenu.styled';
-import { IoLanguageOutline } from 'react-icons/io5';
+import {
+  IoLogoGithub,
+  IoOpenOutline,
+  IoLanguageOutline,
+} from 'react-icons/io5';
 import { useModalPortal } from '@/components/units/Portal';
 import LangSelectModal from '@/components/modals/LangSelectModal';
 
@@ -46,11 +51,22 @@ const HeaderRightMenu: React.FC<PropsWithChildren> = ({ children }) => {
             });
           }}
         >
-          <li className="language">
-            <IoLanguageOutline size={20} />
+          <li>
+            <IoLanguageOutline className="icon" size={20} />
             {localesLabels.title}
           </li>
         </StDivDropdownMenuItem>
+        <StLinkDropdownMenuItem
+          href={siteInfo.githubUrl}
+          key={siteInfo.githubUrl}
+          target="_blank"
+        >
+          <li>
+            <IoLogoGithub className="icon" size={20} />
+            View on GitHub&nbsp;
+            <IoOpenOutline size={15} />
+          </li>
+        </StLinkDropdownMenuItem>
       </StUlDropdownMenu>
     </>
   );

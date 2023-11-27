@@ -5,11 +5,8 @@ import styled from 'styled-components';
 
 type DropdownProps = {
   dropdownBtn: React.ReactNode;
-  dropdownMenuList: {
-    listKey: any;
-    menuComponent: React.ReactNode;
-    onClick?: () => void;
-  }[];
+  menuComponentList: React.ReactNode[];
+  dropdownAlign?: 'left' | 'center' | 'right';
 };
 
 const StDivDropdownBtnWrapper = styled.div`
@@ -19,16 +16,27 @@ const StDivDropdownBtnWrapper = styled.div`
   align-items: center;
   height: 100%;
   padding: 0 10px;
-  right: -10px;
   cursor: pointer;
 `;
 
 const StUlDropdownMenu = styled.ul<{
   $show: boolean;
+  $dropdownAlign: DropdownProps['dropdownAlign'];
 }>`
   position: absolute;
   top: ${({ theme }) => theme.layout.headerHeight}px;
-  right: 0;
+  ${({ $dropdownAlign }) => {
+    switch ($dropdownAlign) {
+      case 'left':
+        return 'left: 0;';
+      case 'center':
+        return 'left: 50%; transform: translateX(-50%);';
+      case 'right':
+        return 'right: 0;';
+      default:
+        return 'right: 0;';
+    }
+  }}
   ${({ $show }) => ($show ? 'display: block;' : 'display: none;')}
   min-width: 120px;
   background-color: ${({ theme }) => theme.color.background};
@@ -47,7 +55,10 @@ const StUlDropdownMenu = styled.ul<{
 `;
 
 const Dropdown: React.FC<DropdownProps> = (props) => {
-  const { dropdownBtn, dropdownMenuList } = props;
+  // Usage:
+  //   menuComponentList는 li 태그로 감싸져야 함
+
+  const { dropdownBtn, menuComponentList, dropdownAlign } = props;
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -62,18 +73,8 @@ const Dropdown: React.FC<DropdownProps> = (props) => {
   return (
     <StDivDropdownBtnWrapper onMouseEnter={showMenu} onMouseLeave={hideMenu}>
       {dropdownBtn}
-      <StUlDropdownMenu $show={isMenuOpen}>
-        {dropdownMenuList.map((menu) => (
-          <li
-            key={menu.listKey}
-            onClick={() => {
-              menu.onClick?.();
-              hideMenu();
-            }}
-          >
-            {menu.menuComponent}
-          </li>
-        ))}
+      <StUlDropdownMenu $show={isMenuOpen} $dropdownAlign={dropdownAlign}>
+        {menuComponentList}
       </StUlDropdownMenu>
     </StDivDropdownBtnWrapper>
   );

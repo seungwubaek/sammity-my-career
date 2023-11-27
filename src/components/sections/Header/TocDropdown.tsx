@@ -8,10 +8,21 @@ import Dropdown from './Dropdown';
 import { IoCaretDown } from 'react-icons/io5';
 
 type TocDropdownProps = {
-  tocMenuList: {
-    href: string;
-    title: string;
-  }[];
+  tocMenuList: TocMenu[];
+};
+
+type TocMenu = {
+  href: string;
+  title: string;
+};
+
+const DropdownComponent: React.FC<{ menu: TocMenu }> = (props) => {
+  const { menu } = props;
+  return (
+    <Link href={menu.href}>
+      <li key={menu.href}>{menu.title}</li>
+    </Link>
+  );
 };
 
 const TocDropdown: React.FC<TocDropdownProps> = (props) => {
@@ -27,10 +38,10 @@ const TocDropdown: React.FC<TocDropdownProps> = (props) => {
           <IoCaretDown size={13} />
         </div>
       }
-      dropdownMenuList={tocMenuList.map((menu) => ({
-        listKey: menu.href,
-        menuComponent: <Link href={menu.href}>{menu.title}</Link>,
-      }))}
+      menuComponentList={tocMenuList.map((menu) => (
+        <DropdownComponent key={menu.href} menu={menu} />
+      ))}
+      dropdownAlign="center"
     />
   );
 };

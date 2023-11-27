@@ -6,4 +6,5 @@ export const personalInfo = {
 
 export const siteInfo = {
   createdYear: 2023,
+  githubUrl: 'https://github.com/seungwubaek/sammity-my-career',
 };

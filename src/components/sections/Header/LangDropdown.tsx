@@ -7,6 +7,7 @@ import {
   localesLabels,
   locales,
 } from '@/intl-navigation';
+import { useTheme } from 'styled-components';
 
 import Dropdown from './Dropdown';
 import { IoLanguageOutline } from 'react-icons/io5';
@@ -14,17 +15,22 @@ import { IoLanguageOutline } from 'react-icons/io5';
 const LangDropdown: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const theme = useTheme();
 
   return (
     <Dropdown
-      dropdownBtn={<IoLanguageOutline size={20} />}
-      dropdownMenuList={locales.map((locale) => ({
-        listKey: locale,
-        menuComponent: <div>{localesLabels[locale]}</div>,
-        onClick: () => {
-          router.replace(pathname, { scroll: false, locale });
-        },
-      }))}
+      dropdownBtn={<IoLanguageOutline size={theme.layout.headerIconSize} />}
+      menuComponentList={locales.map((locale) => (
+        <li
+          key={locale}
+          onClick={() => {
+            router.replace(pathname, { scroll: false, locale });
+          }}
+        >
+          <div>{localesLabels[locale]}</div>
+        </li>
+      ))}
+      dropdownAlign="center"
     />
   );
 };

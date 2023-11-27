@@ -13,6 +13,7 @@ const defaultLayout = {
   contentWidth: 1024,
   // Header
   headerHeight: 60,
+  headerIconSize: 20,
   // Section
   sectionHorizontalPadding: 20,
   // HeroSkillStacks

@@ -25,6 +25,9 @@ export const StCSSDropdownMenuItem = css`
   &:not(:last-child) {
     border-bottom: solid 1px ${({ theme }) => theme.color.border};
   }
+  &:hover {
+    background-color: ${({ theme }) => theme.color.listHovered};
+  }
   li {
     display: flex;
     justify-content: center;
@@ -32,11 +35,9 @@ export const StCSSDropdownMenuItem = css`
     padding: 10px 20px;
     margin: 0 10px;
     text-align: center;
-    &.language {
-      svg {
-        margin-right: 5px;
-      }
-      cursor: pointer;
+    cursor: pointer;
+    svg.icon {
+      margin-right: 5px;
     }
   }
 `;

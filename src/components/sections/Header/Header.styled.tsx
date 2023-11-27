@@ -39,7 +39,7 @@ export const StDivHeaderRight = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   height: 100%;
 `;
 
