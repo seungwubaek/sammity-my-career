@@ -4,6 +4,7 @@
     "description": "Career Page of Sammy Baek, a computer engineer."
   },
   "Header": {
+    "toc": "Table of Contents",
     "lang": "Language"
   },
   "NotFound": {

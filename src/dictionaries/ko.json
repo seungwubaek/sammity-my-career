@@ -4,6 +4,7 @@
     "description": "컴퓨터 엔지니어, 백승우의 커리어 페이지"
   },
   "Header": {
+    "toc": "목차",
     "lang": "언어"
   },
   "NotFound": {

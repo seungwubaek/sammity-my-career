@@ -16,6 +16,7 @@ import SiteLogo from '@/components/units/Logo';
 import LangDropdown from './LangDropdown';
 import HeaderRightMenu from './HeaderRightMenu';
 import { IoMenuSharp } from 'react-icons/io5';
+import TocDropdown from './TocDropdown';
 
 const Header: React.FC = () => {
   const locale = useLocale() as 'ko' | 'en';
@@ -27,11 +28,12 @@ const Header: React.FC = () => {
           <SiteLogo colorScheme="black" />
         </StLinkHeaderLeft>
         <StDivHeaderRight className={clsx('responsive-only-desktop')}>
-          {headerMenus.map((menu) => (
-            <Link href={menu.href} key={menu.href}>
-              {menu.title[locale]}
-            </Link>
-          ))}
+          <TocDropdown
+            tocMenuList={headerMenus.map((menu) => ({
+              href: menu.href,
+              title: menu.title[locale],
+            }))}
+          />
           <LangDropdown />
         </StDivHeaderRight>
         <StDivHeaderRightMobile
