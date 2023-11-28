@@ -31,7 +31,13 @@ const Footer: React.FC = () => {
           <Link href={`/${locale}/me`}>
             <SiteLogo colorScheme="white" />
           </Link>
-          <LinkSet logoSize={16} githubColor="white" />
+          <LinkSet
+            logoSize={16}
+            linkList={[
+              { linkName: 'github', logoColor: 'white' },
+              { linkName: 'blog' },
+            ]}
+          />
         </StSectionFooterLogoAndLinkSet>
         <StUlPersonalInfo>
           <li>{t('Footer.name')}</li>

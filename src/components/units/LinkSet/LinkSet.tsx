@@ -11,29 +11,59 @@ import { IoLogoGithub } from 'react-icons/io5';
 
 type PropsLinkSet = {
   logoSize: number;
-  githubColor: 'black' | 'white';
+  linkList: {
+    linkName: Links;
+    logoColor?: string;
+  }[];
 };
 
+type Links = 'github' | 'blog';
+
 const LinkSet: React.FC<PropsLinkSet> = (props) => {
-  const { logoSize, githubColor } = props;
+  const { logoSize, linkList } = props;
 
   const t = useTranslations('');
 
   return (
     <StDivLinkSet>
-      <Link href={`${personalInfo.github}`} target="_blank">
-        <IoLogoGithub size={logoSize} color={githubColor} />
-        &nbsp;{t('Profile.githubHeader')}
-      </Link>
-      <Link href={`${personalInfo.gitblog}`} target="_blank">
-        <Image
-          src={getAssetUrl('favicon_gitpage_seungwubaek.ico').toString()}
-          alt="blog icon"
-          width={logoSize}
-          height={logoSize}
-        />
-        &nbsp;{t('Profile.blogHeader')}
-      </Link>
+      {linkList.map((link) => {
+        switch (link.linkName) {
+          case 'github':
+            return (
+              <Link
+                key={link.linkName}
+                href={`${personalInfo.github}`}
+                target="_blank"
+              >
+                <IoLogoGithub
+                  size={logoSize}
+                  color={link.logoColor ?? 'black'}
+                />
+                &nbsp;{t('Profile.githubHeader')}
+              </Link>
+            );
+          case 'blog':
+            return (
+              <Link
+                key={link.linkName}
+                href={`${personalInfo.gitblog}`}
+                target="_blank"
+              >
+                <Image
+                  src={getAssetUrl(
+                    'favicon_gitpage_seungwubaek.ico'
+                  ).toString()}
+                  alt="blog icon"
+                  width={logoSize}
+                  height={logoSize}
+                />
+                &nbsp;{t('Profile.blogHeader')}
+              </Link>
+            );
+          default:
+            return null;
+        }
+      })}
     </StDivLinkSet>
   );
 };

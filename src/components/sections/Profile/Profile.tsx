@@ -131,7 +131,10 @@ const SectionProfile: React.FC<PropsSectionProfile> = ({ locale }) => {
                     <div></div>
                   </th>
                   <td>
-                    <LinkSet logoSize={18} githubColor="black" />
+                    <LinkSet
+                      logoSize={18}
+                      linkList={[{ linkName: 'github' }, { linkName: 'blog' }]}
+                    />
                   </td>
                 </tr>
               </tbody>
