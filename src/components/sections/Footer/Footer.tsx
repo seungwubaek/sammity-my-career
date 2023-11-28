@@ -36,6 +36,7 @@ const Footer: React.FC = () => {
             linkList={[
               { linkName: 'github', logoColor: 'white' },
               { linkName: 'blog' },
+              { linkName: 'instagram', logoColor: 'white' },
             ]}
           />
         </StSectionFooterLogoAndLinkSet>

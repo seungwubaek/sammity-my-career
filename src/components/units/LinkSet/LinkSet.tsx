@@ -7,7 +7,7 @@ import { personalInfo } from '@/data/commonInfo';
 import { getAssetUrl } from '@/lib/utils/url';
 
 import { StDivLinkSet } from './LinkSet.styled';
-import { IoLogoGithub } from 'react-icons/io5';
+import { IoLogoGithub, IoLogoInstagram } from 'react-icons/io5';
 
 type PropsLinkSet = {
   logoSize: number;
@@ -17,7 +17,7 @@ type PropsLinkSet = {
   }[];
 };
 
-type Links = 'github' | 'blog';
+type Links = 'github' | 'blog' | 'instagram';
 
 const LinkSet: React.FC<PropsLinkSet> = (props) => {
   const { logoSize, linkList } = props;
@@ -58,6 +58,20 @@ const LinkSet: React.FC<PropsLinkSet> = (props) => {
                   height={logoSize}
                 />
                 &nbsp;{t('Profile.blogHeader')}
+              </Link>
+            );
+          case 'instagram':
+            return (
+              <Link
+                key={link.linkName}
+                href={`${personalInfo.instagram}`}
+                target="_blank"
+              >
+                <IoLogoInstagram
+                  size={logoSize}
+                  color={link.logoColor ?? 'black'}
+                />
+                &nbsp;Instagram
               </Link>
             );
           default:
