@@ -91,6 +91,8 @@ export const StSpanSectionTitle = styled.span<{ $underlineWidth: number }>`
     bottom: 0;
     width: 100%;
     height: ${({ $underlineWidth: underlineWidth }) => `${underlineWidth}px`};
+    border-radius: ${({ $underlineWidth: underlineWidth }) =>
+      `${underlineWidth / 2}px`};
     background-color: ${({ theme }) => theme.color.secondary};
     content: '';
   }
