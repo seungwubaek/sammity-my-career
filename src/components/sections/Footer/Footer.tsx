@@ -27,10 +27,10 @@ const Footer: React.FC = () => {
   return (
     <StSectionFooter $wide>
       <StDivFooterInner>
+        <Link href={`/${locale}/me`}>
+          <SiteLogo colorScheme="white" />
+        </Link>
         <StSectionFooterLogoAndLinkSet>
-          <Link href={`/${locale}/me`}>
-            <SiteLogo colorScheme="white" />
-          </Link>
           <LinkSet
             logoSize={16}
             linkList={[
