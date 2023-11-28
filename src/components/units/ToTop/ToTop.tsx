@@ -18,6 +18,7 @@ const StDivToTopBtn = styled.div`
   background-color: ${({ theme }) => theme.color.secondary};
   box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  z-index: ${({ theme }) => theme.zIndex.toTop};
 
   &:hover {
     transform: scale(1.1);

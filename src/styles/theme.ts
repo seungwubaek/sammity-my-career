@@ -95,7 +95,11 @@ const defaultStyle = {
 };
 
 const defaultZIndex = {
-  skillStackSwiper: 2,
+  // 주석을 이용해서 각 엘리먼트의 상속 관계를 표시해야 함
+  // Main
+  // ToTop
+  toTop: 1,
+  // Modal
   modalBackdrop: 100,
   modal: 200,
 };
