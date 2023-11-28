@@ -70,8 +70,10 @@ const CareerCard: React.FC<PropsCareerCard> = (props) => {
   }
 
   // prettier-ignore
-  const period = `(${periodDiffString}) ${periodFrom.getFullYear()}. ${periodFrom.getMonth() + 1} ~
-                  ${periodTo.getFullYear()}. ${periodTo.getMonth() + 1}`;
+  const period =
+    `(${periodDiffString})
+      ${periodFrom.getFullYear()}. ${String(periodFrom.getMonth() + 1).padStart(2, '0')} ~
+      ${periodTo.getFullYear()}. ${String(periodTo.getMonth() + 1).padStart(2, '0')}`;
 
   return (
     <StDivCareerCard
