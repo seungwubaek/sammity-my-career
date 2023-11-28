@@ -6,7 +6,7 @@ import styled, { useTheme } from 'styled-components';
 
 import { siteInfo } from '@/data/commonInfo';
 
-import Dropdown from './Dropdown';
+import Dropdown from '.';
 import { IoLogoGithub, IoOpenOutline } from 'react-icons/io5';
 
 const StLinkDropdownIcon = styled(Link)`

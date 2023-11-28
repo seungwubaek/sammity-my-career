@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import Dropdown from './Dropdown';
+import Dropdown from '.';
 import { IoCaretDown } from 'react-icons/io5';
 
 type TocDropdownProps = {

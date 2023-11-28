@@ -13,9 +13,7 @@ import {
   StDivHeaderRightMobile,
 } from './Header.styled';
 import SiteLogo from '@/components/units/Logo';
-import TocDropdown from './TocDropdown';
-import GitHubDropdown from './GitHubDropdown';
-import LangDropdown from './LangDropdown';
+import { TocDropdown, LangDropdown, GitHubDropdown } from './Dropdown';
 import HeaderRightMenu from './HeaderRightMenu';
 import { IoMenuSharp } from 'react-icons/io5';
 

@@ -9,7 +9,7 @@ import {
 } from '@/intl-navigation';
 import { useTheme } from 'styled-components';
 
-import Dropdown from './Dropdown';
+import Dropdown from '.';
 import { IoLanguageOutline } from 'react-icons/io5';
 
 const LangDropdown: React.FC = () => {
