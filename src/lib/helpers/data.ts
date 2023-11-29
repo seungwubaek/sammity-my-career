@@ -1,6 +1,5 @@
 import skills from '@/data/skills';
 import { ko as project_ko, en as project_en } from '@/data/projects';
-import { ko as speech_ko, en as speech_en } from '@/data/speechCards';
 
 import { getAssetUrl } from '../utils/url';
 
@@ -32,18 +31,4 @@ export const getProjectsFromServer = (locale: string) => {
   });
 
   return urlPrefixedProjects;
-};
-
-export const getSpeechesFromServer = (locale: string) => {
-  // TODO: server-only 적용
-  let speech;
-  if (locale === 'ko') {
-    speech = speech_ko;
-  } else if (locale === 'en') {
-    speech = speech_en;
-  } else {
-    throw new Error('Unsupported locale');
-  }
-
-  return speech;
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 
 import { getAssetUrl } from '@/lib/utils/url';
-import { getSpeechesFromServer } from '@/lib/helpers/data';
 
 import {
   SectionContent,
@@ -22,8 +21,6 @@ const SectionSelfIntroduction: React.FC<PropsSectionIntroduction> = (props) => {
 
   const t = useTranslations();
 
-  const speeches = getSpeechesFromServer(locale);
-
   return (
     <StSection $wide>
       <StSection>
@@ -39,7 +36,7 @@ const SectionSelfIntroduction: React.FC<PropsSectionIntroduction> = (props) => {
       <StSection>
         <SectionContent>
           <StDivSpeechCardContainer>
-            <SpeechCards speeches={speeches} />
+            <SpeechCards locale={locale} />
           </StDivSpeechCardContainer>
         </SectionContent>
       </StSection>

@@ -1,20 +1,37 @@
 'use client';
 
 import React from 'react';
+import { useLocale } from 'next-intl';
 import { useTheme } from 'styled-components';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 import { Speech } from '@/types/speech';
-import { StDivSpeechCard, StH2SpeechCardTitle } from './SpeechCards.styled';
+// import {
+//   koAttitudeOfLearning,
+//   koProblemSolvingAbility,
+//   koSuperpowerMeticulousness,
+//   enAttitudeOfLearning,
+//   enProblemSolvingAbility,
+//   enSuperpowerMeticulousness,
+// } from '@/data/speechCards';
+import MDXSpeechCards from '@/data/speechCards';
+import { StDivSpeechCard } from './SpeechCards.styled';
 
 type PropsSpeechCards = {
-  speeches: Speech[];
+  locale: string;
 };
 
 const SpeechCards: React.FC<PropsSpeechCards> = (props) => {
-  const { speeches } = props;
+  const { locale } = props;
 
   const theme = useTheme();
+
+  const MDXSpeechCardsByLocale = MDXSpeechCards[locale];
+  const mdxNameOrder = [
+    'AttitudeOfLearning',
+    'ProblemSolvingAbility',
+    'SuperpowerMeticulousness',
+  ];
 
   return (
     <ResponsiveMasonry
@@ -24,14 +41,14 @@ const SpeechCards: React.FC<PropsSpeechCards> = (props) => {
       }}
     >
       <Masonry gutter={'20px'}>
-        {speeches.map((speech, index) => (
-          <StDivSpeechCard key={`introductionSpeechCard_${index}`}>
-            <StH2SpeechCardTitle>{speech.title}</StH2SpeechCardTitle>
-            {speech.message.map((message, index) => (
-              <p key={`introductionSpeechMsg_${index}`}>{message}</p>
-            ))}
-          </StDivSpeechCard>
-        ))}
+        {mdxNameOrder.map((mdxName, index) => {
+          const MDXSpeechCard = MDXSpeechCardsByLocale[mdxName];
+          return (
+            <StDivSpeechCard key={`introductionSpeechCard_${mdxName}`}>
+              <MDXSpeechCard />
+            </StDivSpeechCard>
+          );
+        })}
       </Masonry>
     </ResponsiveMasonry>
   );

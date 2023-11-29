@@ -8,5 +8,3 @@ export const StDivSpeechCard = styled.div`
   border: 1px solid ${({ theme }) => theme.color.speechCardBorder};
   border-radius: 15px;
 `;
-
-export const StH2SpeechCardTitle = styled.h2``;
