@@ -1,8 +1,6 @@
 import skills from '@/data/skills';
 import { ko as project_ko, en as project_en } from '@/data/projects';
 import { ko as speech_ko, en as speech_en } from '@/data/speechCards';
-import { ko as aboutSite_ko, en as aboutSite_en } from '@/data/aboutSite';
-import { aboutSiteH2Messages } from '@/data/aboutSite/ko';
 
 import { getAssetUrl } from '../utils/url';
 
@@ -48,18 +46,4 @@ export const getSpeechesFromServer = (locale: string) => {
   }
 
   return speech;
-};
-
-export const getAboutSiteMessagesFromServer = (locale: string) => {
-  // TODO: server-only 적용
-  let aboutSiteMessages;
-  if (locale === 'ko') {
-    aboutSiteMessages = aboutSite_ko;
-  } else if (locale === 'en') {
-    aboutSiteMessages = aboutSite_en;
-  } else {
-    throw new Error('Unsupported locale');
-  }
-
-  return { h2: aboutSiteH2Messages, p: aboutSiteMessages };
 };
