@@ -113,6 +113,14 @@ const globalStyles = createGlobalStyle`
     border-spacing: 0;
   }
 
+  code {
+    font-family: var(--roboto-mono);
+    font-size: 0.9em;
+    background-color: ${({ theme }) => theme.color.codeBackground};
+    padding: 1px 0.25em;
+    border-radius: 0.375em;
+  }
+
   .responsive-only-desktop {
     @media (max-width: ${({ theme }) => theme.media.tabletMaxWidth}px) {
       display: none !important;

@@ -6,7 +6,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 
 import Initializers from '@/lib/initializers';
 import GlobalStyles from '@/styles/GlobalStyles.styled';
-import { Noto_Sans_KR } from 'next/font/google';
+import { Noto_Sans_KR, Roboto_Mono } from 'next/font/google';
 import { GoogleAnalytics } from '@/lib/scripts';
 import { localeMap } from '@/intl-navigation';
 import { getAssetUrl } from '@/lib/utils/url';
@@ -15,6 +15,7 @@ import Header from '@/components/sections/Header';
 import ToTop from '@/components/units/ToTop';
 import { Suspense } from 'react';
 import Loading from './loading';
+import clsx from 'clsx';
 
 type PropsMetadata = {
   params: {
@@ -23,7 +24,17 @@ type PropsMetadata = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-const notoSansKr = Noto_Sans_KR({ subsets: [] });
+const notoSansKr = Noto_Sans_KR({
+  subsets: [],
+  variable: '--noto-sans-kr',
+  fallback: ['system-ui', 'arial'],
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: [],
+  variable: '--roboto-mono',
+  fallback: ['--noto-sans-kr', 'system-ui', 'arial'],
+});
 
 async function getMessages(locale: string) {
   try {
@@ -84,7 +95,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={notoSansKr.className}>
+      <body className={clsx([notoSansKr.className, robotoMono.variable])}>
         <Initializers locale={locale}>
           <GlobalStyles />
           <Header />

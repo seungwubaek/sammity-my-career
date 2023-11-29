@@ -65,6 +65,7 @@ const defaultColors = {
   black: '#222222',
   background: '#fff',
   darkBackground: '#222222',
+  codeBackground: '#b1deee',
   border: '#e5e5e5',
   lightBorder: '#ebebeb',
   darkBorder: '#a5a5a5',
