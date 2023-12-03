@@ -1,8 +1,6 @@
 import path from 'path';
 import { Project } from '@/types/projects';
 
-// TODO: need to use markdown converting
-
 let baseUrlPathname = '';
 
 const projects: Project[] = [
