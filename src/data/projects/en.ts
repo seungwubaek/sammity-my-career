@@ -41,8 +41,8 @@ const projects: Project[] = [
     where: 'Mobigen Co., Ltd.',
     summary:
       'ETL server based on Spring Boot and Worker Agent solution based on Python.' +
-      'Worker Agent executes ETL Java Job created by Talend on each Node.' +
-      'ETL server serves management, monitoring and data visualization of connected Worker Agent and Slave Node',
+      'ETL server serves management, monitoring and data visualization of connected Worker Agent and Slave Node. ' +
+      'Worker Agent executes ETL Java Job created by Talend on each Node.',
     startedAt: '2017. 01',
     endedAt: '2017. 12',
     participationRate: 30,
@@ -57,10 +57,10 @@ const projects: Project[] = [
       'Talend',
     ],
     tasks: [
-      'Development of user management page using Spring Boot and JSP',
-      'Development of ETL Dashboard and system summary data visualization page using Spring Boot and JSP',
-      'Development of management, monitoring, visualization page for Master and Slave Node using Spring Boot and JSP',
-      'Development of Talend Job execution/stop/monitoring management page using Spring Boot and JSP',
+      'Development page of ETL Dashboard and system summary data visualization',
+      'Development page of management, monitoring, visualization for Master and Slave Node',
+      'Development page of Talend Job execution/stop by controlling Worker Agent using API, and monitoring management',
+      'Development page of user access control and management',
     ],
   },
   {
@@ -235,7 +235,9 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_mosepeople.png'),
     where: 'MosePeople Co., Ltd.',
     summary:
-      'Production of React-based company official homepage. Rendering news article from Django-based Backend Server',
+      'Development of React-based company official homepage. From backend restful api server based on django, ' +
+      'create/read/update/delete news articles, and From frontend based on react, render CSR pages and ' +
+      'news articles fetched from backend',
     startedAt: '2022. 10',
     endedAt: '2023. 05',
     participationRate: 70,
@@ -334,7 +336,8 @@ const projects: Project[] = [
     imageBorderRadius: 'round',
     where: 'MosePeople Co., Ltd.',
     summary:
-      'Development of React-based website that introduces Korean products to Uzbekistan',
+      'Development of React-based website that introduces Korean products to Uzbekistan, ' +
+      'and connects local wholesalers with Korean manufacturers',
     startedAt: '2023. 05',
     endedAt: '2023. 08',
     participationRate: 100,

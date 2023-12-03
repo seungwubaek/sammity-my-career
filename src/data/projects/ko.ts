@@ -40,8 +40,8 @@ const projects: Project[] = [
     where: '(주)모비젠',
     summary:
       'Spring Boot 기반의 ETL 서버 및 Python 기반 Worker Agent 솔루션. ' +
-      'Worker Agent는 각 Node에서 Talend로 생성한 ETL Java Job을 실행. ' +
-      'ETL 서버는 연동되는 Worker Agent 및 Slave Node의 관리, 모니터링, 데이터 시각화 제공',
+      'ETL 서버는 연동되는 Worker Agent 및 Slave Node의 관리, 모니터링, 데이터 시각화 제공 ' +
+      'Worker Agent는 각 Node에서 Talend로 생성한 ETL Java Job을 실행.',
     startedAt: '2017. 01',
     endedAt: '2017. 12',
     participationRate: 30,
@@ -56,14 +56,14 @@ const projects: Project[] = [
       'Talend',
     ],
     tasks: [
-      'Spring Boot, JSP를 이용한 사용자 관리 페이지 개발',
-      'Spring Boot, JSP를 이용한 ETL Dashboard 구현 및 시스템 요약 데이터 시각화 페이지 개발',
-      'Spring Boot, JSP를 이용한 Master, Slave Node 관리 및 모니터링 데이터 시각화 페이지 개발',
-      'Spring Boot, JSP를 이용한 Talend Job 실행/중지/모니터링 관리 페이지 개발',
+      'ETL 서버의 Dashboard 구현 및 시스템 요약 데이터 시각화 페이지 개발',
+      'Master, Slave Node 관리 및 모니터링 데이터 시각화 페이지 개발',
+      'Worker Agent를 API로 제어하여 Talend Job 실행/중지 및 모니터링 페이지 개발',
+      '사용자 관리/권한설정 페이지 개발',
     ],
   },
   {
-    title: 'L사 - 냉장고 딥러닝을 이용한 사전진단 서비스',
+    title: 'L사 - 딥러닝을 이용한 스마트 냉장고 사전진단 서비스',
     representativeImageSrc: path.join(
       baseUrlPathname,
       'proj_l_refrig_deep.png'
@@ -79,13 +79,13 @@ const projects: Project[] = [
     tasks: [
       '기초통계량 분석 및 시각화',
       '상관분석, 교차상관분석, Logistic Regression, 시계열분석',
-      'Deep Learning 알고리즘 개발 (DNN, CNN, Bi-LSTM, AutoEndoder, Ensemble Model)',
+      'Deep Learning 알고리즘 개발 (DNN, CNN, Bi-LSTM, AutoEncoder, Ensemble Model)',
       'Deep Learning 엔진을 이용한 최종 고장 사전 진단 (Deep Learning Classification)',
       '냉장고 실시간 데이터 시각화 및 고장 진단 GUI 프로그램 개발',
     ],
   },
   {
-    title: '스마트시티 SW보안 관제 시스템 개발',
+    title: '한**력공사 - 스마트시티 SW보안 관제 시스템 개발',
     representativeImageSrc: path.join(baseUrlPathname, 'proj_audit_system.png'),
     where: '(주)모비젠',
     summary:
@@ -231,7 +231,8 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_mosepeople.png'),
     where: '(주)모세피플',
     summary:
-      'React 기반 회사 홈페이지 제작. Django 기반 백엔드 서버로부터 소식 게시물 데이터를 받아와서 렌더링',
+      'React 기반 회사 홈페이지 제작. Django 기반 백엔드 Restful API 서버에서 소식 게시물을 생성/조회/수정/삭제하고, ' +
+      'React 기반 프론트엔드에서 CSR 페이지 및 백엔드로부터 가져온 소식 게시물을 렌더링',
     startedAt: '2022. 10',
     endedAt: '2023. 05',
     participationRate: 70,
@@ -327,7 +328,8 @@ const projects: Project[] = [
     representativeImageSrc: path.join(baseUrlPathname, 'logo_komart.png'),
     imageBorderRadius: 'round',
     where: '(주)모세피플',
-    summary: '우즈베키스탄에 한국 제품을 소개하는 React 기반 웹사이트 개발',
+    summary:
+      '우즈베키스탄에 한국 제품을 소개하고, 현지 도매업자와 한국 제조업자의 거래를 연결해주는 React 기반 웹사이트 개발',
     startedAt: '2023. 05',
     endedAt: '2023. 08',
     participationRate: 100,
